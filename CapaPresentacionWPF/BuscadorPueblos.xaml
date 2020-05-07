@@ -1,0 +1,42 @@
+﻿<Window x:Class="CapaPresentacionWPF.BuscadorPueblos"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CapaPresentacionWPF"
+       
+        mc:Ignorable="d"
+        Title="BuscadorPueblos" Height="450" Width="800">
+    
+     
+    <Grid>
+        <ListBox x:Name="pueblos" Grid.RowSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Height="25"  >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Path=LocalidadID}" />
+                        <TextBlock Text="{Binding Path=Nombre}" />
+                        <TextBlock Text="{Binding Path=ProvinciaID}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="212,116,0,0" Name="comboBox1"  ItemsSource="{Binding _provincias}"
+                    VerticalAlignment="Top" Width="120" >
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Nombre: "></TextBlock>
+                        <TextBlock Text="{Binding Path=Nombre}" Width="80"></TextBlock>
+                        <TextBlock Text="ProvinciaID: "></TextBlock>
+                        <TextBlock Text="{Binding Path=ProvinciaID}" Width="80"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+
+
+
+    </Grid>
+</Window>
