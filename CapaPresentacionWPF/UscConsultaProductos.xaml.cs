@@ -29,16 +29,16 @@ namespace CapaPresentacionWPF
         public UscConsultaProductos()
         {
             InitializeComponent();
-<<<<<<< Updated upstream
+
          
         }
 
-=======
+
            
-        }
+    
 
 
->>>>>>> Stashed changes
+
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
             _negociotipoArticulo = new NegociotipoArticulo();
@@ -63,11 +63,10 @@ namespace CapaPresentacionWPF
 
       
 
-<<<<<<< Updated upstream
+
         }
 
       
-=======
->>>>>>> Stashed changes
+
     }
-}
+

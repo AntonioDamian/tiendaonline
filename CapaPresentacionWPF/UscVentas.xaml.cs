@@ -134,34 +134,33 @@ namespace CapaPresentacionWPF
            
         }
 
-        
+
 
         private void Articulos_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-<<<<<<< Updated upstream
-         
-         /*   Window wd = new Window();
-=======
->>>>>>> Stashed changes
-
-            Articulo articuloSelecionado = Articulos.SelectedItem as Articulo;
-
-            lbIdProducto.Content = articuloSelecionado.ArticuloID;
-            lbNombreProducto.Content = articuloSelecionado.Nombre;
-            lbPrecio.Content =articuloSelecionado.Pvp.ToString();
-            lbStock.Content = articuloSelecionado.Cantidad;
-
-            lbPrecioTotal.Content = "";
-            txtCantidad.Text = "";
-
-        }     
 
 
-<<<<<<< Updated upstream
-            wd.ShowDialog();*/
-=======
-    
->>>>>>> Stashed changes
+            /*   Window wd = new Window();
+
+
+               Articulo articuloSelecionado = Articulos.SelectedItem as Articulo;
+
+               lbIdProducto.Content = articuloSelecionado.ArticuloID;
+               lbNombreProducto.Content = articuloSelecionado.Nombre;
+               lbPrecio.Content =articuloSelecionado.Pvp.ToString();
+               lbStock.Content = articuloSelecionado.Cantidad;
+
+               lbPrecioTotal.Content = "";
+               txtCantidad.Text = "";
+
+           }     
+
+
+
+               wd.ShowDialog();*/
+
+        }
+
 
         private void TxtCantidad_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -175,12 +174,9 @@ namespace CapaPresentacionWPF
 
                 lbPrecioTotal.Content = resultado.ToString();
 
-<<<<<<< Updated upstream
-            BusquedaProducto busqueda = new BusquedaProducto();
-            busqueda.Owner = Window.GetWindow(this);
-            busqueda.Opacity = 0.5;
-            busqueda.ShowDialog();
-=======
+
+           
+
 
             }
             catch (FormatException)
@@ -188,7 +184,7 @@ namespace CapaPresentacionWPF
                 MessageBox.Show("Solo numeros", "", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
             
->>>>>>> Stashed changes
+
         }
 
         private void TxtCantidad_KeyDown(object sender, KeyEventArgs e)
