@@ -99,6 +99,7 @@
     <Compile Include="CambioContrasenya.xaml.cs">
       <DependentUpon>CambioContrasenya.xaml</DependentUpon>
     </Compile>
+    <Compile Include="IBuscar.cs" />
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>

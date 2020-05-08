@@ -16,12 +16,12 @@
                 <Label Content="Nombre"/>
                 <TextBox Width="100" Height="25"/>
                 <Label Content="Tipo"/>
-                <ComboBox x:Name="ComboTipo"     Width="100" Text="Seleccione" IsSynchronizedWithCurrentItem="True" DisplayMemberPath=" Value" SelectedValuePath="Key"
-                          SelectionChanged="ComboTipo_SelectionChanged"   />
+                <ComboBox x:Name="ComboTipo"     Width="100" Text="Seleccionar" IsSynchronizedWithCurrentItem="True" 
+                          DisplayMemberPath="Descripcion" />
             </StackPanel>
         </GroupBox>
         <GroupBox Header="Articulos" Grid.Row="1" Margin="10,2" BorderBrush="Black" BorderThickness="1">
-            <ListBox Name="listArticulos" Margin="5" ItemsSource="{Binding }" IsSynchronizedWithCurrentItem="True">
+            <ListBox Name="listArticulos" Margin="5" ItemsSource="{Binding SelectedItem.ListaArticulos,ElementName=ComboTipo}" IsSynchronizedWithCurrentItem="True" MouseDoubleClick="ListArticulos_MouseDoubleClick">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Grid>

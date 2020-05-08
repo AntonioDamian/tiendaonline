@@ -14,6 +14,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -25,7 +26,7 @@ namespace CapaPresentacionWPF
     /// <summary>
     /// Lógica de interacción para UscVentas.xaml
     /// </summary>
-    public partial class UscVentas : UserControl
+    public partial class UscVentas : UserControl ,IBuscar
     {
 
         CultureInfo cultures = new CultureInfo("es-ES");
@@ -36,7 +37,7 @@ namespace CapaPresentacionWPF
         private NegocioLinped _negLinped;
         NegociotipoArticulo _negociotipoArticulo;
 
-         Articulo _articulo;
+        
 
         private List<Articulo> _listArticulos;
         List<Linped> linpeds = new List<Linped>();
@@ -45,6 +46,8 @@ namespace CapaPresentacionWPF
 
 
         private ObservableCollection<TipoArticulo> ListaProductos;
+
+
 
         public UscVentas()
         {
@@ -60,10 +63,10 @@ namespace CapaPresentacionWPF
             _listArticulos = new List<Articulo>();
             _negLinped = new NegocioLinped();
             _negociotipoArticulo = new NegociotipoArticulo();
-            ListaProductos = _negociotipoArticulo.ListadoTipos();
+          //  ListaProductos = _negociotipoArticulo.ListadoTipos();
 
 
-            listArticulosStock.ItemsSource = ListaProductos;
+          //  listArticulosStock.ItemsSource = ListaProductos;
 
 
             pedido = new Pedido();
@@ -107,7 +110,6 @@ namespace CapaPresentacionWPF
         private void BtnBuscarUsuario_Click(object sender, RoutedEventArgs e)
         {
             BuscadorUsuario bsUsu = new BuscadorUsuario(this);
-
             bsUsu.Opacity = 0.8;
             bsUsu.ShowDialog();     
 
@@ -290,12 +292,7 @@ namespace CapaPresentacionWPF
                        
                         cont_fila++;
 
-                    }
-                   
-                 
-
-
-                     
+                    }  
 
                 
                   
@@ -311,9 +308,44 @@ namespace CapaPresentacionWPF
 
         private void BtnBuscar_Click(object sender, RoutedEventArgs e)
         {
+            
             BuscadorArticulo buscadorArticulo = new BuscadorArticulo();
+            buscadorArticulo.Buscar = this;
             buscadorArticulo.Opacity = 0.8;
-            buscadorArticulo.ShowDialog();
+            buscadorArticulo.Show();
+
+
+           
+        }
+
+        public void ArticuloSeleccionado(Articulo articuloSeleleccionado)
+        {
+            if(articuloSeleleccionado!=null)
+            {
+
+                lbIdProducto.Content = articuloSeleleccionado.ArticuloID;
+                lbNombreProducto.Content = articuloSeleleccionado.Nombre;
+                lbPrecio.Content = articuloSeleleccionado.Pvp.ToString();
+                lbStock.Content = articuloSeleleccionado.Cantidad;
+
+                lbPrecioTotal.Content = "";
+                txtCantidad.Text = "";
+            }
+        }
+
+        public void Ejecutar(Articulo articulo)
+        {
+          
+            
+         
+                lbIdProducto.Content = articulo.ArticuloID;
+                lbNombreProducto.Content = articulo.Nombre;
+                lbPrecio.Content = articulo.Pvp.ToString();
+                lbStock.Content = articulo.Cantidad;
+
+                lbPrecioTotal.Content = "";
+                txtCantidad.Text = "";
+            
         }
     }
 }

@@ -37,15 +37,15 @@ namespace Capa_negocio
 
 
             aux = ObtenertiposArticulos();
-
-            foreach(TipoArticulo t in aux)
+            ListaTipos.Add(new TipoArticulo(0, "Null", negProducto.ListaArticulos(0)));
+            foreach (TipoArticulo t in aux)
             {
 
                 ListaTipos.Add(new TipoArticulo( t.TipoArticuloID, t.Descripcion, negProducto.ListaArticulos(t.TipoArticuloID)));
 
-            }
+            } 
 
-
+           
 
             return ListaTipos;
 

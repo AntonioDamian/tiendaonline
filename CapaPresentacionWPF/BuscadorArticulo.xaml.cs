@@ -26,60 +26,94 @@ namespace CapaPresentacionWPF
         Dictionary<int, string> especi;        
         NegociotipoArticulo _negTipo;
         NegocioProducto _negocioProducto;
+       
+       
 
-        private ObservableCollection<TipoArticulo> ListaProductos;
+        public IBuscar Buscar { get; set; }
+
+        private List<TipoArticulo> ListaProductos;
         private ObservableCollection<Articulo> ListaArticulos;
+        private ObservableCollection<TipoArticulo> ListaTipoArticulos;
 
         public BuscadorArticulo()
         {
             InitializeComponent();
         }
 
+      
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
 
-            _negocioProducto = new NegocioProducto();
+           _negocioProducto = new NegocioProducto();
 
-            ListaArticulos = new ObservableCollection<Articulo>(_negocioProducto.ObtenerArticulos());
+         //  ListaArticulos = new ObservableCollection<Articulo>(_negocioProducto.ObtenerArticulos());
 
             _negTipo = new NegociotipoArticulo();
 
-            ListaProductos = _negTipo.ListadoTipos();
+            ListaProductos = _negTipo.ObtenertiposArticulos();
+            ListaTipoArticulos = new ObservableCollection<TipoArticulo>(_negTipo.ListadoTipos());
+
 
             especi = new Dictionary<int, string>();
-            especi.Add(0, "Null");
+           // especi.Add(0, "Null");
 
-            foreach (TipoArticulo tp in ListaProductos)
+            foreach (TipoArticulo tp in ListaTipoArticulos)
             {
                 especi.Add(tp.TipoArticuloID, tp.Descripcion);
             }
+            especi[0] = "Null";
 
-            ComboTipo.ItemsSource = especi;
+
+            ComboTipo.ItemsSource = ListaTipoArticulos;
+           // ComboTipo.Text = "Null";
             ComboTipo.SelectedIndex = 0;
 
         }
 
-        private void ComboTipo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        /*  private void ComboTipo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+          {
+              _negocioProducto = new NegocioProducto();          
+              int v2 =Convert.ToInt32(ComboTipo.SelectedValue.ToString());
+
+            //  ListaArticulos= new ObservableCollection<Articulo>(_negocioProducto.ListaArticulos(v2));
+
+              /*  if (v2==0)
+                {
+                    listArticulos.ItemsSource = ListaArticulos.Where(x => x.TipoArticuloID is null);
+
+
+                 }
+                else
+                {
+                   // listArticulos.ItemsSource = ListaArticulos.Where(x => x.TipoArticuloID.Equals(v2));
+                    listArticulos.ItemsSource = new ObservableCollection<Articulo>(_negocioProducto.ListaArticulos(v2));
+                }*/
+
+
+
+        //  listArticulos.ItemsSource = ListaArticulos;
+
+
+
+        // }
+
+        Articulo articulo;
+
+        private void ListArticulos_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            _negocioProducto = new NegocioProducto();          
-            int v2 =Convert.ToInt32(ComboTipo.SelectedValue.ToString());         
+            articulo = new Articulo();
 
-            if (v2==0)
-            {
-                listArticulos.ItemsSource = ListaArticulos.Where(x => x.TipoArticuloID is null);
-
-                 
-             }
-            else
-            {
-                listArticulos.ItemsSource = ListaArticulos.Where(x => x.TipoArticuloID.Equals(v2));
-            }
-          
-          
+           articulo= (Articulo)listArticulos.SelectedItem
+                as Articulo;
 
 
+         
+                Buscar.Ejecutar(articulo);
 
+        
+           
         }
-
     }
 }
+ 

@@ -56,14 +56,17 @@ namespace Capa_negocio
             negocioStock = new NegocioStock();
             negEspe = new NegocioEspecificaciones();
           
+            
+
             aux2 = listArt.Where(a => a.TipoArticuloID == tipoArticulo).ToList();
+
             ListStocks = new List<Stock>();
 
             switch (tipoArticulo)
             {
-                    case 1:
+                
 
-                   
+                case 1:                   
                     for (int i = 0; i < aux2.Count; i++)
                     {
                       
@@ -124,19 +127,22 @@ namespace Capa_negocio
                     }
                     break;
 
+                default:
+                    aux2 = listArt.Where(a => a.TipoArticuloID is null).ToList();
+
+                    for (int i = 0; i < aux2.Count; i++)
+                    {
+
+                        stocks = negocioStock.ObtenerStock(aux2[i].ArticuloID);
+                        ListStocks.Add(stocks);
+                        aux2[i].Cantidad = stocks.Disponible;
+                    }
+
+                    break;
+                   
               
                     
             }
-
-          
-
-
-         
-
-
-
-
-
             aux = new ObservableCollection<Articulo>(aux2);
 
             return aux;
