@@ -206,7 +206,7 @@ namespace CapaPresentacionWPF
         int cont_fila = 0;
 
 
-        private void BtnAgregar_Click(object sender, RoutedEventArgs e)
+     /*   private void BtnAgregar_Click(object sender, RoutedEventArgs e)
         {
            
 
@@ -304,7 +304,7 @@ namespace CapaPresentacionWPF
 
                 MessageBox.Show("Faltan datos");
             }
-        }
+        }*/
 
         private void BtnBuscar_Click(object sender, RoutedEventArgs e)
         {
