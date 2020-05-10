@@ -84,7 +84,7 @@ namespace TiendaOnline
                 List<Articulo> list = _listArticulos.Where(x => x.Nombre.ToUpper() == txtNombreArticulo.Text.ToUpper()).ToList();
 
                 bool existe = false;
-                int num_fila = 0;
+                int num_fila = 1;
 
                 if(list.Count>0)
                 {
@@ -125,6 +125,7 @@ namespace TiendaOnline
                            
 
                         }
+                        //no existe
                         else
                         {
                             dgvLinped.Rows.Add((cont_filas + 1).ToString(), list[0].ArticuloID.ToString(), txtPrecioArticulo.Text, txtCantidadArticulo.Text);
@@ -132,7 +133,7 @@ namespace TiendaOnline
                             dgvLinped.Rows[cont_filas].Cells[2].Value = importe;
                             cont_filas++;
 
-                            li = new Linped(Convert.ToInt32(txtPedidoID.Text), num_fila, list[0].ArticuloID.ToString(), importe, Convert.ToInt32(dgvLinped.Rows[num_fila].Cells[3].Value));
+                            li = new Linped(Convert.ToInt32(txtPedidoID.Text), num_fila+1, list[0].ArticuloID.ToString(), importe, Convert.ToInt32(dgvLinped.Rows[num_fila].Cells[3].Value));
                             linpeds.Add(li);
                         }
 

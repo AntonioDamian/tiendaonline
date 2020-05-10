@@ -26,7 +26,7 @@ namespace CapaPresentacionWPF
     /// <summary>
     /// Lógica de interacción para UscVentas.xaml
     /// </summary>
-    public partial class UscVentas : UserControl ,IBuscar
+    public partial class UscVentas : UserControl, IBuscar
     {
 
         CultureInfo cultures = new CultureInfo("es-ES");
@@ -37,7 +37,7 @@ namespace CapaPresentacionWPF
         private NegocioLinped _negLinped;
         NegociotipoArticulo _negociotipoArticulo;
 
-        
+
 
         private List<Articulo> _listArticulos;
         List<Linped> linpeds = new List<Linped>();
@@ -52,7 +52,7 @@ namespace CapaPresentacionWPF
         public UscVentas()
         {
             InitializeComponent();
-          
+
         }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
@@ -63,10 +63,10 @@ namespace CapaPresentacionWPF
             _listArticulos = new List<Articulo>();
             _negLinped = new NegocioLinped();
             _negociotipoArticulo = new NegociotipoArticulo();
-          //  ListaProductos = _negociotipoArticulo.ListadoTipos();
+            //  ListaProductos = _negociotipoArticulo.ListadoTipos();
 
 
-          //  listArticulosStock.ItemsSource = ListaProductos;
+            //  listArticulosStock.ItemsSource = ListaProductos;
 
 
             pedido = new Pedido();
@@ -90,28 +90,28 @@ namespace CapaPresentacionWPF
             TxTPedidoID.Text = "";
             TxTUsuarioID.Text = "";
             TxTNombreCliente.Text = "";
-            
-          /*   txtPrecioArticulo.Text = "";
-             txtCantidadArticulo.Text = "";
-             cont_filas = 0;
-             lbTotal.Text = "0";
-             lbIva.Text = "0";
-             lbTotalIVa.Text = "0";
-             total = 0;
-             totalConIva = 0;
-             totalIva = 0;
 
-             dgvLinped.Rows.Clear();*/
+            /*   txtPrecioArticulo.Text = "";
+               txtCantidadArticulo.Text = "";
+               cont_filas = 0;
+               lbTotal.Text = "0";
+               lbIva.Text = "0";
+               lbTotalIVa.Text = "0";
+               total = 0;
+               totalConIva = 0;
+               totalIva = 0;
+
+               dgvLinped.Rows.Clear();*/
             TxTUsuarioID.Focus(); ;
         }
 
-       //  MainWindow gk = (MainWindow)Application.Current.Windows.OfType<Window>().SingleOrDefault(x => x.IsActive);
+        //  MainWindow gk = (MainWindow)Application.Current.Windows.OfType<Window>().SingleOrDefault(x => x.IsActive);
 
         private void BtnBuscarUsuario_Click(object sender, RoutedEventArgs e)
         {
             BuscadorUsuario bsUsu = new BuscadorUsuario(this);
             bsUsu.Opacity = 0.8;
-            bsUsu.ShowDialog();     
+            bsUsu.ShowDialog();
 
 
         }
@@ -126,14 +126,14 @@ namespace CapaPresentacionWPF
                     TxTUsuarioID.Text = usuario.UsuarioID.ToString(cultures);
                     TxTNombreCliente.Text = usuario.Nombre.ToString(cultures);
                 }
-              
+
             }
-            catch (ArgumentNullException )
+            catch (ArgumentNullException)
             {
 
                 throw;
             }
-           
+
         }
 
 
@@ -166,7 +166,7 @@ namespace CapaPresentacionWPF
 
         private void TxtCantidad_TextChanged(object sender, TextChangedEventArgs e)
         {
-           
+
             decimal precio = Convert.ToDecimal(lbPrecio.Content);
             try
             {
@@ -177,7 +177,7 @@ namespace CapaPresentacionWPF
                 lbPrecioTotal.Content = resultado.ToString();
 
 
-           
+
 
 
             }
@@ -185,7 +185,7 @@ namespace CapaPresentacionWPF
             {
                 MessageBox.Show("Solo numeros", "", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
-            
+
 
         }
 
@@ -197,106 +197,121 @@ namespace CapaPresentacionWPF
                 e.Handled = true;
         }
 
-      
-        List<object> listao = new List<object>();
+
+       // List<object> listao = new List<object>();
+
         decimal importeTotal = 0;
         decimal precio = 0;
         int cantidad = 0;
         string id = "";
-        int cont_fila = 0;
+        int num_fila = 1;
+
+        decimal total;
+         decimal totalConIva;
+         decimal totalIva;
 
 
-     /*   private void BtnAgregar_Click(object sender, RoutedEventArgs e)
+
+        private void BtnAgregar_Click(object sender, RoutedEventArgs e)
         {
-           
+
 
             try
             {
-                if(string.IsNullOrEmpty(lbIdProducto.Content.ToString()) || lbStock.Content.ToString().Length==0  )
+                if (string.IsNullOrEmpty(lbIdProducto.Content.ToString()) || lbStock.Content.ToString().Length == 0)
                 {
                     MessageBox.Show("Faltan ingresar algunos datos");
 
                 }
-                else if(lbPrecio.Content.ToString().Length==0)
+                else if (lbPrecio.Content.ToString().Length == 0)
                 {
                     MessageBox.Show("No tenemos ningun precio de venta");
                 }
                 else
                 {
-                   // bool registro = true;
-                    int num_fila = 0;
+                    // bool registro = true;
+                  
 
                     if (linpeds.Count > 0)
                     {
-                        var l = linpeds.Where(x => x.ArticuloID.Equals(lbIdProducto.Content.ToString(),comparison)).ToList();
+                        var l = linpeds.Where(x => x.ArticuloID.Equals(lbIdProducto.Content.ToString(), comparison)).ToList();
 
-                        if(l.Count>0)
+                        if (l.Count > 0)
                         {
-                           // registro = false;
+                            
 
-                            foreach(var t in l)
+                            foreach (var t in l)
                             {
-                                cantidad = Convert.ToInt32(t.Cantidad) +Convert.ToInt32( txtCantidad.Text);
+                                cantidad = Convert.ToInt32(t.Cantidad) ;
                                 importeTotal = Convert.ToDecimal(cantidad * t.Importe);
                                 id = t.ArticuloID;
                                 precio = t.Importe;
                                 num_fila = t.Linea;
                             }
 
-                            li = new Linped(Convert.ToInt32(TxTPedidoID.Text), num_fila, id, precio, cantidad);
+                            li = new Linped(Convert.ToInt32(TxTPedidoID.Text), num_fila, id, precio, cantidad + Convert.ToInt32(txtCantidad.Text));
 
-                            linpeds.RemoveAt(num_fila);
-                            linpeds.Insert(num_fila, li);
+                            linpeds.RemoveAt(num_fila-1);
+                            linpeds.Insert(num_fila-1, li);
 
-                            listaVentas.Items.RemoveAt(num_fila);
-                            listaVentas.Items.Insert(num_fila,new { num_fila, id, precio, cantidad, importeTotal });
+                            listaVentas.Items.RemoveAt(num_fila-1);
+                            listaVentas.Items.Insert(num_fila-1, new { num_fila, id, precio, cantidad, importeTotal });
 
 
                         }
                         else
                         {
-                            li = new Linped(Convert.ToInt32(TxTPedidoID.Text), num_fila, lbIdProducto.Content.ToString(), Convert.ToDecimal(lbPrecio.Content.ToString()),
-                                                 Convert.ToInt32(txtCantidad.Text));
-                            linpeds.Add(li);
 
+                            cantidad = Convert.ToInt32(txtCantidad.Text);
                             importeTotal = Convert.ToDecimal(lbPrecio.Content.ToString()) * Convert.ToDecimal(txtCantidad.Text);
                             id = lbIdProducto.Content.ToString();
                             precio = Convert.ToDecimal(lbPrecio.Content.ToString());
-                            num_fila = num_fila + 1;
-                            ListViewItem item = new ListViewItem();
-                            item.Content = new { num_fila, id, precio, txtCantidad.Text, importeTotal };
-                            listao.Add(item);
-                            listaVentas.Items.Add(new { num_fila, id, precio, txtCantidad.Text, importeTotal });
+                         
 
-                            cont_fila++;
+                            listaVentas.Items.Add(new { num_fila=num_fila+1, id, precio, cantidad, importeTotal });
+                            li = new Linped(Convert.ToInt32(TxTPedidoID.Text), num_fila+1, lbIdProducto.Content.ToString(),
+                                Convert.ToDecimal(lbPrecio.Content.ToString()),
+                                               Convert.ToInt32(txtCantidad.Text));
+                            linpeds.Add(li);
+
+                           
                         }
-
-
                     }
-                    else
+                    //nuevo
+                    else 
                     {
-                        li = new Linped(Convert.ToInt32(TxTPedidoID.Text), num_fila, lbIdProducto.Content.ToString(), Convert.ToDecimal(lbPrecio.Content.ToString()),
-                                                  Convert.ToInt32(txtCantidad.Text));
-                        linpeds.Add(li);
-
+                       
                         importeTotal = Convert.ToDecimal(lbPrecio.Content.ToString()) * Convert.ToDecimal(txtCantidad.Text);
                         id = lbIdProducto.Content.ToString();
                         precio = Convert.ToDecimal(lbPrecio.Content.ToString());
-                        cantidad =Convert.ToInt32( txtCantidad.Text);
-                        num_fila = num_fila + 1;
-                        ListViewItem item = new ListViewItem();
-                        item.Content = new { num_fila, id, precio, txtCantidad.Text, importeTotal };
-                        listao.Add(item);
-                        listaVentas.Items.Add(new { num_fila, id, precio,cantidad, importeTotal });
+                        cantidad = Convert.ToInt32(txtCantidad.Text);                     
 
-                       
-                        cont_fila++;
+                        listaVentas.Items.Add(new {num_fila, id, precio, cantidad, importeTotal });
+                        li = new Linped(Convert.ToInt32(TxTPedidoID.Text), num_fila, lbIdProducto.Content.ToString(), Convert.ToDecimal(lbPrecio.Content.ToString()),
+                                                 Convert.ToInt32(txtCantidad.Text));
+                        linpeds.Add(li);
 
-                    }  
 
-                
-                  
+                        num_fila++;
+
+                    }
+
+
+                    pedido.Linpeds = linpeds;
+
+                    decimal[] resumenFactura = new decimal[4];
+
+                    resumenFactura = _pedido.Datosfactura(pedido);
+
+                    total = resumenFactura[0];
+                    totalIva = resumenFactura[1];
+                    totalConIva = resumenFactura[2];
+
+                    lbSubTotal.Content = total.ToString() + " €";
+                    lbIva.Content = totalIva.ToString() + " €";
+                    lbTotalConIva.Content = totalConIva.ToString() + " €";
                 }
+
 
             }
             catch (FormatException)
@@ -304,23 +319,23 @@ namespace CapaPresentacionWPF
 
                 MessageBox.Show("Faltan datos");
             }
-        }*/
+        }
 
         private void BtnBuscar_Click(object sender, RoutedEventArgs e)
         {
-            
+
             BuscadorArticulo buscadorArticulo = new BuscadorArticulo();
             buscadorArticulo.Buscar = this;
             buscadorArticulo.Opacity = 0.8;
             buscadorArticulo.Show();
 
 
-           
+
         }
 
         public void ArticuloSeleccionado(Articulo articuloSeleleccionado)
         {
-            if(articuloSeleleccionado!=null)
+            if (articuloSeleleccionado != null)
             {
 
                 lbIdProducto.Content = articuloSeleleccionado.ArticuloID;
@@ -335,9 +350,9 @@ namespace CapaPresentacionWPF
 
         public void Ejecutar(Articulo articulo)
         {
-          
-            
-         
+
+            if (articulo != null)
+            {
                 lbIdProducto.Content = articulo.ArticuloID;
                 lbNombreProducto.Content = articulo.Nombre;
                 lbPrecio.Content = articulo.Pvp.ToString();
@@ -345,7 +360,12 @@ namespace CapaPresentacionWPF
 
                 lbPrecioTotal.Content = "";
                 txtCantidad.Text = "";
-            
+
+            }
+
+
         }
+
+
     }
 }
