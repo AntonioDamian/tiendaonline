@@ -1,0 +1,50 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CapaPresentacionWPF" 
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+            
+             x:Class="CapaPresentacionWPF.PruebaCharts" 
+           
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="1250" Background="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}" Loaded="UserControl_Loaded"
+             d:DataContext="{d:DesignInstance local:PruebaCharts}">
+    <Grid  >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition  Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <lvc:PieChart Grid.Column="1" HorizontalAlignment="Left" Height="397"  VerticalAlignment="Top" Width="364" x:Name="pie"  Margin="0"
+                      Series="{Binding PieSeriesCollection2}"  Hoverable="False">
+            <lvc:PieChart.DataTooltip>
+                <lvc:DefaultTooltip BulletSize="10"></lvc:DefaultTooltip>
+            </lvc:PieChart.DataTooltip>
+        </lvc:PieChart>
+        <lvc:PieChart Grid.Column="0" HorizontalAlignment="Left" Height="374"  VerticalAlignment="Top" Width="300" x:Name="pie2" Margin="0"
+                  Series="{Binding }" Hoverable="False">
+            <lvc:PieChart.DataTooltip>
+                <lvc:DefaultTooltip BulletSize="10"></lvc:DefaultTooltip>
+            </lvc:PieChart.DataTooltip>
+        </lvc:PieChart>
+        <lvc:CartesianChart Grid.Column="2" Series="{Binding ColunmSeriesCollection}"  x:Name="cartesian" Hoverable="False">
+            <lvc:CartesianChart.AxisX>
+                <lvc:Axis Labels="{Binding ColumnXLabels }"></lvc:Axis>
+            </lvc:CartesianChart.AxisX>
+            <lvc:CartesianChart.AxisY>
+                <lvc:Axis></lvc:Axis>
+            </lvc:CartesianChart.AxisY>
+            <lvc:CartesianChart.DataTooltip>
+                <lvc:DefaultTooltip BulletSize="10"></lvc:DefaultTooltip>
+            </lvc:CartesianChart.DataTooltip>
+        </lvc:CartesianChart>
+
+        <Button Grid.Column="0" x:Name="button" Content="Button" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="75" Click="Button_Click_1" Margin="282,376,0,0"/>
+
+
+
+
+    </Grid>
+</UserControl>

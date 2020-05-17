@@ -80,8 +80,11 @@ namespace CapaPresentacionWPF
                     GridBackground.Children.Add(usc);   
                     break;
                 case "Ventas":
-                    usc = new UscVentas();
+
+                    usc = new UscEstadisticas();
                     GridBackground.Children.Add(usc);
+                    /*  usc = new UscVentas();
+                       GridBackground.Children.Add(usc);*/
                     break;
 
 

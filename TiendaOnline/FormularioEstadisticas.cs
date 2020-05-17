@@ -26,24 +26,19 @@ namespace TiendaOnline
         NegocioLinped _negLinped;
         List<Linped> _listaLinpeds;
 
-        
-
-
-
-
         public FormularioEstadisticas()
         {
              InitializeComponent();
-            _negPedido = new NegocioPedido();
-            _negLinped = new NegocioLinped();
+          
         }
 
     
 
         private void FormularioEstadisticas_Load(object sender, EventArgs e)
         {
+            _negPedido = new NegocioPedido();
+            _negLinped = new NegocioLinped();
 
-           
             _listaPedidos = new List<Pedido>();
             _listaLinpeds = _negLinped.ObtenerLinped();
           // chart1.ChartAreas.Clear();
