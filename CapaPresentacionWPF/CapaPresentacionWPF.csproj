@@ -118,6 +118,9 @@
     <Compile Include="UscEstadisticas.xaml.cs">
       <DependentUpon>UscEstadisticas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UscInformes.xaml.cs">
+      <DependentUpon>UscInformes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UscUsuarioMantenimiento.xaml.cs">
       <DependentUpon>UscUsuarioMantenimiento.xaml</DependentUpon>
     </Compile>
@@ -178,6 +181,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UscEstadisticas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UscInformes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

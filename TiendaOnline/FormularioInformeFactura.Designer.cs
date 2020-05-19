@@ -31,12 +31,20 @@ namespace TiendaOnline
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnBuscarFactura = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label10 = new System.Windows.Forms.Label();
+            this.errorUsuarioID = new MiLibreria.ErrorTxtBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.errorTxtDni = new MiLibreria.ErrorTxtBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.errorTxtnumeroPedido = new MiLibreria.ErrorTxtBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.errorTxtlocalidad = new MiLibreria.ErrorTxtBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.errorTxtdireccion = new MiLibreria.ErrorTxtBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.errorTxtnombre = new MiLibreria.ErrorTxtBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1Pedido = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -47,14 +55,6 @@ namespace TiendaOnline
             this.label8 = new System.Windows.Forms.Label();
             this.textsubTotal = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.errorUsuarioID = new MiLibreria.ErrorTxtBox();
-            this.errorTxtDni = new MiLibreria.ErrorTxtBox();
-            this.errorTxtnumeroPedido = new MiLibreria.ErrorTxtBox();
-            this.errorTxtlocalidad = new MiLibreria.ErrorTxtBox();
-            this.errorTxtdireccion = new MiLibreria.ErrorTxtBox();
-            this.errorTxtnombre = new MiLibreria.ErrorTxtBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -118,6 +118,31 @@ namespace TiendaOnline
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos cliente";
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(602, 134);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 14;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(27, 28);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(63, 13);
+            this.label10.TabIndex = 13;
+            this.label10.Text = "Usuario ID :";
+            // 
+            // errorUsuarioID
+            // 
+            this.errorUsuarioID.Location = new System.Drawing.Point(126, 25);
+            this.errorUsuarioID.Name = "errorUsuarioID";
+            this.errorUsuarioID.Size = new System.Drawing.Size(100, 20);
+            this.errorUsuarioID.SoloNumeros = false;
+            this.errorUsuarioID.TabIndex = 12;
+            this.errorUsuarioID.Validar = false;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -136,6 +161,15 @@ namespace TiendaOnline
             this.label5.TabIndex = 9;
             this.label5.Text = "DNI :";
             // 
+            // errorTxtDni
+            // 
+            this.errorTxtDni.Location = new System.Drawing.Point(602, 95);
+            this.errorTxtDni.Name = "errorTxtDni";
+            this.errorTxtDni.Size = new System.Drawing.Size(196, 20);
+            this.errorTxtDni.SoloNumeros = false;
+            this.errorTxtDni.TabIndex = 8;
+            this.errorTxtDni.Validar = false;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -144,6 +178,15 @@ namespace TiendaOnline
             this.label4.Size = new System.Drawing.Size(80, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "Numero Pedido";
+            // 
+            // errorTxtnumeroPedido
+            // 
+            this.errorTxtnumeroPedido.Location = new System.Drawing.Point(126, 161);
+            this.errorTxtnumeroPedido.Name = "errorTxtnumeroPedido";
+            this.errorTxtnumeroPedido.Size = new System.Drawing.Size(100, 20);
+            this.errorTxtnumeroPedido.SoloNumeros = false;
+            this.errorTxtnumeroPedido.TabIndex = 6;
+            this.errorTxtnumeroPedido.Validar = false;
             // 
             // label3
             // 
@@ -154,6 +197,15 @@ namespace TiendaOnline
             this.label3.TabIndex = 5;
             this.label3.Text = "Localidad :";
             // 
+            // errorTxtlocalidad
+            // 
+            this.errorTxtlocalidad.Location = new System.Drawing.Point(126, 126);
+            this.errorTxtlocalidad.Name = "errorTxtlocalidad";
+            this.errorTxtlocalidad.Size = new System.Drawing.Size(100, 20);
+            this.errorTxtlocalidad.SoloNumeros = false;
+            this.errorTxtlocalidad.TabIndex = 4;
+            this.errorTxtlocalidad.Validar = false;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -163,6 +215,15 @@ namespace TiendaOnline
             this.label2.TabIndex = 3;
             this.label2.Text = "Direccion :";
             // 
+            // errorTxtdireccion
+            // 
+            this.errorTxtdireccion.Location = new System.Drawing.Point(126, 95);
+            this.errorTxtdireccion.Name = "errorTxtdireccion";
+            this.errorTxtdireccion.Size = new System.Drawing.Size(100, 20);
+            this.errorTxtdireccion.SoloNumeros = false;
+            this.errorTxtdireccion.TabIndex = 2;
+            this.errorTxtdireccion.Validar = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -171,6 +232,15 @@ namespace TiendaOnline
             this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Nombre :";
+            // 
+            // errorTxtnombre
+            // 
+            this.errorTxtnombre.Location = new System.Drawing.Point(126, 55);
+            this.errorTxtnombre.Name = "errorTxtnombre";
+            this.errorTxtnombre.Size = new System.Drawing.Size(100, 20);
+            this.errorTxtnombre.SoloNumeros = false;
+            this.errorTxtnombre.TabIndex = 0;
+            this.errorTxtnombre.Validar = false;
             // 
             // groupBox2
             // 
@@ -267,76 +337,6 @@ namespace TiendaOnline
             this.label7.Size = new System.Drawing.Size(52, 13);
             this.label7.TabIndex = 0;
             this.label7.Text = "Subtotal :";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(27, 28);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(63, 13);
-            this.label10.TabIndex = 13;
-            this.label10.Text = "Usuario ID :";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(602, 134);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 14;
-            // 
-            // errorUsuarioID
-            // 
-            this.errorUsuarioID.Location = new System.Drawing.Point(126, 25);
-            this.errorUsuarioID.Name = "errorUsuarioID";
-            this.errorUsuarioID.Size = new System.Drawing.Size(100, 20);
-            this.errorUsuarioID.SoloNumeros = false;
-            this.errorUsuarioID.TabIndex = 12;
-            this.errorUsuarioID.Validar = false;
-            // 
-            // errorTxtDni
-            // 
-            this.errorTxtDni.Location = new System.Drawing.Point(602, 95);
-            this.errorTxtDni.Name = "errorTxtDni";
-            this.errorTxtDni.Size = new System.Drawing.Size(196, 20);
-            this.errorTxtDni.SoloNumeros = false;
-            this.errorTxtDni.TabIndex = 8;
-            this.errorTxtDni.Validar = false;
-            // 
-            // errorTxtnumeroPedido
-            // 
-            this.errorTxtnumeroPedido.Location = new System.Drawing.Point(126, 161);
-            this.errorTxtnumeroPedido.Name = "errorTxtnumeroPedido";
-            this.errorTxtnumeroPedido.Size = new System.Drawing.Size(100, 20);
-            this.errorTxtnumeroPedido.SoloNumeros = false;
-            this.errorTxtnumeroPedido.TabIndex = 6;
-            this.errorTxtnumeroPedido.Validar = false;
-            // 
-            // errorTxtlocalidad
-            // 
-            this.errorTxtlocalidad.Location = new System.Drawing.Point(126, 126);
-            this.errorTxtlocalidad.Name = "errorTxtlocalidad";
-            this.errorTxtlocalidad.Size = new System.Drawing.Size(100, 20);
-            this.errorTxtlocalidad.SoloNumeros = false;
-            this.errorTxtlocalidad.TabIndex = 4;
-            this.errorTxtlocalidad.Validar = false;
-            // 
-            // errorTxtdireccion
-            // 
-            this.errorTxtdireccion.Location = new System.Drawing.Point(126, 95);
-            this.errorTxtdireccion.Name = "errorTxtdireccion";
-            this.errorTxtdireccion.Size = new System.Drawing.Size(100, 20);
-            this.errorTxtdireccion.SoloNumeros = false;
-            this.errorTxtdireccion.TabIndex = 2;
-            this.errorTxtdireccion.Validar = false;
-            // 
-            // errorTxtnombre
-            // 
-            this.errorTxtnombre.Location = new System.Drawing.Point(126, 55);
-            this.errorTxtnombre.Name = "errorTxtnombre";
-            this.errorTxtnombre.Size = new System.Drawing.Size(100, 20);
-            this.errorTxtnombre.SoloNumeros = false;
-            this.errorTxtnombre.TabIndex = 0;
-            this.errorTxtnombre.Validar = false;
             // 
             // FormularioInformeFactura
             // 
