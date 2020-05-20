@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Capa_entidades;
+using Capa_negocio;
 
 namespace CapaPresentacionWPF
 {
@@ -20,9 +22,26 @@ namespace CapaPresentacionWPF
     /// </summary>
     public partial class UscInformes : UserControl
     {
+
+        Negocio _usuario;
+        NegocioPedido _negPedido;
+        List<Pedido> _listaPedidos = new List<Pedido>();
+
         public UscInformes()
         {
             InitializeComponent();
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            _usuario = new Negocio();
+            _negPedido = new NegocioPedido();
+        }
+
+        private void BuscarFactura_Click(object sender, RoutedEventArgs e)
+        {
+            BusquedaPedido busPedido = new BusquedaPedido();
+            busPedido.Show();
         }
     }
 }

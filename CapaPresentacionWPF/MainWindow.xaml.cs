@@ -81,10 +81,12 @@ namespace CapaPresentacionWPF
                     break;
                 case "Ventas":
 
-                    usc = new UscEstadisticas();
+                    usc = new UscInformes();
                     GridBackground.Children.Add(usc);
-                    /*  usc = new UscVentas();
-                       GridBackground.Children.Add(usc);*/
+                    /*  usc = new UscEstadisticas();
+                      GridBackground.Children.Add(usc);
+                        usc = new UscVentas();
+                         GridBackground.Children.Add(usc);*/
                     break;
 
 

@@ -34,7 +34,7 @@ namespace Capa_datos
             }
             catch (Exception e)
             {
-                throw new ExternalException("Error:" + e);
+                   throw new ExternalException("Error:" + e);
             } 
 
             return listaUsuarios;
