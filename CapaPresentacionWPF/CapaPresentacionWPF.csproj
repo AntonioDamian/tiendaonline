@@ -102,6 +102,9 @@
     <Compile Include="BuscadorUsuario.xaml.cs">
       <DependentUpon>BuscadorUsuario.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BusquedaPedido.xaml.cs">
+      <DependentUpon>BusquedaPedido.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CambioContrasenya.xaml.cs">
       <DependentUpon>CambioContrasenya.xaml</DependentUpon>
     </Compile>
@@ -141,6 +144,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="BuscadorUsuario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BusquedaPedido.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
