@@ -41,7 +41,7 @@ namespace CapaPresentacionWPF
         private void BuscarFactura_Click(object sender, RoutedEventArgs e)
         {
             BusquedaPedido busPedido = new BusquedaPedido();
-            busPedido.Show();
+            busPedido.ShowDialog();
         }
     }
 }

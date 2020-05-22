@@ -96,26 +96,17 @@ namespace CapaPresentacionWPF
             }
 
 
-            // dv = new DataView(Dt);
+          
 
             dtgPedidos.DataContext = Dt.DefaultView;
 
+            comboBoxfiltro.Text = "Seleccionar Filtro";
             comboBoxfiltro.Items.Add("Nombre Usuario");
             comboBoxfiltro.Items.Add("Fecha Pedido");
             comboBoxfiltro.Items.Add("Nombre Usuario/Fecha Pedido");
         }
 
-        private void TxtNombreUsuario_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            if (string.IsNullOrEmpty(TxtNombreUsuario.Text.Trim()) == false)
-            {
-
-                Dt.DefaultView.RowFilter = $"Nombre like'{TxtNombreUsuario.Text}%'";
-            }
-
-
-        }
-
+     
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             int indice = comboBoxfiltro.SelectedIndex;
@@ -123,21 +114,56 @@ namespace CapaPresentacionWPF
             if(indice==0)
             {
                 TxtNombreUsuario.IsEnabled = true;
+                dateFecha.IsEnabled = false;
             }
             if(indice==1)
             {
                 dateFecha.IsEnabled = true;
+                TxtNombreUsuario.IsEnabled = false;
+            }
+            if(indice ==2)
+            {
+                TxtNombreUsuario.IsEnabled = true;
+                dateFecha.IsEnabled = true;
             }
         }
+        private void TxtNombreUsuario_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (string.IsNullOrEmpty(TxtNombreUsuario.Text.Trim()) == false)
+            {
+
+                Dt.DefaultView.RowFilter = $"Nombre like'{TxtNombreUsuario.Text}%'";
+            }
+        }
+
 
         private void DateFecha_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
             DateTime date = dateFecha.SelectedDate.Value;
 
-            DataView dv = new DataView(Dt);
-            dv.RowFilter =String.Format("Fecha ='{0}'",date);
+           /* DataView dv = new DataView(Dt);
+            dv.RowFilter =String.Format("Fecha ='{0}'",date);*/
 
              Dt.DefaultView.RowFilter = String.Format("Fecha ='{0}'",date);
+        }
+
+        private void BtnSeleccionar_Click(object sender, RoutedEventArgs e)
+        {
+            if (dtgPedidos.Items.Count == 0)
+            {
+                return;
+            }
+            else
+            {
+               var result= dtgPedidos.SelectedItems;
+            }
+
+            
+        }
+
+        private void Btncancelar_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

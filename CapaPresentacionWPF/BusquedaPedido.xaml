@@ -53,8 +53,8 @@
                 <ColumnDefinition/>
                 <ColumnDefinition Width=".5*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="button" Content="Selecccionar" Grid.Column="1" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="127" Margin="10,18"/>
-            <Button x:Name="button1"  Content="Cancelar" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" Width="127" Margin="10,18"/>
+            <Button x:Name="btnSeleccionar" Content="Selecccionar" Grid.Column="1" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="127" Margin="10,18" Click="BtnSeleccionar_Click"/>
+            <Button x:Name="btncancelar"  Content="Cancelar" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" Width="127" Margin="10,18" Click="Btncancelar_Click"/>
         </Grid>
     </Grid>
 </Window>

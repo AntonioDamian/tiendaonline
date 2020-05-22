@@ -115,9 +115,7 @@ namespace TiendaOnline
                         lista = _ListPedidos[i].Linpeds;
                         }
                   
-                }
-
-               
+                }              
 
 
                 Close();
