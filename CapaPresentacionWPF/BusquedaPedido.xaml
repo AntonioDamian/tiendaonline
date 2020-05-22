@@ -19,7 +19,7 @@
             <RowDefinition Height="2*"/>
             <RowDefinition Height=".5*"/>
         </Grid.RowDefinitions>
-        <ComboBox x:Name="comboBox"  Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1"  Width="120"/>
+        <ComboBox x:Name="comboBoxfiltro"  Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1"  Width="120" SelectionChanged="ComboBox_SelectionChanged"/>
         <Grid Grid.Row="1" Grid.Column="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width=".75*" />
@@ -29,9 +29,9 @@
                 <ColumnDefinition Width=".2*"/>
             </Grid.ColumnDefinitions>
             <TextBlock Text="Nombre Usuario" TextAlignment="Center" VerticalAlignment="Center"/>
-            <TextBox x:Name="TxtNombreUsuario" Grid.Column="1"  Width="100" Height="25"/>
+            <TextBox x:Name="TxtNombreUsuario" Grid.Column="1"  Width="100" Height="25" TextChanged="TxtNombreUsuario_TextChanged"/>
             <TextBlock Text="Fecha Pedido" TextAlignment="Center" VerticalAlignment="Center" Grid.Column="2"/>
-            <DatePicker Grid.Column="3" Width="100"/>
+            <DatePicker x:Name="dateFecha" Margin="30,22,10,22" Grid.Column="3" SelectedDateChanged="DateFecha_SelectedDateChanged" />
         </Grid>
         <DataGrid x:Name="dtgPedidos" Grid.Column="2" HorizontalAlignment="Stretch"   Grid.Row="2" VerticalAlignment="Stretch"  AutoGenerateColumns="False" 
               ItemsSource="{Binding }" >
@@ -53,8 +53,8 @@
                 <ColumnDefinition/>
                 <ColumnDefinition Width=".5*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="button" Content="Selecccionar" Grid.Column="1" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="127" Margin="10,18"/>
-            <Button x:Name="button1"  Content="Cancelar" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" Width="127" Margin="10,18"/>
+            <Button x:Name="btnSeleccionar" Content="Selecccionar" Grid.Column="1" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="127" Margin="10,18" Click="BtnSeleccionar_Click"/>
+            <Button x:Name="btncancelar"  Content="Cancelar" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" Width="127" Margin="10,18" Click="Btncancelar_Click"/>
         </Grid>
     </Grid>
 </Window>
