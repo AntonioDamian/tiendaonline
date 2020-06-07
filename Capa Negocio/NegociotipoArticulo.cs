@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Capa_Datos;
 using Capa_entidades;
-using System.Collections.ObjectModel;
+using System.Collections.ObjectModel;									 
 
 namespace Capa_negocio
 {
@@ -17,6 +17,8 @@ namespace Capa_negocio
         ObservableCollection<TipoArticulo> ListaTipos;
         List<TipoArticulo> aux = new List<TipoArticulo>();
 
+
+
         public NegociotipoArticulo()
         {
             _tipoArticuloADO = new TipoArticuloADO();
@@ -27,10 +29,6 @@ namespace Capa_negocio
         {
             return _tipoArticuloADO.LeerTipoTipoArticulos();
         }
-
-     
-
-
         public ObservableCollection<TipoArticulo>ListadoTipos()
         {
             ListaTipos = new ObservableCollection<TipoArticulo>();
@@ -51,14 +49,5 @@ namespace Capa_negocio
 
         }
       
-
-       
-       
-
-
-
-
-
-
     }
 }

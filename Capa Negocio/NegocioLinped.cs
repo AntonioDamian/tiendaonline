@@ -23,6 +23,11 @@ namespace Capa_negocio
             return _linpedADO.LeerLinped();
         }
 
+        public bool NuevoLinped(int pedidoID, int linea, string articuloID, decimal importe, int cantidad)
+        {
+            return _linpedADO.InsertarLinped(pedidoID, linea, articuloID, importe, cantidad);
+        }
+
         public bool Actualizar(Linped linped)
         {
 

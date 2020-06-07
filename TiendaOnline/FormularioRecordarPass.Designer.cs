@@ -44,9 +44,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(236, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 13);
+            this.label1.Size = new System.Drawing.Size(161, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Recuperar Contraseña";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -54,9 +55,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(70, 53);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 13);
+            this.label2.Size = new System.Drawing.Size(132, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre Usuario";
             // 
@@ -79,29 +81,38 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(70, 93);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 13);
+            this.label3.Size = new System.Drawing.Size(97, 18);
             this.label3.TabIndex = 3;
             this.label3.Text = "Dni Usuario";
             // 
             // btnRecuperar
             // 
-            this.btnRecuperar.Location = new System.Drawing.Point(239, 178);
+            this.btnRecuperar.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecuperar.Image = global::TiendaOnline.Properties.Resources.Buscar_p;
+            this.btnRecuperar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRecuperar.Location = new System.Drawing.Point(317, 177);
             this.btnRecuperar.Name = "btnRecuperar";
-            this.btnRecuperar.Size = new System.Drawing.Size(111, 23);
+            this.btnRecuperar.Size = new System.Drawing.Size(111, 48);
             this.btnRecuperar.TabIndex = 5;
             this.btnRecuperar.Text = "Recuperar";
+            this.btnRecuperar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRecuperar.UseVisualStyleBackColor = true;
             this.btnRecuperar.Click += new System.EventHandler(this.btnRecuperar_Click);
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(393, 178);
+            this.btnSalir.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Image = global::TiendaOnline.Properties.Resources.door_in;
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalir.Location = new System.Drawing.Point(145, 177);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(100, 48);
             this.btnSalir.TabIndex = 6;
             this.btnSalir.Text = "Salir";
+            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -121,6 +132,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(542, 281);
             this.Controls.Add(this.lbError);
             this.Controls.Add(this.btnSalir);

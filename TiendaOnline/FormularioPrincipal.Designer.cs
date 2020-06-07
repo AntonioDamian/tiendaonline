@@ -87,7 +87,8 @@ namespace TiendaOnline
             this.BarraMenuFormPrincipal.Location = new System.Drawing.Point(0, 0);
             this.BarraMenuFormPrincipal.MdiWindowListItem = this.menuVentana;
             this.BarraMenuFormPrincipal.Name = "BarraMenuFormPrincipal";
-            this.BarraMenuFormPrincipal.Size = new System.Drawing.Size(1264, 24);
+            this.BarraMenuFormPrincipal.Padding = new System.Windows.Forms.Padding(10, 3, 0, 3);
+            this.BarraMenuFormPrincipal.Size = new System.Drawing.Size(1284, 25);
             this.BarraMenuFormPrincipal.TabIndex = 0;
             this.BarraMenuFormPrincipal.Text = "menuStrip1";
             // 
@@ -96,7 +97,7 @@ namespace TiendaOnline
             this.menuArchivo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.salirToolStripMenuItem});
             this.menuArchivo.Name = "menuArchivo";
-            this.menuArchivo.Size = new System.Drawing.Size(60, 20);
+            this.menuArchivo.Size = new System.Drawing.Size(60, 19);
             this.menuArchivo.Text = "A&rchivo";
             // 
             // salirToolStripMenuItem
@@ -113,7 +114,7 @@ namespace TiendaOnline
             this.modificarEliminarToolStripMenuItem,
             this.mantenimientoUsuariosToolStripMenuItem});
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(64, 19);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             // 
             // insertarToolStripMenuItem
@@ -142,7 +143,7 @@ namespace TiendaOnline
             this.productosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.consultarToolStripMenuItem});
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(73, 19);
             this.productosToolStripMenuItem.Text = "Productos";
             // 
             // consultarToolStripMenuItem
@@ -159,7 +160,7 @@ namespace TiendaOnline
             this.consultaModificacionToolStripMenuItem,
             this.eliminarToolStripMenuItem});
             this.menuUsuarios.Name = "menuUsuarios";
-            this.menuUsuarios.Size = new System.Drawing.Size(61, 20);
+            this.menuUsuarios.Size = new System.Drawing.Size(61, 19);
             this.menuUsuarios.Text = "Pedidos";
             // 
             // nuevoToolStripMenuItem
@@ -186,7 +187,7 @@ namespace TiendaOnline
             this.estadisticasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.estadisticasToolStripMenuItem1});
             this.estadisticasToolStripMenuItem.Name = "estadisticasToolStripMenuItem";
-            this.estadisticasToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
+            this.estadisticasToolStripMenuItem.Size = new System.Drawing.Size(79, 19);
             this.estadisticasToolStripMenuItem.Text = "Estadisticas";
             // 
             // estadisticasToolStripMenuItem1
@@ -202,7 +203,7 @@ namespace TiendaOnline
             this.facturaToolStripMenuItem,
             this.stockToolStripMenuItem});
             this.menuInformes.Name = "menuInformes";
-            this.menuInformes.Size = new System.Drawing.Size(66, 20);
+            this.menuInformes.Size = new System.Drawing.Size(66, 19);
             this.menuInformes.Text = "&Informes";
             // 
             // facturaToolStripMenuItem
@@ -225,7 +226,7 @@ namespace TiendaOnline
             this.menuOrganizarVertical,
             this.menuOrganizarHorizontal});
             this.menuVentana.Name = "menuVentana";
-            this.menuVentana.Size = new System.Drawing.Size(61, 20);
+            this.menuVentana.Size = new System.Drawing.Size(61, 19);
             this.menuVentana.Text = "&Ventana";
             // 
             // menuOrganizarVertical
@@ -245,7 +246,7 @@ namespace TiendaOnline
             // menuAcercaDe
             // 
             this.menuAcercaDe.Name = "menuAcercaDe";
-            this.menuAcercaDe.Size = new System.Drawing.Size(80, 20);
+            this.menuAcercaDe.Size = new System.Drawing.Size(80, 19);
             this.menuAcercaDe.Text = "&Acerca de...";
             this.menuAcercaDe.Click += new System.EventHandler(this.menuAcercaDe_Click);
             // 
@@ -289,9 +290,10 @@ namespace TiendaOnline
             this.toolHoraSistema,
             this.toolStripStatusLabel4,
             this.toolTiempoTranscurrido});
-            this.statusStripApiTienda.Location = new System.Drawing.Point(0, 665);
+            this.statusStripApiTienda.Location = new System.Drawing.Point(0, 983);
             this.statusStripApiTienda.Name = "statusStripApiTienda";
-            this.statusStripApiTienda.Size = new System.Drawing.Size(1264, 22);
+            this.statusStripApiTienda.Padding = new System.Windows.Forms.Padding(2, 0, 23, 0);
+            this.statusStripApiTienda.Size = new System.Drawing.Size(1284, 22);
             this.statusStripApiTienda.TabIndex = 4;
             this.statusStripApiTienda.Text = "Estado";
             // 
@@ -317,7 +319,7 @@ namespace TiendaOnline
             // toolStripStatusLabel4
             // 
             this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
-            this.toolStripStatusLabel4.Size = new System.Drawing.Size(117, 17);
+            this.toolStripStatusLabel4.Size = new System.Drawing.Size(118, 17);
             this.toolStripStatusLabel4.Text = "Tiempo en ejecucion";
             // 
             // toolTiempoTranscurrido
@@ -328,18 +330,22 @@ namespace TiendaOnline
             // 
             // FormularioPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 687);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(1284, 1005);
             this.Controls.Add(this.statusStripApiTienda);
             this.Controls.Add(this.BarraMenuFormPrincipal);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.BarraMenuFormPrincipal;
-            this.MaximumSize = new System.Drawing.Size(1280, 1024);
-            this.MinimumSize = new System.Drawing.Size(1278, 726);
+            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.MaximumSize = new System.Drawing.Size(2123, 1403);
+            this.MinimumSize = new System.Drawing.Size(1278, 982);
             this.Name = "FormularioPrincipal";
             this.Text = "Usuario: Usuario conectado";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormularioPrincipal_FormClosing);
             this.Load += new System.EventHandler(this.FormularioPrincipal_Load);
             this.BarraMenuFormPrincipal.ResumeLayout(false);

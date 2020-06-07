@@ -34,8 +34,8 @@ namespace Capa_datos
             }
             catch (Exception e)
             {
-                   throw new ExternalException("Error:" + e);
-            } 
+                throw new ExternalException("Error:" + e);
+            }
 
             return listaUsuarios;
         }
@@ -43,7 +43,7 @@ namespace Capa_datos
         {
             List<Usuario> listaUsuarios = new List<Usuario>();
             string aux;
-
+             
             try
             {
                 HttpResponseMessage response = client.GetAsync("api/usuarios/"+id).Result;
@@ -62,8 +62,7 @@ namespace Capa_datos
             return listaUsuarios;
         }
         // Creo un nuevo usuario en la BD
-        public bool InsertarUsuario( string email, string password, string nombre, string apellidos, string dni, string telefono,
-            string calle, string calle2, string codpos, string puebloID, string provinciaID, DateTime? nacido)
+        public bool InsertarUsuario( string email, string password, string nombre, string apellidos, string dni, string telefono, string calle, string calle2, string codpos, string puebloID, string provinciaID, DateTime? nacido)
         {
             try
             {

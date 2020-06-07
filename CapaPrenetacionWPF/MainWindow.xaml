@@ -1,0 +1,458 @@
+﻿<Window x:Class="CapaPresentacionWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+          xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"     
+        xmlns:local="clr-namespace:CapaPresentacionWPF"      
+        mc:Ignorable="d"
+        x:Name="thisUC"
+       Title="TiendaOnLine" Height="960" Width="1280" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" >
+    <Window.Resources>
+      
+
+        <local:BinaryImageConverter x:Key="imgConverter"/>
+
+        <!--#region STORYBOARD PARA ABRIR EL MENU LATERAL-->
+        <Storyboard x:Key="MenuOpen">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
+                <EasingDoubleKeyFrame KeyTime="0" Value="90" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="300" />
+            </DoubleAnimationUsingKeyFrames>
+            <!--CONFIGURACIÓN PARA EL MENÚ LATERAL-->
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="borderHome">
+                <EasingDoubleKeyFrame KeyTime="0" Value="70" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="270" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="borderUsuario">
+                <EasingDoubleKeyFrame KeyTime="0" Value="70" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="270" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="borderProducto">
+                
+                <EasingDoubleKeyFrame KeyTime="0" Value="70" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="270" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="borderPedidos">
+                <EasingDoubleKeyFrame KeyTime="0" Value="70" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="270" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="borderEstadisticas">
+                <EasingDoubleKeyFrame KeyTime="0" Value="70" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="270" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="borderInformes">
+                <EasingDoubleKeyFrame KeyTime="0" Value="70" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="270" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="borderAcercaDe">
+                <EasingDoubleKeyFrame KeyTime="0" Value="70" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="270" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="borderSalir">
+                <EasingDoubleKeyFrame KeyTime="0" Value="70" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="270" />
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <!--#endregion-->
+
+        <!--#region STORYBOARD PARA CERRAR EL MENU LATERAL-->
+        <Storyboard x:Key="MenuClose">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
+                <EasingDoubleKeyFrame KeyTime="0" Value="300" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="90" />
+            </DoubleAnimationUsingKeyFrames>
+            <!--PRUEBA PARA ENCOGER EL BORDE DE LOS BOTONES DEL MENU-->
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="borderHome">
+                <EasingDoubleKeyFrame KeyTime="0" Value="270" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="70" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="borderUsuario">
+                <EasingDoubleKeyFrame KeyTime="0" Value="270" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="70" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="borderProducto">
+                <EasingDoubleKeyFrame KeyTime="0" Value="270" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="70" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="borderPedidos">
+                <EasingDoubleKeyFrame KeyTime="0" Value="270" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="70" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="borderEstadisticas">
+                <EasingDoubleKeyFrame KeyTime="0" Value="270" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="70" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="borderInformes">
+                <EasingDoubleKeyFrame KeyTime="0" Value="270" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="70" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="borderAcercaDe">
+                <EasingDoubleKeyFrame KeyTime="0" Value="270" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="70" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="borderSalir">
+                <EasingDoubleKeyFrame KeyTime="0" Value="270" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="70" />
+            </DoubleAnimationUsingKeyFrames>
+            <!--#region Escondemos los submenús-->
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="listAñadirUsuario" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Collapsed}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="listConsultarProducto" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Collapsed}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="listNuevoPedido" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Collapsed}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="listInformeFactura" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Collapsed}"/>
+            </ObjectAnimationUsingKeyFrames>
+        
+            <!--#endregion-->
+        </Storyboard>
+        <!--#endregion-->
+
+        <!--#region STORYBOARD PARA DESPLEGAR EL SUBMENU DE LOS USUARIOS DE LA APP-->
+        <Storyboard x:Key="MostrarOpcionesUsuario">
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="listAñadirUsuario" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>           
+        </Storyboard>
+        <!--#region-->
+
+        <!--#region STORYBOARD PARA DESPLEGAR EL SUBMENU DE LOS PRODUCTOS-->
+        <Storyboard x:Key="MostrarOpcionesProducto">
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="listConsultarProducto" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>           
+        </Storyboard>
+        <!--#region-->
+        <!--#region STORYBOARD PARA DESPLEGAR EL SUBMENU DE LOS PEDIDOS-->
+        <Storyboard x:Key="MostrarOpcionesPedidos">
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="listNuevoPedido" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <!--#region-->
+
+        <!--#region STORYBOARD PARA DESPLEGAR EL SUBMENU DE LOS INFORMES-->
+        <Storyboard x:Key="MostrarOpcionesInforme">            
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="listInformeFactura" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+          
+        </Storyboard>
+        <!--#region-->
+
+    </Window.Resources>
+
+    <!--TRIGGERS O DESENCADENADOR DE EVENTOS-->
+    <Window.Triggers>
+        <!--#region LOS DOS DESENCADENADORES SIGUIENTES SON PARA MOSTRAR EL MENÚ AL PONER EL RATÓN ENCIMA-->
+        <EventTrigger RoutedEvent="Grid.MouseEnter" SourceName="GridMenu">
+            <BeginStoryboard Storyboard="{StaticResource MenuOpen}" />
+        </EventTrigger>
+        <EventTrigger RoutedEvent="Grid.MouseLeave" SourceName="GridMenu">
+            <BeginStoryboard Storyboard="{StaticResource MenuClose}" />
+        </EventTrigger>
+        <!--#endregion-->
+
+        <!--#region DESENCADENADORES PARA MOSTRAR/OCULTAR LOS SUBMENUS-->
+        <EventTrigger RoutedEvent="ListViewItem.PreviewMouseDown" SourceName="listUsuario">
+            <BeginStoryboard Storyboard="{StaticResource MostrarOpcionesUsuario}" />
+        </EventTrigger>
+        <EventTrigger RoutedEvent="ListViewItem.PreviewMouseDown" SourceName="listProducto">
+            <BeginStoryboard Storyboard="{StaticResource MostrarOpcionesProducto}" />
+        </EventTrigger>
+        <EventTrigger RoutedEvent="ListViewItem.PreviewMouseDown" SourceName="listPedidos">
+            <BeginStoryboard Storyboard="{StaticResource MostrarOpcionesPedidos}" />
+        </EventTrigger>
+        <EventTrigger RoutedEvent="ListViewItem.PreviewMouseDown" SourceName="listInformes">
+            <BeginStoryboard Storyboard="{StaticResource MostrarOpcionesInforme}" />
+        </EventTrigger>
+
+        <!--#endregion-->
+    </Window.Triggers>
+
+    <Grid x:Name="GridBarraSuperior" Background="White">
+        <!--#region GRID QUE CONTIENE EL CONTENIDO A MOSTRAR AL USUARIO: OCUPA EL RESTO DE ESPACIO QUE DEJAN LAS OTRAS SECCIONES-->
+        <Grid x:Name="GridContenido" Width="1190" HorizontalAlignment="Left" Margin="0 70 0 45" Background="#8FAFCA" />
+        <!--#endregion-->
+        <Grid Height="70" VerticalAlignment="Top" Background="#FF4682B4">
+
+            <Grid.Resources>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Foreground" Value="White"/>
+                </Style>
+            </Grid.Resources>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+
+            <!--AQUÍ MUESTRO EL NOMBRE DE LA APLICACIÓN Y UN MENÚ CONTEXTUAL-->
+            <!--<StackPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Orientation="Horizontal">
+                <materialDesign:PopupBox Margin="10" PlacementMode="BottomAndAlignCentres" StaysOpen="False" Foreground="White">
+                    <StackPanel Width="150" Background="White">
+                        <Button Content="Acerca de..." Foreground="Black" />
+                        <Separator />
+                        <Button x:Name="btnPopupSalir" Content="Salir" Foreground="Black" />
+                    </StackPanel>
+                </materialDesign:PopupBox>
+            </StackPanel>-->
+
+            <!--AQUÍ VOY A MOSTRAR EL NOMBRE DEL USUARIO-->
+            <Grid x:Name="datosUsuarioAPP1" Grid.Column="1" Margin="0 0 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel x:Name="datosUsuarioAPP" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="left" Orientation="Horizontal" Margin="10,18,0,18" Height="34" Width="auto">
+                    <TextBlock Text="Nombre: " FontSize="22" Margin="5 2"/>
+                    <TextBlock Text="{Binding Nombre}" FontSize="22" Margin="5 2"/>
+                </StackPanel>
+
+
+                <Border Margin="10 0 0 0"
+                    CornerRadius="5"
+                    BorderBrush="White"
+                    BorderThickness="1"
+                    Width="60"
+                    Height="60">
+                    <Image x:Name="imgFotografia2" Source="Recursos/imagen_no_disponible_v2.png"
+                           Stretch="UniformToFill" StretchDirection="Both" Grid.Column="0" Width="auto" Height="auto" >
+                        <Image.Effect>
+                            <DropShadowEffect/>
+                        </Image.Effect>
+                    </Image>
+                </Border>
+                <Border Margin="10 0 0 0"
+                    CornerRadius="5"
+                    BorderBrush="White"
+                    BorderThickness="1"
+                    Width="60"
+                    Height="60">
+                    <Image x:Name="imgFotografia" Source="{Binding Path=Fotografia, Converter={StaticResource imgConverter}}"
+                           Stretch="UniformToFill" StretchDirection="Both" Grid.Column="0" Width="auto" Height="auto" >
+                        <Image.Effect>
+                            <DropShadowEffect/>
+                        </Image.Effect>
+                    </Image>
+                </Border>
+            </Grid>
+
+        </Grid>
+        <!--#endregion-->
+        <Grid x:Name="GridBarraInferior" Height="45" VerticalAlignment="Bottom" Background="#FF4682B4">
+
+            <Grid.Resources>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Foreground" Value="White"/>
+                </Style>
+            </Grid.Resources>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.2*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Orientation="Horizontal" Margin="5 0">
+                <TextBlock Text="Hora:" FontSize="16" Margin="5 2"/>
+                <TextBlock x:Name="Hora" Text="" FontSize="16" Margin="5 2"/>
+                <TextBlock Text="- Tiempo ejecución:" FontSize="16" Margin="5 2"/>
+                <TextBlock x:Name="TiempoEjecucion" Text="{Binding StringFormat=\{0:hh\\:mm\\:ss\}}" FontSize="16" Margin="5 2"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Orientation="Horizontal" Margin="5 0">
+                <TextBlock Text="Información de errores de la aplicación" Grid.Column="3" FontSize="16" Margin="5 2" Visibility="Collapsed"/>
+            </StackPanel>
+            <StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Left" Orientation="Horizontal" Margin="15 0">
+                <TextBlock Text="Tienda WPF ©2020" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="16"/>
+            </StackPanel>
+        </Grid>
+        <!--#endregion-->
+        <!--NOTA: cambiar el width a 90 al terminar de configurar el aspecto visual de los botones-->
+        <Grid x:Name="GridMenu" Width="90" HorizontalAlignment="Right" Background="#FF185A91">
+            <StackPanel>
+               
+                <ListView ScrollViewer.HorizontalScrollBarVisibility="Hidden" Foreground="FloralWhite"
+                          FontSize="25">
+
+                    <!--#region Estilos del ListView Menú Latreal-->
+                    <ListView.Resources>
+                        <!--ESTILO PARA EL BORDER-->
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="Margin" Value="0"/>
+                            <!--<Setter Property="Width" Value="230"/>-->
+                            <Setter Property="Width" Value="70"/>
+                            <Setter Property="Height" Value="70"/>
+                            <Setter Property="CornerRadius" Value="15"/>
+                            <Setter Property="BorderBrush" Value="White"/>
+                            <Setter Property="BorderThickness" Value="5"/>
+                        </Style>
+                        <!--ESTILO PARA EL STACKPANEL-->
+                        <Style TargetType="{x:Type StackPanel}">
+                            <Setter Property="Orientation" Value="Horizontal"/>
+                            <Setter Property="Width" Value="auto"/>
+                        </Style>
+                        <!--ESTILO PARA EL STACKPANEL-->
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="Width" Value="auto"/>
+                            <Setter Property="Margin" Value="10 0 0 0 " />
+                            <Setter Property="VerticalAlignment" Value="Center" />
+                        </Style>
+                    </ListView.Resources>
+                    <!--#endregion-->
+
+                    <!--#region ListView.ItemContainerStyle-->
+                    <ListView.ItemContainerStyle>
+                        <!--ESTILO PARA LISTVIEWITEM-->
+                        <Style TargetType="{x:Type ListViewItem}">
+                            <Setter Property="Margin" Value="5"/>
+                            <Setter Property="Width" Value="auto"/>
+                            <Setter Property="Height" Value="80"/>
+                            <EventSetter Event="UIElement.PreviewMouseLeftButtonDown" Handler="ListViewItem_PreviewMouseLeftButtonDown"/>
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                    <!--#endregion-->
+
+                    <!--PANTALLA PRINCIPAL-->
+                    <ListViewItem x:Name="listHome">
+                        <Border x:Name="borderHome">
+                            <StackPanel>
+                                <materialDesign:PackIcon Kind="Home" Width="40" Height="40" VerticalAlignment="Center" Margin="10 0"/>
+                                <TextBlock Text="Home"/>
+                            </StackPanel>
+                        </Border>
+                    </ListViewItem>
+
+                    <!--#region MENÚ DE USUARIO-->
+                    <ListViewItem x:Name="listUsuario">
+                        <Border x:Name="borderUsuario">
+                            <StackPanel>
+                                <materialDesign:PackIcon Kind="Account" Width="40" Height="40" VerticalAlignment="Center" Margin="10 0"/>
+                                <TextBlock Text="Usuario APP"/>
+                            </StackPanel>
+                        </Border>
+                    </ListViewItem>
+
+                    <!--#region SUBMENÚ DE USUARIOS-->
+                    <ListViewItem x:Name="listAñadirUsuario" Visibility="Collapsed">
+                        <Border x:Name="borderAñadirUsuario" Width="210" Margin="35 0 0 0">
+                            <StackPanel>
+                                <materialDesign:PackIcon Kind="AccountPlus" Width="40" Height="40" VerticalAlignment="Center" Margin="10 0"/>
+                                <TextBlock Text="MantenimientoUsuario"/>
+                            </StackPanel>
+                        </Border>
+                    </ListViewItem>
+                 
+                    <!--#endregion SUBMENÚ DE USUARIOS-->
+                    <!--#endregion MENÚ DE USUARIO-->
+
+                    <!--#region MENÚ DE PRODUCTO-->
+                    <ListViewItem x:Name="listProducto">
+                        <Border x:Name="borderProducto">
+                            <StackPanel>
+                                <materialDesign:PackIcon Kind="camera" Width="40" Height="40" VerticalAlignment="Center" Margin="10 0"/>
+                                <TextBlock Text="Producto"/>
+                            </StackPanel>
+                        </Border>
+                    </ListViewItem>
+                    <!--#region SUBMENÚ DE PRODUCTO-->
+                    <ListViewItem x:Name="listConsultarProducto" Visibility="Collapsed">
+                        <Border x:Name="borderConsultarProducto" Width="210" Margin="35 0 0 0">
+                            <StackPanel>
+                                <materialDesign:PackIcon Kind="MagnifyPlus" Width="40" Height="40" VerticalAlignment="Center" Margin="10 0"/>
+                                <TextBlock Text="Consultar"/>
+                            </StackPanel>
+                        </Border>
+                    </ListViewItem>
+               
+                    <!--#endregion-->
+                    <!--#endregion-->
+
+                    <!--#region MENÚ DE PEDIDOS-->
+                <ListViewItem x:Name="listPedidos">
+                        <Border x:Name="borderPedidos">
+                            <StackPanel>
+                                <materialDesign:PackIcon Kind="CartPlus" Width="40" Height="40" VerticalAlignment="Center" Margin="10 0"/>
+                                <TextBlock Text="Pedidos"/>
+                            </StackPanel>
+                        </Border>
+                    </ListViewItem>
+                    <!--#region SUBMENÚ DE PEDIDOS-->
+                    <ListViewItem x:Name="listNuevoPedido" Visibility="Collapsed">
+                        <Border x:Name="borderNuevoPedido" Width="210" Margin="35 0 0 0">
+                            <StackPanel>
+                                <materialDesign:PackIcon Kind="CartArrowDown" Width="40" Height="40" VerticalAlignment="Center" Margin="10 0"/>
+                                <TextBlock Text="Nuevo Pedido"/>
+                            </StackPanel>
+                        </Border>
+                    </ListViewItem>
+                    <!--#endregion MENÚ DE PEDIDOS-->
+
+                    <!--#region MENÚ DE ESTADISTICAS-->
+                    <ListViewItem x:Name="listEstadisticas">
+                        <Border x:Name="borderEstadisticas">
+                            <StackPanel>
+                                <materialDesign:PackIcon Kind="ChartPie" Width="40" Height="40" VerticalAlignment="Center" Margin="10 0"/>
+                                <TextBlock Text="Estadisticas"/>
+                            </StackPanel>
+                        </Border>
+                    </ListViewItem>
+                    <!--#endregion MENÚ DE ESTADISTICAS-->
+
+                    <!--#region MENÚ DE INFORMES-->
+                    <ListViewItem x:Name="listInformes">
+                        <Border x:Name="borderInformes">
+                            <StackPanel>
+                                <materialDesign:PackIcon Kind="PrinterSearch" Width="40" Height="40" VerticalAlignment="Center" Margin="10 0"/>
+                                <TextBlock Text="Informes"/>
+                            </StackPanel>
+                        </Border>
+                    </ListViewItem>
+
+                    <!--#region SUBMENÚ DE INFORMES-->
+                    <ListViewItem x:Name="listInformeFactura" Visibility="Collapsed">
+                        <Border x:Name="borderInformefactura" Width="210" Margin="35 0 0 0">
+                            <StackPanel>
+                                <materialDesign:PackIcon Kind="FileDocumentBoxOutline" Width="40" Height="40" VerticalAlignment="Center" Margin="10 0"/>
+                                <TextBlock Text="Factura" ToolTip="Informe de una factura concreta"/>
+                            </StackPanel>
+                        </Border>
+                    </ListViewItem>
+                    <!--#endregion SUBMENÚ DE INFORMES-->
+                    <!--#endregion MENÚ DE INFORMES-->
+
+                    <!--#region MENÚ DE ACERCA DE-->
+                    <ListViewItem x:Name="listAcercaDe">
+                        <Border x:Name="borderAcercaDe">
+                            <StackPanel>
+                                <materialDesign:PackIcon Kind="About" Width="40" Height="40" VerticalAlignment="Center" Margin="10 0"/>
+                                <TextBlock Text="Acerca de..."/>
+                            </StackPanel>
+                        </Border>
+                    </ListViewItem>
+                    <!--#endregion MENÚ DE ACERCA DE-->
+
+                    <!--#region MENÚ DE SALIR-->
+                    <ListViewItem x:Name="listSalir">
+                        <Border x:Name="borderSalir">
+                            <StackPanel>
+                                <materialDesign:PackIcon Kind="ExitToApp" Width="40" Height="40" VerticalAlignment="Center" Margin="10 0"/>
+                                <TextBlock Text="Salir"/>
+                            </StackPanel>
+                        </Border>
+                    </ListViewItem>
+                    <!--#endregion MENÚ DE SALIR-->
+                </ListView>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</Window>

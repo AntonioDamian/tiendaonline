@@ -7,15 +7,13 @@ using System.Net.Http;
 using Newtonsoft.Json;
 using System.Runtime.InteropServices;
 using Capa_entidades;
-using System.Data;
-using MiLibreria;
 
 namespace Capa_Datos
 {
     public class LocalidadADO:ADO
     {
         // Leo todos los articulos dela BD
-        public  List<Localidad> LeerLocalidades()
+        public List<Localidad> LeerLocalidades()
         {
             List<Localidad> listaLocalidades = new List<Localidad>();
             string aux;
@@ -118,7 +116,5 @@ namespace Capa_Datos
                 throw new ExternalException("Error:" + e);
             }
         }
-
-       
     }
 }

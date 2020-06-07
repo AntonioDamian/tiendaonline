@@ -63,10 +63,10 @@ namespace Capa_Datos
         {
             try
             {
-                Linped linped = new Linped(pedidoID,linea,articuloID,importe,cantidad)
-;
-                HttpResponseMessage response = client.PostAsJsonAsync("api/linpeds",linped).Result;
-                //var response = client.PostAsync("api/usuarios", new StringContent(new JavaScriptSerializer().Serialize(usu), Encoding.UTF8, "application/json")).Result;
+                Linped linped = new Linped(pedidoID,linea,articuloID,importe,cantidad);
+
+                HttpResponseMessage response = client.PostAsJsonAsync("api/linpeds",linped).Result;              
+                
                 if (response.IsSuccessStatusCode)
                 {
                     return true;

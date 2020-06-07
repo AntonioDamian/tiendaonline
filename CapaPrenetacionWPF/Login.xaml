@@ -1,0 +1,110 @@
+﻿<Window x:Class="CapaPresentacionWPF.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:CapaPresentacionWPF"
+        mc:Ignorable="d"
+         Title="Login" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Loaded="Window_Loaded">
+    <Window.Resources>
+        <Style x:Key="InputIcon" TargetType="materialDesign:PackIcon">
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="30"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <SolidColorBrush x:Key="brushWatermarkBackground" Color="White" />
+        <SolidColorBrush x:Key="brushWatermarkForeground" Color="LightSteelBlue" />
+        <SolidColorBrush x:Key="brushWatermarkBorder" Color="Indigo" />
+
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+        <local:ConvertTextInputToVisibility x:Key="TextInputToVisibilityConverter" />
+
+        <Style x:Key="EntryFieldStyle" TargetType="Grid" >
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Margin" Value="20,0" />
+        </Style>
+    </Window.Resources>
+    <Grid   Opacity="90">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Background="BlueViolet">
+                <Image HorizontalAlignment="Center" VerticalAlignment="Center" Source="Recursos/tienda.jpg"/>
+            </Grid>
+            <Grid Background="CadetBlue" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="1*"/>
+
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center">
+                    <TextBlock Text="LOGIN" FontSize="25" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Grid>
+                <StackPanel Grid.Column="3" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" Orientation="Horizontal">
+                    <Button x:Name="ButtonMinimizar" Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonMinimizar_Click">
+                        <materialDesign:PackIcon Kind="WindowMinimize"/>
+                    </Button>
+                    <Button x:Name="ButtonSalir"  Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonSalir_Click">
+                        <materialDesign:PackIcon Kind="WindowClose"/>
+                    </Button>
+                </StackPanel>
+                <materialDesign:PackIcon Grid.Column="0"  Grid.Row="1" Kind="UserBox" Style="{StaticResource InputIcon}" Margin="48,17,10,28"/>
+
+                <Grid Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" 
+                      Background="{StaticResource brushWatermarkBackground}" Style="{StaticResource EntryFieldStyle}">
+                    <TextBlock Margin="5,2" Text="Usuario ..." Foreground="{StaticResource brushWatermarkForeground}"
+                       Visibility="{Binding ElementName=txtUserEntry, Path=Text.IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                    <TextBox x:Name="Usuario" Background="Transparent" BorderBrush="{StaticResource brushWatermarkBorder}" Height="25" />
+                </Grid>
+                <materialDesign:PackIcon Grid.Column="0" Grid.Row="2" Kind="ShieldKey" Style="{StaticResource InputIcon}" Margin="48,25,10,20"/>
+
+                <Grid Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Background="{StaticResource brushWatermarkBackground}"
+                      Style="{StaticResource EntryFieldStyle}">
+                    <TextBlock Margin="5,2" Text="Password" Foreground="{StaticResource brushWatermarkForeground}" >
+                        <TextBlock.Visibility>
+                            <MultiBinding Converter="{StaticResource TextInputToVisibilityConverter}">
+                                <Binding ElementName="txtUserEntry2" Path="Text.IsEmpty" />
+                                <Binding ElementName="txtUserEntry2" Path="IsFocused" />
+                            </MultiBinding>
+                        </TextBlock.Visibility>
+                    </TextBlock>
+                    <PasswordBox x:Name="Contrasenya" Background="Transparent" BorderBrush="{StaticResource brushWatermarkBorder}"  PasswordChar="*" 
+                                 Height="25"/>                   
+                </Grid>
+
+                <Grid Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2">
+                    <Button Click="BtnAcceder_Click" Margin="0,28,0,0" >
+                        <StackPanel>
+                            <TextBlock Name="btnLogin" Text="ACCEDER"/>
+                        </StackPanel>
+                    </Button>
+
+
+                </Grid>
+
+                <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2">
+                    <Label Height="25" HorizontalAlignment="Center" Name="label1" VerticalAlignment="Center" >
+                        <Hyperlink Click="Hyperlink_Click">¿Has olvidado la contraseña?</Hyperlink>
+                    </Label>
+                    <TextBlock Name="InfoLogin" Text="" Margin="20,10 " TextAlignment="Justify" TextWrapping="Wrap" VerticalAlignment="Bottom"/>
+
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

@@ -13,9 +13,7 @@ namespace Capa_negocio
    
     public class NegocioUsuario
     {
-      
-
-        private UsuarioADO _dat;
+      private UsuarioADO _dat;
 
         public NegocioUsuario()
         {

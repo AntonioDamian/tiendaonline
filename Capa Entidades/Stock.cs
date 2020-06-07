@@ -29,7 +29,19 @@ namespace Capa_entidades
 
     }
 
-   
+    /* public static string GetDescription(this Enum e)
+       {
+           FieldInfo field = e.GetType().GetField(e.ToString());
+           if (field != null)
+           {
+               object[] attribs =
+                 field.GetCustomAttributes(typeof(DescriptionAttribute), false);
+
+               if (attribs.Length > 0)
+                   return (attribs[0] as DescriptionAttribute).Description;
+           }
+           return e.ToString();
+       }*/
 
 
    
@@ -42,7 +54,6 @@ namespace Capa_entidades
        // private Entrega _entrega;
         private string _entrega;
 
-       
         //Propiedades
         public string ArticuloID { get => _articuloID;
             set
@@ -76,7 +87,7 @@ namespace Capa_entidades
             }
         }
 
-        public string Entrega { get => _entrega; set => _entrega =value; }
+        public string Entrega { get => _entrega.ToString(); set => _entrega =value; }
 
         
 

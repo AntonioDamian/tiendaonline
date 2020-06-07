@@ -31,11 +31,6 @@ namespace API_Tienda.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Stock>> GetStock(string id)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
             var stock = await _context.Stock.FindAsync(id);
 
             if (stock == null)

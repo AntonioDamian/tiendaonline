@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
+using System.ComponentModel;						
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,7 +19,7 @@ namespace Capa_entidades
         //Atributos
         private int _tipoArticuloID;
         private string _descripcion;
-        public IEnumerable<Articulo> Articulos { get; set; }
+         public IEnumerable<Articulo> Articulos { get; set; }
 
         private ObservableCollection<Articulo> _listaArticulos;
         public ObservableCollection<Articulo> ListaArticulos
@@ -37,8 +37,6 @@ namespace Capa_entidades
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nombrePropiedad));
         }
-
-
 
         //Propiedades
         public int TipoArticuloID { get => _tipoArticuloID;
@@ -64,7 +62,7 @@ namespace Capa_entidades
         {
             _tipoArticuloID =0;
             _descripcion = "descripcion";
-            _listaArticulos = new ObservableCollection<Articulo>();
+			     _listaArticulos = new ObservableCollection<Articulo>();
         }
 
         //Constructor con argumentos
@@ -74,7 +72,6 @@ namespace Capa_entidades
             _descripcion = descripcion;
             _listaArticulos = new ObservableCollection<Articulo>();
         }
-
         public TipoArticulo(int tipoArticuloID, string descripcion, ObservableCollection<Articulo> listaArticulos)
         {
             _tipoArticuloID = tipoArticuloID;
@@ -82,7 +79,7 @@ namespace Capa_entidades
             _listaArticulos = listaArticulos;
             
         }
-
+        
 
         //Constructor de copia
         public TipoArticulo(TipoArticulo otroTipoArticulo)
@@ -90,6 +87,7 @@ namespace Capa_entidades
             _tipoArticuloID = otroTipoArticulo._tipoArticuloID;
             _descripcion = otroTipoArticulo._descripcion;
         }
+
         //Destructor
         ~TipoArticulo()
         {
@@ -108,6 +106,4 @@ namespace Capa_entidades
             return TipoArticuloID + "#" + Descripcion;
         }
     }
-
-
 }

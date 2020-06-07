@@ -21,22 +21,7 @@ namespace Capa_entidades
         //Propiedades
 
 
-        public decimal ImporteTotal
-        {
-            get
-            {
-                decimal imp = 0.0M;
-                for (int i = 0; i < Linpeds.Count; i++)
-                {
-                    imp += Linpeds[i].Importe *(decimal) Linpeds[i].Cantidad;
-
-                }
-                return imp;
-            }
-
-        }
-
-
+     
         public int PedidoID
         {
             get => _pedidoID;
@@ -91,7 +76,20 @@ namespace Capa_entidades
             Linpeds.Add(linped);
         }
 
+        public decimal ImporteTotal
+        {
+            get
+            {
+                decimal imp = 0.0M;
+                for (int i = 0; i < Linpeds.Count; i++)
+                {
+                    imp += Linpeds[i].Importe * (decimal)Linpeds[i].Cantidad;
 
+                }
+                return imp;
+            }
+
+        }
 
 
         //Constructor  sin argumentos
@@ -106,6 +104,14 @@ namespace Capa_entidades
         }
 
         //Constructor con argumentos
+
+
+        public Pedido(int pedidoID, int usuarioID, DateTime fecha)
+        {
+            _pedidoID = pedidoID;
+            _usuarioID = usuarioID;
+            _fecha = fecha;
+        }
         public Pedido(int pedidoID, int usuarioID, DateTime fecha, List<Linped> linpeds)
         {
             _pedidoID = pedidoID;
@@ -123,7 +129,8 @@ namespace Capa_entidades
             Linpeds = otroPedido.Linpeds;
         }
 
-      
+
+
 
         //Destructor
         ~Pedido()

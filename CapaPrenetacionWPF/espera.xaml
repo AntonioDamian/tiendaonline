@@ -1,0 +1,18 @@
+﻿<Window x:Class="CapaPresentacionWPF.espera"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CapaPresentacionWPF"
+        mc:Ignorable="d"
+        Title="espera" Height="450" Width="800" WindowStyle="None" ShowInTaskbar="False">
+    <Window.Background>
+        <ImageBrush ImageSource="tienda.jpg"/>
+    </Window.Background>
+    <Grid>
+        <ProgressBar Minimum="0" Maximum="100" IsIndeterminate="True" Margin="-24,396,24,42" />
+        <TextBlock HorizontalAlignment="Center"
+                   VerticalAlignment="Center" Margin="366,405,375,21">Loading...</TextBlock>
+
+    </Grid>
+</Window>

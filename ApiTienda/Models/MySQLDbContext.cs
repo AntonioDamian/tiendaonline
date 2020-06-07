@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using API_Tienda.Models;
 
 namespace API_Tienda.Models
@@ -27,7 +27,7 @@ namespace API_Tienda.Models
         public DbSet<Objetivo> Objetivo { get; set; }
         public DbSet<Tv> Tv { get; set; }
 
-        // Clave primaria compuesta de linped y localidad
+        // Clave primaria compuesta de linped
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Linped>()
@@ -36,6 +36,5 @@ namespace API_Tienda.Models
             modelBuilder.Entity<Localidad>()
                 .HasKey(lo => new { lo.ProvinciaID, lo.LocalidadID });
         }
-
     }
 }

@@ -9,7 +9,6 @@ using Capa_Datos;
 using Capa_entidades;
 using MiLibreria;
 
-
 namespace Capa_negocio
 {
     public class NegocioProvincia
@@ -58,9 +57,9 @@ namespace Capa_negocio
             DataTable dataTableProvincias = Utilidades.ConvertToDataTable(loc); 
 
 
+
             return dataTableProvincias;
         }
-
 
 
 

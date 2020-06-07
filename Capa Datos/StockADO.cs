@@ -35,7 +35,30 @@ namespace Capa_Datos
 
             return listaStocks;
         }
-        public Stock LeerStock(string id)
+     /*   public List<Stock> LeerStock(string id)
+        {
+            List<Stock> listaStocks = new List<Stock>();
+            string aux;
+
+            try
+            {
+                HttpResponseMessage response = client.GetAsync("api/Stock/" + id).Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    aux = response.Content.ReadAsStringAsync().Result;
+
+                    listaStocks = JsonConvert.DeserializeObject<List<Stock>>(aux);
+                }
+            }
+            catch (Exception e)
+            {
+                throw new ExternalException("Error:" + e);
+            }
+
+            return listaStocks;
+        }*/
+		
+		  public Stock LeerStock(string id)
         {
             List<Stock> listaStocks = new List<Stock>();
             Stock stc = new Stock();
@@ -66,7 +89,7 @@ namespace Capa_Datos
             {
                 Stock Stock = new Stock(articuloID,disponible,entrega);
 
-                HttpResponseMessage response = client.PostAsJsonAsync("api/stock", Stock).Result;
+                HttpResponseMessage response = client.PostAsJsonAsync("api/Stock", Stock).Result;
                 //var response = client.PostAsync("api/usuarios", new StringContent(new JavaScriptSerializer().Serialize(usu), Encoding.UTF8, "application/json")).Result;
                 if (response.IsSuccessStatusCode)
                 {
@@ -88,7 +111,7 @@ namespace Capa_Datos
         {
             try
             {
-                HttpResponseMessage response = client.PutAsJsonAsync("api/stocks/" + Stock.ArticuloID, Stock).Result;
+                HttpResponseMessage response = client.PutAsJsonAsync("api/Stock/" + Stock.ArticuloID, Stock).Result;
 
                 if (response.IsSuccessStatusCode)
                     return true;
@@ -106,7 +129,7 @@ namespace Capa_Datos
             try
             {
 
-                HttpResponseMessage response = client.DeleteAsync("api/stocks/" + id).Result;
+                HttpResponseMessage response = client.DeleteAsync("api/stock/" + id).Result;
 
                 if (response.IsSuccessStatusCode)
                     return true;
