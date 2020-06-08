@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 using Capa_negocio;
 using Capa_entidades;
 using MiLibreria;
@@ -40,7 +39,7 @@ namespace TiendaOnline
             
         }
 
-        private void BtnBuscar_Click(object sender, EventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
          
 
@@ -65,7 +64,7 @@ namespace TiendaOnline
         private void FormularioPedidos_Load(object sender, EventArgs e)
         {
             _listArticulos = _negproducto.ObtenerArticulos();
-             pedido = new Pedido();
+            pedido = new Pedido();
 
         }
 
@@ -75,7 +74,7 @@ namespace TiendaOnline
         public static decimal totalIva;
 
 
-        private void BtnColocar_Click(object sender, EventArgs e)
+        private void btnColocar_Click(object sender, EventArgs e)
         {
              
 
@@ -84,7 +83,7 @@ namespace TiendaOnline
                 List<Articulo> list = _listArticulos.Where(x => x.Nombre.ToUpper() == txtNombreArticulo.Text.ToUpper()).ToList();
 
                 bool existe = false;
-                int num_fila = 1;
+                int num_fila = 0;
 
                 if(list.Count>0)
                 {
@@ -122,10 +121,20 @@ namespace TiendaOnline
                             linpeds.RemoveAt(num_fila);
                             linpeds.Insert(num_fila, li);
 
-                           
+                            /*   _negLinped.Actualizar(li);
+
+                               if(_negLinped.Actualizar(li))
+                               {
+                                   li = linpeds.FirstOrDefault(x => x.Linea == num_fila+1);
+
+                                   if (li != null)
+                                   {
+                                       linpeds.RemoveAt(num_fila);
+                                       linpeds.Insert(num_fila, li);
+                                   }
+                               }*/
 
                         }
-                        //no existe
                         else
                         {
                             dgvLinped.Rows.Add((cont_filas + 1).ToString(), list[0].ArticuloID.ToString(), txtPrecioArticulo.Text, txtCantidadArticulo.Text);
@@ -133,7 +142,7 @@ namespace TiendaOnline
                             dgvLinped.Rows[cont_filas].Cells[2].Value = importe;
                             cont_filas++;
 
-                            li = new Linped(Convert.ToInt32(txtPedidoID.Text), num_fila+1, list[0].ArticuloID.ToString(), importe, Convert.ToInt32(dgvLinped.Rows[num_fila].Cells[3].Value));
+                            li = new Linped(Convert.ToInt32(txtPedidoID.Text), num_fila, list[0].ArticuloID.ToString(), importe, Convert.ToInt32(dgvLinped.Rows[num_fila].Cells[3].Value));
                             linpeds.Add(li);
                         }
 
@@ -145,7 +154,7 @@ namespace TiendaOnline
 
                     decimal[] resumenFactura = new decimal[4];
 
-                    resumenFactura = _pedido.Datosfactura( pedido);
+                    resumenFactura = _pedido.Datosfactura( pedido,21);
 
                     total = resumenFactura[0];
                     totalIva = resumenFactura[1];
@@ -158,7 +167,12 @@ namespace TiendaOnline
                 else
                 {
                     MessageBox.Show("No existe ese articulo");
-                }                   
+                }
+
+
+            
+
+                        
                 
 
             }
@@ -167,16 +181,31 @@ namespace TiendaOnline
 
         }
 
-        private void BtnNuevo_Click(object sender, EventArgs e)
+        private void btnNuevo_Click(object sender, EventArgs e)
         {
-
-            Reset();
+         
                 List<Pedido> pedidos = new List<Pedido>();
                 pedidos = _pedido.ObtenerPedido();
 
                 int ultimoPedido = pedidos.Last().PedidoID + 1;
 
-                txtPedidoID.Text = ultimoPedido.ToString();              
+                txtPedidoID.Text = ultimoPedido.ToString();
+
+                txtUsuarioID.Text = "";
+                txtNombreArticulo.Text = "";
+                txtMarcaArticulo.Text = "";
+                txtPrecioArticulo.Text = "";
+                txtCantidadArticulo.Text = "";
+                cont_filas = 0;
+                lbTotal.Text = "0";
+                lbIva.Text = "0";
+                lbTotalIVa.Text = "0";
+                total = 0;
+                totalConIva = 0;
+                totalIva = 0;
+
+                dgvLinped.Rows.Clear();
+                txtUsuarioID.Focus();
 
           
             pedido.PedidoID =Convert.ToInt32( ultimoPedido.ToString());
@@ -184,27 +213,7 @@ namespace TiendaOnline
           
         }
 
-        private void Reset()
-        {
-            txtPedidoID.Text = "";
-            txtUsuarioID.Text = "";
-            txtNombreArticulo.Text = "";
-            txtMarcaArticulo.Text = "";
-            txtPrecioArticulo.Text = "";
-            txtCantidadArticulo.Text = "";
-            cont_filas = 0;
-            lbTotal.Text = "0";
-            lbIva.Text = "0";
-            lbTotalIVa.Text = "0";
-            total = 0;
-            totalConIva = 0;
-            totalIva = 0;
-
-            dgvLinped.Rows.Clear();
-            txtUsuarioID.Focus();
-        }
-
-        private void BtnEliminar_Click(object sender, EventArgs e)
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
             if(cont_filas>0)
             {
@@ -221,22 +230,21 @@ namespace TiendaOnline
 
       
 
-        private void Btnproducto_Click(object sender, EventArgs e)
+        private void btnproducto_Click(object sender, EventArgs e)
         {
-            FormularioBusquedaProducto formProducto = new FormularioBusquedaProducto(true);
-            
+            FormularioBusquedaProducto formProducto = new FormularioBusquedaProducto();
             formProducto.ShowDialog();
 
             if(formProducto.DialogResult==DialogResult.OK)
             {
-                txtNombreArticulo.Text = formProducto.dataGridViewArticulos.Rows[formProducto.dataGridViewArticulos.CurrentRow.Index].Cells[4].Value.ToString();
-                txtMarcaArticulo.Text= formProducto.dataGridViewArticulos.Rows[formProducto.dataGridViewArticulos.CurrentRow.Index].Cells[6].Value.ToString();
-                txtPrecioArticulo.Text= formProducto.dataGridViewArticulos.Rows[formProducto.dataGridViewArticulos.CurrentRow.Index].Cells[5].Value.ToString();
+                txtNombreArticulo.Text = formProducto.dataGridViewArticulos.Rows[formProducto.dataGridViewArticulos.CurrentRow.Index].Cells[1].Value.ToString();
+                txtMarcaArticulo.Text= formProducto.dataGridViewArticulos.Rows[formProducto.dataGridViewArticulos.CurrentRow.Index].Cells[3].Value.ToString();
+                txtPrecioArticulo.Text= formProducto.dataGridViewArticulos.Rows[formProducto.dataGridViewArticulos.CurrentRow.Index].Cells[2].Value.ToString();
                 txtCantidadArticulo.Focus();
             }
         }
 
-        private void BtnBuscarPedido_Click(object sender, EventArgs e)
+        private void btnBuscarPedido_Click(object sender, EventArgs e)
         {
             dgvLinped.Rows.Clear();
 
@@ -269,18 +277,14 @@ namespace TiendaOnline
                     data["Importe"].ToString(), data["Cantidad"].ToString(), data["ImporteTotal"].ToString());
 
                 }
-
-            
-
-
-
-
-
-
-
-
-
             }
+
+
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+
 
 
         }

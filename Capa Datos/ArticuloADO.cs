@@ -42,7 +42,7 @@ namespace Capa_Datos
 
             try
             {
-                HttpResponseMessage response = client.GetAsync("api/articulos/"+ id).Result;
+                HttpResponseMessage response = client.GetAsync("api/articulos/" + id).Result;
                 if (response.IsSuccessStatusCode)
                 {
                     aux = response.Content.ReadAsStringAsync().Result;

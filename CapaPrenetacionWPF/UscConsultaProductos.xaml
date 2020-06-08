@@ -1,0 +1,140 @@
+﻿<UserControl x:Class="CapaPresentacionWPF.UscConsultaProductos"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CapaPresentacionWPF"             
+             mc:Ignorable="d" 
+             d:DesignHeight="850" d:DesignWidth="1190" Loaded="UserControl_Loaded" >
+    <Grid>
+      
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2.75*"/>
+            <RowDefinition Height="3.25*"/>
+            <RowDefinition Height=".25*"/>
+        </Grid.RowDefinitions>
+        <GroupBox Header="Tipo de articulos" Grid.Row="0" Margin="10,2" BorderBrush="Black" BorderThickness="1" Width="500">
+            <ListBox x:Name="TipoaArt" Margin="5" ItemsSource="{Binding}" IsSynchronizedWithCurrentItem="True">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="{Binding Path=Descripcion, FallbackValue=Descripcion}" FontWeight="Bold" FontSize="16" Width="75" HorizontalAlignment ="Center" Padding="10,0,0,0" Margin="5,0"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+            </ListBox>
+        </GroupBox>
+        <GroupBox  Grid.Row="1" Margin="10,2" BorderBrush="Black" BorderThickness="1" >
+            <GroupBox.Header>
+                <TextBlock Width="250" >
+                    <Run Text="Detalles del articulo  del tipo"/>                   
+                    <Run Text="{Binding ElementName=TipoaArt, Path=SelectedItem.Descripcion}" FontStyle="Italic" />
+                </TextBlock>
+            </GroupBox.Header>
+            <ListBox x:Name="listArticulos" ItemsSource="{Binding SelectedItem.ListaArticulos, ElementName=TipoaArt}" 
+                     IsSynchronizedWithCurrentItem="True" SelectionMode="Single" MouseDoubleClick="listArticulos_MouseDoubleClick">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="75"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="20,0,0,0" >
+                                <TextBlock Foreground="BlueViolet" FontWeight="Heavy"  FontSize="10">
+                                    <Run Text="{Binding Path=Nombre}" />
+                                    <Run Text="{Binding Path=MarcaID}" />
+                                </TextBlock>
+                                <TextBlock FontSize="12">
+                                    <Run Text="ArticuloID: " FontWeight="Bold"/>
+                                    <Run Text="{Binding Path=ArticuloID}" />
+                                    <LineBreak/>
+                                    <Run Text="Precio: " FontWeight="Bold"/>
+                                    <Run Text="{Binding Path=Pvp}" />
+                                    <LineBreak/>
+                                    <Run Text="Cantidad : " FontWeight="Bold"/>
+                                    <Run Text="{Binding Path=Cantidad}" />
+                                    <LineBreak/>
+                                </TextBlock>
+                            </StackPanel>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+        </GroupBox>
+        <GroupBox  Grid.Row="2" BorderBrush="Black" BorderThickness="1">
+            <GroupBox.Header >
+                <TextBlock Width="250" >
+                    <Run Text="Detalles expeciales del articulo "/>                   
+                    <Run Text="{Binding ElementName=listArticulos, Path=SelectedItem.Nombre}" FontStyle="Italic"  />
+                </TextBlock>
+            </GroupBox.Header>
+            <Border  BorderThickness="1" BorderBrush="Black" 
+                Background="{DynamicResource {x:Static SystemColors.InactiveBorderBrushKey}}" Margin="0,5"  CornerRadius="10" Padding="5" Width="1146">
+                <DataGrid ItemsSource="{Binding SelectedItem.EspeExtra ,ElementName=listArticulos}" CanUserAddRows="False"
+                          IsSynchronizedWithCurrentItem="true"   AutoGenerateColumns="True" Height="1000"  Width="300" IsReadOnly="True" >
+                    <DataGrid.Resources>
+                        <Style x:Key="DataGridBase" TargetType="Control">
+                            <Setter Property="Width" Value="250"/>
+                            <Setter Property="LayoutTransform">
+                                <Setter.Value>
+                                    <TransformGroup>
+                                        <RotateTransform Angle="-90" />
+                                        <ScaleTransform ScaleX="1" ScaleY="-1" />
+                                    </TransformGroup>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="TextOptions.TextFormattingMode" Value="Display" />
+                        </Style >
+                        <Style x:Key="Header" TargetType="DataGridColumnHeader">
+                            <Setter Property="Background" Value="Bisque"/>
+                            <Setter Property="Width" Value="100"/>
+                            <Setter Property="LayoutTransform">                                
+                                <Setter.Value>
+                                    <TransformGroup>
+                                        <RotateTransform Angle="-90" />
+                                        <ScaleTransform ScaleX="1" ScaleY="-1" />
+                                    </TransformGroup>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="TextOptions.TextFormattingMode" Value="Display" />
+                        </Style>
+                        <Style TargetType="DataGridCell" BasedOn="{StaticResource DataGridBase}"/>
+                        <Style TargetType="DataGridColumnHeader" BasedOn="{StaticResource Header}"/>
+                        <Style TargetType="DataGridRowHeader" BasedOn="{StaticResource DataGridBase}"/>
+                    </DataGrid.Resources>
+                    <DataGrid.LayoutTransform>
+                        <TransformGroup>
+                            <RotateTransform Angle="90" />
+                            <MatrixTransform Matrix="-1, 0, 0, 1, 0, 0" />
+                        </TransformGroup>
+                    </DataGrid.LayoutTransform>
+                  <DataGrid.RowDetailsTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <StackPanel.LayoutTransform>
+                                    <TransformGroup>
+                                        <RotateTransform Angle="90" />
+                                        <MatrixTransform Matrix="-1, 0, 0, 1, 0, 0" />
+                                    </TransformGroup>
+                                </StackPanel.LayoutTransform>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGrid.RowDetailsTemplate>
+                </DataGrid>
+            </Border>
+        </GroupBox>
+        <StackPanel  x:Name="loading"  Grid.Row="3" Visibility="Collapsed">
+            <ProgressBar x:Name="progressbar" Minimum="0" Maximum="100" IsIndeterminate="True"  />
+            <TextBlock HorizontalAlignment="Center"
+                   VerticalAlignment="Center" >Loading...</TextBlock>
+        </StackPanel>
+    </Grid>
+</UserControl>

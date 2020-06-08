@@ -71,12 +71,12 @@ namespace TiendaOnline
 
         private void MantenimientoUsuarios(object sender, EventArgs e)
         {
-            MantenimientoUsuarios mantenimiento = new MantenimientoUsuarios()
+            FormularioNuevoUsuario añadir = new FormularioNuevoUsuario()
             {
                 MdiParent = this
             };
-            mantenimiento.WindowState = FormWindowState.Maximized;
-            mantenimiento.Show();         
+            añadir.WindowState = FormWindowState.Maximized;
+            añadir.Show();         
 
         }
 
@@ -105,7 +105,7 @@ namespace TiendaOnline
 
         private void ConsultarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormularioBusquedaProducto busquedaProducto = new FormularioBusquedaProducto(false)
+            FormularioBusquedaProducto busquedaProducto = new FormularioBusquedaProducto()
             {
                 MdiParent = this
               }; 

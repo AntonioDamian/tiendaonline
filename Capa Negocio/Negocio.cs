@@ -3,7 +3,7 @@ using Capa_Datos;
 using Capa_entidades;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
+using System.Collections.ObjectModel;									 
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -88,9 +88,10 @@ namespace Capa_negocio
 
         // Creo un nuevo usuario
         public bool Nuevo( string email, string password, string nombre, string apellidos, string dni, string telefono, string calle, string calle2,
-            string codpos, string puebloID, string provinciaID, DateTime nacido)
+		string codpos, string puebloID, string provinciaID, DateTime nacido)
         {
-            return _dat.InsertarUsuario( email,password, nombre, apellidos, dni, telefono, calle, calle2, codpos, puebloID, provinciaID, nacido);
+
+            return (_dat.InsertarUsuario( email,password, nombre, apellidos, dni, telefono, calle, calle2, codpos, puebloID, provinciaID, nacido));
         }
 
 
@@ -104,10 +105,6 @@ namespace Capa_negocio
         {
             return (_dat.BorrarUsuario(usu));
         }
-
-      
-
-
     }
     
 }

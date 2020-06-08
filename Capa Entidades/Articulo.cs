@@ -1,9 +1,9 @@
-using Capa_Entidades;
+using Capa_entidades;				 
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
-using System.ComponentModel;
+using System.ComponentModel;							
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,7 +28,7 @@ namespace Capa_entidades
         private string _urlimagen;
         private string _especificaciones;
         private int? _tipoArticuloID;
-
+		
         public IEnumerable<Object> EspecificacionesisExtra1 { get; set; }
         public IEnumerable<Stock> Stocks { get; set; }
 
@@ -49,14 +49,6 @@ namespace Capa_entidades
 
             set { if (value != null) { _espeExtra = value; } }
         }
-
-       
-
-
-     
-
-
-
            public void OnPropertyChanged(string name)
            {
                if (PropertyChanged != null)
@@ -64,15 +56,6 @@ namespace Capa_entidades
                    PropertyChanged(this, new PropertyChangedEventArgs(name));
                }
            }
-
-
-        
-
-      
-
-
-
-
         //Propiedades      
 
         public string ArticuloID { get => _articuloID;
@@ -137,6 +120,9 @@ namespace Capa_entidades
             }
           
         }
+      
+       // public string Especificaciones { get => _especificaciones; set => _especificaciones = value; }
+
         public int? TipoArticuloID
         {
             get => _tipoArticuloID;
@@ -144,15 +130,12 @@ namespace Capa_entidades
                  _tipoArticuloID = value > 11 ? throw new ArgumentOutOfRangeException("La tipoArticuloID no puede superar los 11 caracteres") : value;
 
         }
-        public string Especificaciones
+		  public string Especificaciones
         {
             get { return _especificaciones; }
 
             set { if (value != null) { _especificaciones = value; } }
-        }
-
-      
-
+        }							  
 
         //Constructor sin argumentos
         public Articulo()
@@ -165,15 +148,14 @@ namespace Capa_entidades
             _urlimagen = "urlimagen";
             _especificaciones = "especificaciones";
             _tipoArticuloID = null;
-            _cantidad = 0;
+             _cantidad = 0;
             _espeExtra = new ObservableCollection<Object>();
-
-         
+ 
         }
 
         //Constructor con argumentos
-        public Articulo(string articuloI, string nombre, decimal pvp, string marcaID, byte[] imagen, 
-            string urlimagen, string especificaciones, int tipoArticuloID)
+        public Articulo(string articuloI, string nombre, decimal pvp, string marcaID, byte[] imagen,
+		string urlimagen, string especificaciones, int tipoArticuloID)
         {
             _articuloID = articuloI;
             _nombre = nombre;
@@ -183,9 +165,9 @@ namespace Capa_entidades
             _urlimagen = urlimagen;           
             _especificaciones = especificaciones;
             _tipoArticuloID = tipoArticuloID;
-             _cantidad = 0;
+			   _cantidad = 0;
             _espeExtra = new ObservableCollection<Object>();
-
+			   
         }
         //Constructor de copia
         public Articulo(Articulo otroArticulo)
@@ -215,7 +197,6 @@ namespace Capa_entidades
 
         }
 
-
         //Metodos
 
         /// <summary>
@@ -232,5 +213,4 @@ namespace Capa_entidades
        
 
     }
-
 }

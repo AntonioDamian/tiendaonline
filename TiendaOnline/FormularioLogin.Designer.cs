@@ -79,7 +79,7 @@ namespace TiendaOnline
             // 
             // btnLogin
             // 
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.Location = new System.Drawing.Point(157, 315);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(161, 35);
@@ -195,6 +195,9 @@ namespace TiendaOnline
             // 
             // btnSalir
             // 
+            this.btnSalir.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Image = global::TiendaOnline.Properties.Resources.door_in;
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalir.Location = new System.Drawing.Point(343, 315);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(176, 35);
@@ -207,6 +210,7 @@ namespace TiendaOnline
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(531, 425);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.linkLabel1);
@@ -221,6 +225,7 @@ namespace TiendaOnline
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormularioLogin";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormularioLogin_FormClosing);
+            this.Load += new System.EventHandler(this.FormularioLogin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

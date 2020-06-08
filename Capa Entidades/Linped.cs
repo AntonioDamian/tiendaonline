@@ -1,4 +1,4 @@
-using System;
+ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -77,7 +77,10 @@ namespace Capa_entidades
         public int? Cantidad
         {
             get => _cantidad;
-            set => _cantidad = value.ToString().Length > 11 ? throw new ArgumentOutOfRangeException("La cantidad no puede ser mayor a 11 caracteres") : value;
+            set
+            {
+                _cantidad = value.ToString().Length > 11 ? throw new ArgumentOutOfRangeException("La cantidad no puede ser mayor a 11 caracteres") : value;
+            } 
 
         }
 

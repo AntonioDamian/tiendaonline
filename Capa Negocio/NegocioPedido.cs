@@ -30,13 +30,19 @@ namespace Capa_negocio
             return _pedido.LeerPedido(pedidoID);
         }
 
-        public decimal [] Datosfactura(Pedido pedido )
+
+        public bool NuevoPedido(int pedidoID, int usuarioID, DateTime fecha, List<Linped> linpeds)
+        {
+            return _pedido.InsertarPedido(pedidoID,usuarioID,fecha,linpeds);
+        }
+
+        public decimal [] Datosfactura(Pedido pedido,decimal iva )
         {
             decimal[] valores = new decimal[3];
             decimal total ;
             decimal totalConIva;
             decimal totalIva;
-            decimal iva = 21;
+           // decimal iva = iva;
           
            /* foreach (DataGridViewRow fila in datos.Rows)
             {

@@ -1,24 +1,25 @@
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
+using System.Collections.ObjectModel;									 
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Capa_Datos;
 using Capa_entidades;
 
+
 namespace Capa_negocio
 {
     public class NegocioProducto
     {
         private ArticuloADO _artDAO;
-        List<Articulo> listArt;
+         List<Articulo> listArt;
 
         public NegocioProducto()
         {
             _artDAO = new ArticuloADO();
-            listArt = new List<Articulo>();
-            listArt = ObtenerArticulos();
+			  listArt = new List<Articulo>();
+            listArt = ObtenerArticulos();							   
         }
 
 
@@ -27,19 +28,18 @@ namespace Capa_negocio
             return _artDAO.LeerArticulos();
         }
 
-        public List<Articulo> ObtenerArticulo(int id)
+	  public List<Articulo> ObtenerArticulo(int id)
         {
             return _artDAO.LeerArticulo(id);
-        }
+        }											 
 
         public bool Actualizar(Articulo articulo)
         {
 
             return (_artDAO.ActualizarArticulo(articulo));
-
         }
 
-        ObservableCollection<Articulo> aux;
+		ObservableCollection<Articulo> aux;
         List<Articulo> aux2 = new List<Articulo>();
         NegocioEspecificaciones negEspe;
         NegocioStock negocioStock;
@@ -139,7 +139,7 @@ namespace Capa_negocio
                     }
 
                     break;
-                   
+                  
               
                     
             }
@@ -147,15 +147,6 @@ namespace Capa_negocio
 
             return aux;
 
-        }
-
-
-        
-
-
-
-
-
-
+        }								   
     }
 }

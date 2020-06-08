@@ -66,7 +66,7 @@ namespace TiendaOnline
 
             if (indice == 0)
             {
-                LbSeleccion.Text = "Nombre y Apellidos del usuario";
+                LbSeleccion.Text = "Nombre y Apellidos del usuario";               
                 txtBusqueda.Enabled = true;
 
             }

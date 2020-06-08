@@ -35,12 +35,6 @@ namespace Capa_Datos
 
             return listaTipoArticulos;
         }
-
-        public List<TipoArticulo> ListaArticuloCompleto()
-        {
-            throw new NotImplementedException();
-        }
-
         public List<TipoArticulo> LeerTipoArticulo(int id)
         {
             List<TipoArticulo> listaTipoArticulos = new List<TipoArticulo>();

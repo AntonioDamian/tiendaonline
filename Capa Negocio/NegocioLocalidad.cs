@@ -80,8 +80,6 @@ namespace Capa_negocio
             }
             return table;
 
-        }
-
-      
+        }	  
     }
 }

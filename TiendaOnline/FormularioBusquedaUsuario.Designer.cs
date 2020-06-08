@@ -28,7 +28,8 @@ namespace TiendaOnline
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioBusquedaUsuario));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
@@ -58,8 +59,8 @@ namespace TiendaOnline
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.543012F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.26408F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 72.102F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 67.38703F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.94892F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1100, 509);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -102,9 +103,10 @@ namespace TiendaOnline
             // 
             this.LbSeleccion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.LbSeleccion.AutoSize = true;
-            this.LbSeleccion.Location = new System.Drawing.Point(669, 26);
+            this.LbSeleccion.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbSeleccion.Location = new System.Drawing.Point(669, 24);
             this.LbSeleccion.Name = "LbSeleccion";
-            this.LbSeleccion.Size = new System.Drawing.Size(194, 13);
+            this.LbSeleccion.Size = new System.Drawing.Size(194, 17);
             this.LbSeleccion.TabIndex = 4;
             // 
             // comboFiltro
@@ -126,9 +128,10 @@ namespace TiendaOnline
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(189, 26);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(189, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(227, 13);
+            this.label1.Size = new System.Drawing.Size(227, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Filtros Busqueda";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -140,21 +143,21 @@ namespace TiendaOnline
             this.dataGridViewUsuarios.AllowUserToResizeColumns = false;
             this.dataGridViewUsuarios.AllowUserToResizeRows = false;
             this.dataGridViewUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewUsuarios.Location = new System.Drawing.Point(3, 98);
             this.dataGridViewUsuarios.Name = "dataGridViewUsuarios";
             this.dataGridViewUsuarios.ReadOnly = true;
             this.dataGridViewUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewUsuarios.Size = new System.Drawing.Size(1094, 360);
+            this.dataGridViewUsuarios.Size = new System.Drawing.Size(1094, 336);
             this.dataGridViewUsuarios.TabIndex = 1;
             this.dataGridViewUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewUsuarios_CellContentClick);
             this.dataGridViewUsuarios.DoubleClick += new System.EventHandler(this.FormularioBusqueda_Load);
@@ -162,6 +165,7 @@ namespace TiendaOnline
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.tableLayoutPanel3.ColumnCount = 4;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.50777F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.49223F));
@@ -169,19 +173,21 @@ namespace TiendaOnline
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.Controls.Add(this.btnSeleccionar, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.btnCancelar, 2, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 464);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 445);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1094, 42);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1094, 55);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
             // btnSeleccionar
             // 
+            this.btnSeleccionar.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeleccionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSeleccionar.Location = new System.Drawing.Point(658, 10);
             this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(30, 10, 3, 3);
             this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(133, 23);
+            this.btnSeleccionar.Size = new System.Drawing.Size(133, 42);
             this.btnSeleccionar.TabIndex = 0;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
@@ -189,10 +195,13 @@ namespace TiendaOnline
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.Location = new System.Drawing.Point(873, 10);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(30, 10, 3, 3);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(146, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(146, 42);
             this.btnCancelar.TabIndex = 1;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -201,10 +210,11 @@ namespace TiendaOnline
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1099, 504);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FormularioBusquedaUsuario";
-            this.Text = "FormularioBusqueda";           
+            this.Text = "FormularioBusqueda";
             this.Load += new System.EventHandler(this.FormularioBusqueda_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);

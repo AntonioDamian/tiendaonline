@@ -1,11 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace API_Tienda.Models
 {
     public class Localidad
     {
-
+      
         public string LocalidadID { get; set; }
         public string Nombre { get; set; }
 
