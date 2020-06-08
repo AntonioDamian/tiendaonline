@@ -1,0 +1,822 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="ActualizarArticulo method" Url="html/26d132d2-c814-8e5c-755d-2e38a873febf.htm" />
+  <HelpKINode Title="ActualizarCamara method" Url="html/34032e67-c817-fa88-8b41-5b1200bad147.htm" />
+  <HelpKINode Title="ActualizarLinped method" Url="html/ab24e3e6-b61e-0dae-edc6-67d8a0b551a4.htm" />
+  <HelpKINode Title="ActualizarLocalidad method" Url="html/31ca46ab-fbf9-b91a-cc59-a41e755490a0.htm" />
+  <HelpKINode Title="ActualizarMarca method" Url="html/4c73d0c6-dc59-3b80-30ef-f844a4731df2.htm" />
+  <HelpKINode Title="ActualizarMemoria method" Url="html/7a00a6b9-6812-dfdb-a8fe-0c32879c1c7f.htm" />
+  <HelpKINode Title="ActualizarObjetivo method" Url="html/a6c3a058-e0c0-219d-db55-95c774b58a32.htm" />
+  <HelpKINode Title="ActualizarPedido method" Url="html/5b1b2946-1662-1924-8485-edb919a8e566.htm" />
+  <HelpKINode Title="ActualizarProvincia method" Url="html/9312fcce-1c1f-639a-00ad-65cfe77a68ae.htm" />
+  <HelpKINode Title="ActualizarStock method" Url="html/a15e1b59-4be9-56ce-702f-36311beea416.htm" />
+  <HelpKINode Title="ActualizarTipoArticulo method" Url="html/f61ead6e-1f3f-e431-fe7a-65b45dea1cf6.htm" />
+  <HelpKINode Title="ActualizarTv method" Url="html/20badc60-23bc-f90a-b149-05405f583d21.htm" />
+  <HelpKINode Title="ActualizarUsuario method" Url="html/3f67fa9b-041f-227a-0be5-9f9e66ca5909.htm" />
+  <HelpKINode Title="AddLinped method" Url="html/bc061be3-27a7-791e-036e-697e2d0556cd.htm" />
+  <HelpKINode Title="ADO class">
+    <HelpKINode Title="ADO Class" Url="html/4720d673-4a1d-d6c7-440e-7d5372385980.htm" />
+    <HelpKINode Title="constructor" Url="html/23448cd8-8748-f743-8fed-d628b66c5235.htm" />
+    <HelpKINode Title="fields" Url="html/152f19fc-f76b-3c52-e95d-3397a4ccb7bf.htm" />
+    <HelpKINode Title="methods" Url="html/f388f25c-404b-367f-5559-7248723f7244.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ADO.ADO constructor" Url="html/23448cd8-8748-f743-8fed-d628b66c5235.htm" />
+  <HelpKINode Title="ADO.client field" Url="html/050f551f-89dc-1030-e92a-c8f0f5f92f5e.htm" />
+  <HelpKINode Title="Apellidos property" Url="html/4807536e-05c8-49bf-33b1-ab9a1c16ae87.htm" />
+  <HelpKINode Title="Apertura property" Url="html/a3f63f9d-cdb8-adaa-3539-39a09e0ba821.htm" />
+  <HelpKINode Title="Articulo class">
+    <HelpKINode Title="Articulo Class" Url="html/8e5af29d-74ef-15a4-a2e9-64d7a9b1b293.htm" />
+    <HelpKINode Title="constructor" Url="html/d08ef86e-0bfe-89b1-8475-d3eac0f526a8.htm" />
+    <HelpKINode Title="events" Url="html/1bfd4ede-f901-4906-39eb-3114f2b0c7d3.htm" />
+    <HelpKINode Title="fields" Url="html/7b8f250f-decb-e78b-27e7-cc4f8c48203f.htm" />
+    <HelpKINode Title="methods" Url="html/f443f125-5fad-67e3-a29a-28bd5c7f4f32.htm" />
+    <HelpKINode Title="properties" Url="html/522001f5-2b74-dda6-989e-e35e814ccc69.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Articulo.Articulo constructor" Url="html/d08ef86e-0bfe-89b1-8475-d3eac0f526a8.htm" />
+  <HelpKINode Title="Articulo.ArticuloID property" Url="html/41c31700-5557-fc6c-a158-1b24e86ec1ad.htm" />
+  <HelpKINode Title="Articulo.Cantidad property" Url="html/0ecde195-a267-7bc0-5c9a-a0acb13a9e83.htm" />
+  <HelpKINode Title="Articulo.Especificaciones property" Url="html/35b4d8b0-dd7f-a1dd-c8da-0db499e7940f.htm" />
+  <HelpKINode Title="Articulo.EspecificacionesisExtra1 property" Url="html/2a707753-fa5e-2a9c-9642-8df962626235.htm" />
+  <HelpKINode Title="Articulo.EspeExtra property" Url="html/176f8ec1-9cb6-9930-7ee0-001b6d002700.htm" />
+  <HelpKINode Title="Articulo.Finalize method" Url="html/9af04ad6-74df-17f7-7e64-200a58a3874e.htm" />
+  <HelpKINode Title="Articulo.Imagen property" Url="html/9b034f88-3be0-41d1-aa6b-a7026392cb1f.htm" />
+  <HelpKINode Title="Articulo.MarcaID property" Url="html/729820a9-e18c-8c00-67bf-16fe500e8169.htm" />
+  <HelpKINode Title="Articulo.Nombre property" Url="html/2f6641b0-885e-944e-7885-b003ed400784.htm" />
+  <HelpKINode Title="Articulo.OnPropertyChanged method" Url="html/f3693910-f8f8-42a5-aba2-fbb34911a328.htm" />
+  <HelpKINode Title="Articulo.PropertyChanged event" Url="html/cd7f430d-0b66-8fb2-9314-b0d3e33fea8c.htm" />
+  <HelpKINode Title="Articulo.Pvp property" Url="html/018249ce-71db-92c2-182d-00049880c9c5.htm" />
+  <HelpKINode Title="Articulo.Stocks property" Url="html/55820bd1-708d-1df0-9d73-3ae74a32bc87.htm" />
+  <HelpKINode Title="Articulo.TipoArticuloID property" Url="html/07df65af-f90f-ef1e-8ede-9065d94d2fc4.htm" />
+  <HelpKINode Title="Articulo.ToString method" Url="html/8313c02b-b61e-9bb1-c942-7354de7f3dac.htm" />
+  <HelpKINode Title="Articulo.Urlimagen property" Url="html/a2bcebb2-891b-52e1-e1e1-fd3bf340bbe4.htm" />
+  <HelpKINode Title="Articulo._articuloID field" Url="html/98632462-506c-51e1-2545-b3dc52f1673b.htm" />
+  <HelpKINode Title="Articulo._cantidad field" Url="html/161e7e41-b3d5-a34b-3a6a-b6503ef2ee34.htm" />
+  <HelpKINode Title="Articulo._especificaciones field" Url="html/aec88288-ad4b-0cc5-764d-796250cffc49.htm" />
+  <HelpKINode Title="Articulo._espeExtra field" Url="html/2965e6ad-7dc8-0ce8-72c7-0135172180ef.htm" />
+  <HelpKINode Title="Articulo._imagen field" Url="html/b02628c1-e1f4-f772-c9cf-ae49b5782482.htm" />
+  <HelpKINode Title="Articulo._marcaID field" Url="html/740f0f13-8b28-0f71-ce8a-80d6401812a3.htm" />
+  <HelpKINode Title="Articulo._nombre field" Url="html/b7a3f6e7-5f29-9664-6b0a-39694ade5a36.htm" />
+  <HelpKINode Title="Articulo._pvp field" Url="html/5499a9a1-6af2-a619-4ed6-f70315e4060d.htm" />
+  <HelpKINode Title="Articulo._tipoArticuloID field" Url="html/47230405-ecd1-3af6-7b94-fdc952b21f51.htm" />
+  <HelpKINode Title="Articulo._urlimagen field" Url="html/88b3e7fc-0222-0a87-37ff-4ef577b35f08.htm" />
+  <HelpKINode Title="ArticuloADO class">
+    <HelpKINode Title="ArticuloADO Class" Url="html/839a5739-3814-7f8f-f608-60de040e90f5.htm" />
+    <HelpKINode Title="constructor" Url="html/8b73c2df-40ce-cf5e-2a36-4ddbd9a83b11.htm" />
+    <HelpKINode Title="fields" Url="html/24e25b4d-5528-e689-66de-d9d66c711eca.htm" />
+    <HelpKINode Title="methods" Url="html/e497c9d3-2ae3-abd9-aa12-56a4a6e8ada6.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ArticuloADO.ActualizarArticulo method" Url="html/26d132d2-c814-8e5c-755d-2e38a873febf.htm" />
+  <HelpKINode Title="ArticuloADO.ArticuloADO constructor" Url="html/8b73c2df-40ce-cf5e-2a36-4ddbd9a83b11.htm" />
+  <HelpKINode Title="ArticuloADO.BorrarArticulo method" Url="html/01984e1c-36e6-e444-07f0-48073f2afd45.htm" />
+  <HelpKINode Title="ArticuloADO.InsertarArticulo method" Url="html/510363ff-0e3b-0ffd-c662-f72ca2888e43.htm" />
+  <HelpKINode Title="ArticuloADO.LeerArticulo method" Url="html/00efff94-9c65-800c-ae98-401b1c7123e4.htm" />
+  <HelpKINode Title="ArticuloADO.LeerArticulos method" Url="html/a48c8082-61c6-00b0-6451-91b79435993a.htm" />
+  <HelpKINode Title="ArticuloID property">
+    <HelpKINode Title="Articulo.ArticuloID Property " Url="html/41c31700-5557-fc6c-a158-1b24e86ec1ad.htm" />
+    <HelpKINode Title="Linped.ArticuloID Property " Url="html/65451c0d-d24f-2657-7733-effe69fab5b0.htm" />
+    <HelpKINode Title="Stock.ArticuloID Property " Url="html/49515cfd-e868-20fe-30bf-9dd7144b41b5.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Articulos property" Url="html/17751f1d-94e0-83b2-e842-c6615a3f6b73.htm" />
+  <HelpKINode Title="BorrarArticulo method" Url="html/01984e1c-36e6-e444-07f0-48073f2afd45.htm" />
+  <HelpKINode Title="BorrarCamara method" Url="html/fd931461-48fe-209f-f321-d10877d3d3fa.htm" />
+  <HelpKINode Title="BorrarLinped method" Url="html/994ebbe2-e06f-b196-5d5b-e00a5f714880.htm" />
+  <HelpKINode Title="BorrarLocalidad method" Url="html/64d629a6-63b8-0633-2c74-3c4c781e6101.htm" />
+  <HelpKINode Title="BorrarMarca method" Url="html/a9ab03bc-f99c-0480-8387-3fbdab29f132.htm" />
+  <HelpKINode Title="BorrarMemoria method" Url="html/7a0977be-72a4-5169-8283-66cecffacc39.htm" />
+  <HelpKINode Title="BorrarObjetivo method" Url="html/44b2f39e-f5dc-b91d-14b3-95f3e1782696.htm" />
+  <HelpKINode Title="BorrarPedido method" Url="html/28b10260-6040-bc76-5f25-450b0bf2b888.htm" />
+  <HelpKINode Title="BorrarProvincia method" Url="html/0f37e99d-7264-277b-8f71-0a72533c6f25.htm" />
+  <HelpKINode Title="BorrarStock method" Url="html/0a368205-4f14-46f9-83d9-d9efaca90608.htm" />
+  <HelpKINode Title="BorrarTipoArticulo method" Url="html/d9d5e7c1-a8d1-0009-fe30-bbef12e11f86.htm" />
+  <HelpKINode Title="BorrarTv method" Url="html/05c04aa9-1a00-a957-cb1a-cc7d20798c79.htm" />
+  <HelpKINode Title="BorrarUsuario method" Url="html/4209493e-8d88-97fb-d61e-560ade957a8d.htm" />
+  <HelpKINode Title="Calle property" Url="html/88d763d5-a9fe-e769-e8ee-e886c6cc99b3.htm" />
+  <HelpKINode Title="Calle2 property" Url="html/e11cc8a4-b6e4-9aa1-b512-f3e65e9ad3a5.htm" />
+  <HelpKINode Title="Camara class">
+    <HelpKINode Title="Camara Class" Url="html/1fa04cb6-63d5-3e6c-7f02-df34a981dc07.htm" />
+    <HelpKINode Title="constructor" Url="html/0cd8c310-0523-16c5-31ba-064ea699d1e7.htm" />
+    <HelpKINode Title="fields" Url="html/8cfe26d1-868a-d338-b1b5-6f53bed9cec5.htm" />
+    <HelpKINode Title="methods" Url="html/a715734f-62b4-8cb7-55af-e39bde73803a.htm" />
+    <HelpKINode Title="properties" Url="html/0f49f4e4-a439-fb60-6b2c-96ef1c065a81.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Camara property" Url="html/b4462dba-600b-27c2-492c-e98670261d70.htm" />
+  <HelpKINode Title="Camara.Camara constructor" Url="html/0cd8c310-0523-16c5-31ba-064ea699d1e7.htm" />
+  <HelpKINode Title="Camara.CamaraID property" Url="html/fd210df4-6829-6bc2-824b-5abbca43a08c.htm" />
+  <HelpKINode Title="Camara.Factor property" Url="html/498ed41a-a657-4d0b-b098-66649777c341.htm" />
+  <HelpKINode Title="Camara.Finalize method" Url="html/0de55b72-77ea-4ba4-8e0e-7d799ae6ba99.htm" />
+  <HelpKINode Title="Camara.Objetivo property" Url="html/25c3b338-8dba-14b4-56c7-498b1d01397f.htm" />
+  <HelpKINode Title="Camara.Pantalla property" Url="html/2a81be30-5571-3ced-cc8c-8efc0ee83b82.htm" />
+  <HelpKINode Title="Camara.Resolucion property" Url="html/d494b455-4890-9ea8-90d0-a032495489f3.htm" />
+  <HelpKINode Title="Camara.Sensor property" Url="html/a8365740-8167-4245-c407-760afab84f86.htm" />
+  <HelpKINode Title="Camara.Tipo property" Url="html/3e7f8168-d9df-a930-8f79-991e5eac0256.htm" />
+  <HelpKINode Title="Camara.ToString method" Url="html/1cdacd35-0da7-17a5-24f2-c0dedb38ce59.htm" />
+  <HelpKINode Title="Camara.Zoom property" Url="html/e2d2a643-67c8-675d-a71f-f1eaac9faea9.htm" />
+  <HelpKINode Title="Camara._camaraID field" Url="html/11fcabc4-7d1a-5f59-3cba-80dc0ccd1987.htm" />
+  <HelpKINode Title="Camara._factor field" Url="html/92895825-7b20-a8a2-1d24-9c860bc066e3.htm" />
+  <HelpKINode Title="Camara._objetivo field" Url="html/f1a3341c-5380-b560-5935-e849dc2f2953.htm" />
+  <HelpKINode Title="Camara._pantalla field" Url="html/bee622de-bbd9-bb7e-18d7-7f20a39d3c46.htm" />
+  <HelpKINode Title="Camara._resolucion field" Url="html/3135ed04-62df-a359-d189-96ce9b6be199.htm" />
+  <HelpKINode Title="Camara._sensor field" Url="html/ffbd99a1-c6cc-071a-fbe8-dd208731c421.htm" />
+  <HelpKINode Title="Camara._tipo field" Url="html/1c26c6cc-c8be-61ca-8869-91b975c44742.htm" />
+  <HelpKINode Title="Camara._zoom field" Url="html/0544007d-9d76-ca3e-15ca-44e1dbc23da4.htm" />
+  <HelpKINode Title="CamaraADO class">
+    <HelpKINode Title="CamaraADO Class" Url="html/1d090d8a-a64c-ce8d-4839-d2f4d726fb55.htm" />
+    <HelpKINode Title="constructor" Url="html/06835888-ff69-d6d5-5cf5-b34ca27292c9.htm" />
+    <HelpKINode Title="fields" Url="html/b82d14d4-30fd-153e-ee0d-18123ef7c247.htm" />
+    <HelpKINode Title="methods" Url="html/7b514635-edb7-ebb6-5e2d-7116a78e5d76.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CamaraADO.ActualizarCamara method" Url="html/34032e67-c817-fa88-8b41-5b1200bad147.htm" />
+  <HelpKINode Title="CamaraADO.BorrarCamara method" Url="html/fd931461-48fe-209f-f321-d10877d3d3fa.htm" />
+  <HelpKINode Title="CamaraADO.CamaraADO constructor" Url="html/06835888-ff69-d6d5-5cf5-b34ca27292c9.htm" />
+  <HelpKINode Title="CamaraADO.InsertarCamara method" Url="html/75c2639a-e516-e157-10a1-6883aef00363.htm" />
+  <HelpKINode Title="CamaraADO.LeerCamara method" Url="html/23291ff6-8007-7e11-70c0-4bc462652aec.htm" />
+  <HelpKINode Title="CamaraADO.LeerCamaras method" Url="html/0f48212d-94c5-4437-d178-9877925b872e.htm" />
+  <HelpKINode Title="CamaraID property" Url="html/fd210df4-6829-6bc2-824b-5abbca43a08c.htm" />
+  <HelpKINode Title="Cantidad property">
+    <HelpKINode Title="Articulo.Cantidad Property " Url="html/0ecde195-a267-7bc0-5c9a-a0acb13a9e83.htm" />
+    <HelpKINode Title="Linped.Cantidad Property " Url="html/26aa58fb-3aa7-8b7a-d82b-eb10c77ea3f3.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Capa_datos namespace" Url="html/adb26996-9687-c252-a8ed-7c93d5bf3d7a.htm" />
+  <HelpKINode Title="Capa_Datos namespace" Url="html/0d0d1035-7cf1-d490-b351-c1db5a60f153.htm" />
+  <HelpKINode Title="Capa_Datos.ADO class" Url="html/4720d673-4a1d-d6c7-440e-7d5372385980.htm" />
+  <HelpKINode Title="Capa_Datos.ArticuloADO class" Url="html/839a5739-3814-7f8f-f608-60de040e90f5.htm" />
+  <HelpKINode Title="Capa_Datos.CamaraADO class" Url="html/1d090d8a-a64c-ce8d-4839-d2f4d726fb55.htm" />
+  <HelpKINode Title="Capa_Datos.LinpedADO class" Url="html/d01b6d50-966b-a190-ec7f-cca3efd7205a.htm" />
+  <HelpKINode Title="Capa_Datos.LocalidadADO class" Url="html/230fa06a-ab39-860a-979f-0529a1d94d4c.htm" />
+  <HelpKINode Title="Capa_Datos.MarcaADO class" Url="html/8214a7f2-ffbf-e598-4729-d6524868c010.htm" />
+  <HelpKINode Title="Capa_Datos.MemoriaADO class" Url="html/6f027c64-884d-6f0b-037d-ed2820c368a8.htm" />
+  <HelpKINode Title="Capa_Datos.ObjetivoADO class" Url="html/85dfb49e-d6ec-6dc7-6ef3-2b2b88b9a90f.htm" />
+  <HelpKINode Title="Capa_Datos.PedidoADO class" Url="html/0066ed19-cd0f-0745-b5a1-e45dfcdd3a12.htm" />
+  <HelpKINode Title="Capa_Datos.ProvinciaADO class" Url="html/94497a8a-f0f1-0ef1-7cb6-700cdb5f649e.htm" />
+  <HelpKINode Title="Capa_Datos.StockADO class" Url="html/59fe1837-cd23-0d01-6ecb-da94352f0311.htm" />
+  <HelpKINode Title="Capa_Datos.TipoArticuloADO class" Url="html/abe9044b-bc5a-a7a9-2b4d-0e5f12345999.htm" />
+  <HelpKINode Title="Capa_Datos.TvADO class" Url="html/af1fe40f-8aa9-4c54-63c2-f46d8dece214.htm" />
+  <HelpKINode Title="Capa_datos.UsuarioADO class" Url="html/6ce4707c-df59-49f9-42bd-eb438720208e.htm" />
+  <HelpKINode Title="Capa_entidades namespace" Url="html/b41b1c43-3dfd-5307-c6fd-5f0ab6e1d1e1.htm" />
+  <HelpKINode Title="Capa_Entidades namespace" Url="html/ac9a5c5d-a17f-24c4-fda3-5f249c065c5c.htm" />
+  <HelpKINode Title="Capa_entidades.Articulo class" Url="html/8e5af29d-74ef-15a4-a2e9-64d7a9b1b293.htm" />
+  <HelpKINode Title="Capa_entidades.Camara class" Url="html/1fa04cb6-63d5-3e6c-7f02-df34a981dc07.htm" />
+  <HelpKINode Title="Capa_entidades.Entrega enumeration" Url="html/fdb9bfb4-fd3e-c73d-823b-e6462a1a0d54.htm" />
+  <HelpKINode Title="Capa_Entidades.EspecificacionesExtras class" Url="html/ab8bec70-e570-022d-a290-6173121e4944.htm" />
+  <HelpKINode Title="Capa_entidades.Linped class" Url="html/6513435f-967d-91da-3efc-a0f66642051e.htm" />
+  <HelpKINode Title="Capa_entidades.Localidad class" Url="html/66790ada-07dd-b2b7-024f-17d8a5642807.htm" />
+  <HelpKINode Title="Capa_entidades.Marca class" Url="html/0ba3a2e3-7779-8e96-ed62-e1b4a8f47601.htm" />
+  <HelpKINode Title="Capa_entidades.Memoria class" Url="html/3240279e-4761-b7a3-c6b9-9da8ce7fcf7c.htm" />
+  <HelpKINode Title="Capa_entidades.Objetivo class" Url="html/acd35325-7a7a-80f8-68b5-85e21cf3f14b.htm" />
+  <HelpKINode Title="Capa_entidades.Pedido class" Url="html/b9fb17c6-2abd-7959-16c4-3cdbb9c46404.htm" />
+  <HelpKINode Title="Capa_entidades.Provincia class" Url="html/fdfaeae0-2eda-12db-970e-3b3bc09f3940.htm" />
+  <HelpKINode Title="Capa_entidades.Stock class" Url="html/8c22b038-20c4-ab27-5ea9-e81e82b8484f.htm" />
+  <HelpKINode Title="Capa_entidades.TipoArticulo class" Url="html/42531fa5-91e9-08a2-0f94-bb1625d081eb.htm" />
+  <HelpKINode Title="Capa_entidades.Tv class" Url="html/eff447a5-7b97-e5f9-c994-436982e73268.htm" />
+  <HelpKINode Title="Capa_entidades.Usuario class" Url="html/0d9d57c4-359e-b021-3aca-51548db2e6a7.htm" />
+  <HelpKINode Title="client field" Url="html/050f551f-89dc-1030-e92a-c8f0f5f92f5e.htm" />
+  <HelpKINode Title="Codpos property" Url="html/acb51c15-b8c2-37f1-6e60-464916a9d868.htm" />
+  <HelpKINode Title="CompareTo method" Url="html/23079dd8-d20a-1cd5-4f04-4cc333391dd4.htm" />
+  <HelpKINode Title="Descatalogado enumeration member" Url="html/fdb9bfb4-fd3e-c73d-823b-e6462a1a0d54.htm" />
+  <HelpKINode Title="Descripcion property" Url="html/2ab7a5b9-3eb6-f40b-d8ee-816b9b56dab6.htm" />
+  <HelpKINode Title="Dias enumeration member" Url="html/fdb9bfb4-fd3e-c73d-823b-e6462a1a0d54.htm" />
+  <HelpKINode Title="Disponible property" Url="html/222f9531-d8f0-64e4-f8c8-8dc6335442ce.htm" />
+  <HelpKINode Title="Dni property" Url="html/a0684f42-a1ed-92fa-af59-6875b6680453.htm" />
+  <HelpKINode Title="Email property" Url="html/db3c6b6a-7d0a-6fcd-9c04-2e08a4405547.htm" />
+  <HelpKINode Title="Empresa property" Url="html/ab0d555b-6737-8484-bb21-27800397baa5.htm" />
+  <HelpKINode Title="Entrega enumeration" Url="html/fdb9bfb4-fd3e-c73d-823b-e6462a1a0d54.htm" />
+  <HelpKINode Title="Entrega property" Url="html/5818b180-2b5c-1034-c70c-b30e41a6f87b.htm" />
+  <HelpKINode Title="Error property" Url="html/1d11b5e0-5147-b5b4-a867-c4e45b87100b.htm" />
+  <HelpKINode Title="Especiales property" Url="html/12fa87ba-b8ce-a0ca-6b4a-7333314efdba.htm" />
+  <HelpKINode Title="Especificaciones property" Url="html/35b4d8b0-dd7f-a1dd-c8da-0db499e7940f.htm" />
+  <HelpKINode Title="EspecificacionesExtras class">
+    <HelpKINode Title="EspecificacionesExtras Class" Url="html/ab8bec70-e570-022d-a290-6173121e4944.htm" />
+    <HelpKINode Title="constructor" Url="html/83d3fe34-7ba8-c6db-5991-6979d346b49b.htm" />
+    <HelpKINode Title="events" Url="html/53a769e0-0656-1ca1-6607-50e01666e750.htm" />
+    <HelpKINode Title="fields" Url="html/fb2ecfb1-3847-1bda-471b-02a16721601f.htm" />
+    <HelpKINode Title="methods" Url="html/1464eb5c-cdf6-a428-8d02-9c8a2cd9c545.htm" />
+    <HelpKINode Title="properties" Url="html/faed3528-e6ac-f056-be6f-1a3a385d2977.htm" />
+  </HelpKINode>
+  <HelpKINode Title="EspecificacionesExtras.Camara property" Url="html/b4462dba-600b-27c2-492c-e98670261d70.htm" />
+  <HelpKINode Title="EspecificacionesExtras.EspecificacionesExtras constructor" Url="html/83d3fe34-7ba8-c6db-5991-6979d346b49b.htm" />
+  <HelpKINode Title="EspecificacionesExtras.OnPropertyChanged method" Url="html/f2b86583-e26d-9d94-5c30-fafcde96a1d6.htm" />
+  <HelpKINode Title="EspecificacionesExtras.PropertyChanged event" Url="html/fefe2caa-3d63-66f0-2ede-26362a41958b.htm" />
+  <HelpKINode Title="EspecificacionesExtras._camara field" Url="html/f6cff7b4-4343-ea9e-2adb-87028988adb6.htm" />
+  <HelpKINode Title="EspecificacionesisExtra1 property" Url="html/2a707753-fa5e-2a9c-9642-8df962626235.htm" />
+  <HelpKINode Title="EspeExtra property" Url="html/176f8ec1-9cb6-9930-7ee0-001b6d002700.htm" />
+  <HelpKINode Title="Factor property" Url="html/498ed41a-a657-4d0b-b098-66649777c341.htm" />
+  <HelpKINode Title="Fecha property" Url="html/93ffdeef-f3a9-c0ca-2749-92d20e6835df.htm" />
+  <HelpKINode Title="Finalize method">
+    <HelpKINode Title="Articulo.Finalize Method " Url="html/9af04ad6-74df-17f7-7e64-200a58a3874e.htm" />
+    <HelpKINode Title="Camara.Finalize Method " Url="html/0de55b72-77ea-4ba4-8e0e-7d799ae6ba99.htm" />
+    <HelpKINode Title="Linped.Finalize Method " Url="html/0d1ca984-6978-89de-bb9b-84ab322f99ed.htm" />
+    <HelpKINode Title="Localidad.Finalize Method " Url="html/bbdec79d-1b44-f0f5-66fb-ce4846570c99.htm" />
+    <HelpKINode Title="Marca.Finalize Method " Url="html/1b0cfff2-ef43-5b25-2925-45624dd8919c.htm" />
+    <HelpKINode Title="Memoria.Finalize Method " Url="html/d37f96dd-4409-7f66-302a-5ed9e70ea78e.htm" />
+    <HelpKINode Title="Objetivo.Finalize Method " Url="html/5e38c6a4-6f0c-d07f-6218-3d8174251183.htm" />
+    <HelpKINode Title="Pedido.Finalize Method " Url="html/6ca5cc6c-e7df-7217-e150-fac0feed058a.htm" />
+    <HelpKINode Title="Provincia.Finalize Method " Url="html/2ab31d3a-f94a-8b4e-41d9-3e1ec97b3b92.htm" />
+    <HelpKINode Title="Stock.Finalize Method " Url="html/841ca300-9db0-633e-613f-0bfb2c96bf52.htm" />
+    <HelpKINode Title="TipoArticulo.Finalize Method " Url="html/cfa516f2-9890-d8d5-1fea-feadbf2a50ad.htm" />
+    <HelpKINode Title="Tv.Finalize Method " Url="html/a7cabda5-7818-e8d8-c519-ad027534b63b.htm" />
+    <HelpKINode Title="Usuario.Finalize Method " Url="html/a2b7e834-dbbc-387a-50d3-cdd5b5972a17.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Focal property" Url="html/9d69a3b8-6704-ac9b-b6ce-bd5ace16db16.htm" />
+  <HelpKINode Title="GetEnumValueFromDescription(Of T) method" Url="html/d7437ef8-58fa-338b-040a-cdb7e0ad370d.htm" />
+  <HelpKINode Title="GetEnumValueFromDescription&lt;T&gt; method" Url="html/d7437ef8-58fa-338b-040a-cdb7e0ad370d.htm" />
+  <HelpKINode Title="Hdreadyfullhd property" Url="html/48b7fbae-af36-3ef0-db85-ef81a72512b3.htm" />
+  <HelpKINode Title="Horas enumeration member" Url="html/fdb9bfb4-fd3e-c73d-823b-e6462a1a0d54.htm" />
+  <HelpKINode Title="Imagen property" Url="html/9b034f88-3be0-41d1-aa6b-a7026392cb1f.htm" />
+  <HelpKINode Title="Importe property" Url="html/a812fc7e-60e7-b872-1e5f-81c8816b8fbb.htm" />
+  <HelpKINode Title="ImporteTotal property" Url="html/3014527f-23f3-154a-03af-8c4d5e7e1745.htm" />
+  <HelpKINode Title="InsertarArticulo method" Url="html/510363ff-0e3b-0ffd-c662-f72ca2888e43.htm" />
+  <HelpKINode Title="InsertarCamara method" Url="html/75c2639a-e516-e157-10a1-6883aef00363.htm" />
+  <HelpKINode Title="InsertarLinped method" Url="html/26e8243e-7ae6-3e0b-4d6b-bc7217e167f4.htm" />
+  <HelpKINode Title="InsertarLocalidad method" Url="html/dea1ae19-16a4-97a0-5144-2c537bd686a9.htm" />
+  <HelpKINode Title="InsertarMarca method" Url="html/a004d5dc-c9eb-14e6-da6f-258124a8c9fc.htm" />
+  <HelpKINode Title="InsertarMemoria method" Url="html/f6b0dea4-7268-fa97-bd71-2c2aac377852.htm" />
+  <HelpKINode Title="InsertarObjetivo method" Url="html/ab8af04b-abb1-4c64-b867-e762a5d9faa4.htm" />
+  <HelpKINode Title="InsertarPedido method" Url="html/b1e5b7a4-f8d0-7c54-f9e9-9c84875db5a7.htm" />
+  <HelpKINode Title="InsertarProvincia method" Url="html/f85b66e4-f4d0-4400-c063-435a58e77b90.htm" />
+  <HelpKINode Title="InsertarStock method" Url="html/d15265a2-38b4-5989-2fe3-7b99a14c9c30.htm" />
+  <HelpKINode Title="InsertarTipoArticulo method" Url="html/68cccfa6-7b9c-87e0-1bcd-6749b9ffa6eb.htm" />
+  <HelpKINode Title="InsertarTv method" Url="html/e6fec364-3faf-2eec-897e-1092e97bf2f8.htm" />
+  <HelpKINode Title="InsertarUsuario method" Url="html/5abae45a-d18e-75b0-44f8-63b064d12f71.htm" />
+  <HelpKINode Title="IsValid method" Url="html/9eb6a478-69c0-685f-50dc-b4ad41436748.htm" />
+  <HelpKINode Title="Item property" Url="html/7f24d8c2-cc38-1f27-d0c1-fd23785ca91b.htm" />
+  <HelpKINode Title="LeerArticulo method" Url="html/00efff94-9c65-800c-ae98-401b1c7123e4.htm" />
+  <HelpKINode Title="LeerArticulos method" Url="html/a48c8082-61c6-00b0-6451-91b79435993a.htm" />
+  <HelpKINode Title="LeerCamara method" Url="html/23291ff6-8007-7e11-70c0-4bc462652aec.htm" />
+  <HelpKINode Title="LeerCamaras method" Url="html/0f48212d-94c5-4437-d178-9877925b872e.htm" />
+  <HelpKINode Title="LeerLinped method" Url="html/3f9fd534-b509-2ed6-88d9-e94fa1b48f61.htm" />
+  <HelpKINode Title="LeerLocalidad method" Url="html/cbd15007-e8f1-ad9b-e473-1ba49c506fc7.htm" />
+  <HelpKINode Title="LeerLocalidades method" Url="html/81051ef4-72f0-087e-4181-4aec36a7d15d.htm" />
+  <HelpKINode Title="LeerMarca method" Url="html/657e14b8-df6c-fe73-4515-2f049afaed63.htm" />
+  <HelpKINode Title="LeerMarcas method" Url="html/730d1a6f-c473-0096-43e5-63f5ce013ce4.htm" />
+  <HelpKINode Title="LeerMemoria method" Url="html/040ead05-726c-985c-4df7-b029f91685a5.htm" />
+  <HelpKINode Title="LeerMemorias method" Url="html/9c9b4064-6d67-c3e2-e2b2-885a7ae0e9f8.htm" />
+  <HelpKINode Title="LeerObjetivo method" Url="html/35bcd09c-910c-821f-a341-4610984d7ae5.htm" />
+  <HelpKINode Title="LeerObjetivos method" Url="html/348ba779-2791-9a7d-e7f6-e2ca03ac3066.htm" />
+  <HelpKINode Title="LeerPedido method" Url="html/70858d0e-036f-c3df-dff2-1dd57c65f10e.htm" />
+  <HelpKINode Title="LeerPedidos method" Url="html/7cb7f4ac-e814-47f7-b8e4-abf1afa31254.htm" />
+  <HelpKINode Title="LeerProvincia method" Url="html/b7d1f5ca-d925-00d2-a149-125117bed6b5.htm" />
+  <HelpKINode Title="LeerProvincias method" Url="html/e2e4e47b-59ef-f353-3f39-2f1612c43ad4.htm" />
+  <HelpKINode Title="LeerStock method" Url="html/4fba5024-06ea-4aaa-2e08-b6d910492958.htm" />
+  <HelpKINode Title="LeerStocks method" Url="html/4f99755c-68ff-3d53-0c73-1cfd4d7ba4bf.htm" />
+  <HelpKINode Title="LeerTipoArticulo method" Url="html/53c8c638-5e66-2f8d-b196-18c19bcaa79d.htm" />
+  <HelpKINode Title="LeerTipoTipoArticulos method" Url="html/6774c0c0-b300-b79b-1ac2-0eb77a64aa40.htm" />
+  <HelpKINode Title="Leertv method" Url="html/58f04cad-0ea2-55f6-fa20-127b81872c3e.htm" />
+  <HelpKINode Title="LeerTvs method" Url="html/b7155e43-1faa-0e21-d77e-c328f8111688.htm" />
+  <HelpKINode Title="LeerUsuario method" Url="html/2c875311-43c2-bed4-0dcd-6b63e2f4a82f.htm" />
+  <HelpKINode Title="LeerUsuarios method" Url="html/5cc9e108-a1ce-1e24-fcd8-0d304bb7c870.htm" />
+  <HelpKINode Title="Linea property" Url="html/98c8854d-5de5-c2a8-030b-90fb2b1f363b.htm" />
+  <HelpKINode Title="Linped class">
+    <HelpKINode Title="Linped Class" Url="html/6513435f-967d-91da-3efc-a0f66642051e.htm" />
+    <HelpKINode Title="constructor" Url="html/5205c18c-051e-d9e4-434e-750e3adfe37b.htm" />
+    <HelpKINode Title="fields" Url="html/fc452019-721a-cb72-c51a-c1efad590351.htm" />
+    <HelpKINode Title="methods" Url="html/d52a6506-b692-519f-3d17-a4add0794d9d.htm" />
+    <HelpKINode Title="properties" Url="html/c7d63d2f-a3ae-6aa0-dd81-85e20115a4ed.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Linped.ArticuloID property" Url="html/65451c0d-d24f-2657-7733-effe69fab5b0.htm" />
+  <HelpKINode Title="Linped.Cantidad property" Url="html/26aa58fb-3aa7-8b7a-d82b-eb10c77ea3f3.htm" />
+  <HelpKINode Title="Linped.Finalize method" Url="html/0d1ca984-6978-89de-bb9b-84ab322f99ed.htm" />
+  <HelpKINode Title="Linped.Importe property" Url="html/a812fc7e-60e7-b872-1e5f-81c8816b8fbb.htm" />
+  <HelpKINode Title="Linped.Linea property" Url="html/98c8854d-5de5-c2a8-030b-90fb2b1f363b.htm" />
+  <HelpKINode Title="Linped.Linped constructor" Url="html/5205c18c-051e-d9e4-434e-750e3adfe37b.htm" />
+  <HelpKINode Title="Linped.PedidoID property" Url="html/b106892d-c437-8876-17a0-d5aaa1b4c730.htm" />
+  <HelpKINode Title="Linped.ToString method" Url="html/1456ad31-d526-7670-d1af-ff19137cd0de.htm" />
+  <HelpKINode Title="Linped._articuloID field" Url="html/8b74221e-03ec-d7ca-5ffa-31c069adac06.htm" />
+  <HelpKINode Title="Linped._cantidad field" Url="html/29581e77-bb44-493f-bbee-7f9d6eb63f7b.htm" />
+  <HelpKINode Title="Linped._importe field" Url="html/04df48d6-b669-0a60-19c5-d20591ad84cc.htm" />
+  <HelpKINode Title="Linped._linea field" Url="html/bf69a5b4-1176-47be-4b55-66f75bd757e8.htm" />
+  <HelpKINode Title="Linped._pedidoID field" Url="html/9f7a039b-03a6-0afd-a38c-e6b719731f01.htm" />
+  <HelpKINode Title="LinpedADO class">
+    <HelpKINode Title="LinpedADO Class" Url="html/d01b6d50-966b-a190-ec7f-cca3efd7205a.htm" />
+    <HelpKINode Title="constructor" Url="html/54afbae3-c8c1-0ed4-2923-f0e6e52cb522.htm" />
+    <HelpKINode Title="fields" Url="html/8e8e9953-f354-5a19-8408-fb0c6e4a9a1b.htm" />
+    <HelpKINode Title="methods" Url="html/b502d873-f687-e49a-9925-852edddb34e3.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LinpedADO.ActualizarLinped method" Url="html/ab24e3e6-b61e-0dae-edc6-67d8a0b551a4.htm" />
+  <HelpKINode Title="LinpedADO.BorrarLinped method" Url="html/994ebbe2-e06f-b196-5d5b-e00a5f714880.htm" />
+  <HelpKINode Title="LinpedADO.InsertarLinped method" Url="html/26e8243e-7ae6-3e0b-4d6b-bc7217e167f4.htm" />
+  <HelpKINode Title="LinpedADO.LeerLinped method" Url="html/3f9fd534-b509-2ed6-88d9-e94fa1b48f61.htm" />
+  <HelpKINode Title="LinpedADO.LinpedADO constructor" Url="html/54afbae3-c8c1-0ed4-2923-f0e6e52cb522.htm" />
+  <HelpKINode Title="Linpeds property" Url="html/12453d2c-9d77-1bd4-73c7-d1fc48e238cf.htm" />
+  <HelpKINode Title="ListaArticuloCompleto method" Url="html/137e21e7-2f2d-38b2-5f48-d63ebdfbc4a3.htm" />
+  <HelpKINode Title="ListaArticulos property" Url="html/64a8aa10-a496-8cb2-a494-1f551e59b923.htm" />
+  <HelpKINode Title="LoadLibrary method" Url="html/5c5bc673-622e-85e5-110c-8f329af374d1.htm" />
+  <HelpKINode Title="LoadNativeAssemblies method" Url="html/23666460-6b1b-d27f-77ca-d94915f03b20.htm" />
+  <HelpKINode Title="LoadNativeAssembly method" Url="html/88deafea-312a-3f98-37c4-dfcdef013a24.htm" />
+  <HelpKINode Title="Localidad class">
+    <HelpKINode Title="Localidad Class" Url="html/66790ada-07dd-b2b7-024f-17d8a5642807.htm" />
+    <HelpKINode Title="constructor" Url="html/26c567a2-ed41-b2ff-e418-9bc22f2e6ace.htm" />
+    <HelpKINode Title="fields" Url="html/9d8b4a2b-15b4-3ab6-77cc-53429bd8fc0e.htm" />
+    <HelpKINode Title="methods" Url="html/f3bf0beb-fdb6-996a-aa89-47e6b41d4227.htm" />
+    <HelpKINode Title="properties" Url="html/3011a82c-f6f2-2e72-3a1d-0072e0d48f60.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Localidad.Finalize method" Url="html/bbdec79d-1b44-f0f5-66fb-ce4846570c99.htm" />
+  <HelpKINode Title="Localidad.Localidad constructor" Url="html/26c567a2-ed41-b2ff-e418-9bc22f2e6ace.htm" />
+  <HelpKINode Title="Localidad.LocalidadID property" Url="html/8e448779-784f-87b0-4cc7-edebb303fcea.htm" />
+  <HelpKINode Title="Localidad.Nombre property" Url="html/931fd7a2-2d75-a217-f341-33521a9fca41.htm" />
+  <HelpKINode Title="Localidad.ProvinciaID property" Url="html/4eb63d15-a4b0-fcab-71f5-82d382a3976f.htm" />
+  <HelpKINode Title="Localidad.ToString method" Url="html/22d5629d-886d-ec16-5a1e-ab587b33906f.htm" />
+  <HelpKINode Title="Localidad._localidadID field" Url="html/3523d577-ab69-0762-911a-cd167cd98e14.htm" />
+  <HelpKINode Title="Localidad._Nombre field" Url="html/61b6c1c6-d624-6f83-8351-290d82e6646a.htm" />
+  <HelpKINode Title="Localidad._provinciaID field" Url="html/4586f91b-e5c3-e7c3-b00d-7baffcd91760.htm" />
+  <HelpKINode Title="LocalidadADO class">
+    <HelpKINode Title="LocalidadADO Class" Url="html/230fa06a-ab39-860a-979f-0529a1d94d4c.htm" />
+    <HelpKINode Title="constructor" Url="html/f630a43c-c51e-7f15-7541-eafda229833c.htm" />
+    <HelpKINode Title="fields" Url="html/5ec06f09-a693-74df-7f7d-29a496f31800.htm" />
+    <HelpKINode Title="methods" Url="html/482a98db-a17e-03fb-6992-70a8cd8244e4.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LocalidadADO.ActualizarLocalidad method" Url="html/31ca46ab-fbf9-b91a-cc59-a41e755490a0.htm" />
+  <HelpKINode Title="LocalidadADO.BorrarLocalidad method" Url="html/64d629a6-63b8-0633-2c74-3c4c781e6101.htm" />
+  <HelpKINode Title="LocalidadADO.InsertarLocalidad method" Url="html/dea1ae19-16a4-97a0-5144-2c537bd686a9.htm" />
+  <HelpKINode Title="LocalidadADO.LeerLocalidad method" Url="html/cbd15007-e8f1-ad9b-e473-1ba49c506fc7.htm" />
+  <HelpKINode Title="LocalidadADO.LeerLocalidades method" Url="html/81051ef4-72f0-087e-4181-4aec36a7d15d.htm" />
+  <HelpKINode Title="LocalidadADO.LocalidadADO constructor" Url="html/f630a43c-c51e-7f15-7541-eafda229833c.htm" />
+  <HelpKINode Title="LocalidadID property" Url="html/8e448779-784f-87b0-4cc7-edebb303fcea.htm" />
+  <HelpKINode Title="Logo property" Url="html/8c912ebe-e3c3-eeb1-97d4-5f3d57979302.htm" />
+  <HelpKINode Title="Marca class">
+    <HelpKINode Title="Marca Class" Url="html/0ba3a2e3-7779-8e96-ed62-e1b4a8f47601.htm" />
+    <HelpKINode Title="constructor" Url="html/748cb9fb-2f89-9d80-0449-c2069d238c29.htm" />
+    <HelpKINode Title="fields" Url="html/7cc8cf1f-e4fd-8a83-d448-98c6b188b38d.htm" />
+    <HelpKINode Title="methods" Url="html/dfe31628-413a-d984-5044-4276266778c8.htm" />
+    <HelpKINode Title="properties" Url="html/1bf2765a-050d-8e1b-c644-bac73b190c1d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Marca.Empresa property" Url="html/ab0d555b-6737-8484-bb21-27800397baa5.htm" />
+  <HelpKINode Title="Marca.Finalize method" Url="html/1b0cfff2-ef43-5b25-2925-45624dd8919c.htm" />
+  <HelpKINode Title="Marca.Logo property" Url="html/8c912ebe-e3c3-eeb1-97d4-5f3d57979302.htm" />
+  <HelpKINode Title="Marca.Marca constructor" Url="html/748cb9fb-2f89-9d80-0449-c2069d238c29.htm" />
+  <HelpKINode Title="Marca.MarcaID property" Url="html/0e2ba527-81f5-1b36-826f-225d93d2f68a.htm" />
+  <HelpKINode Title="Marca.ToString method" Url="html/1f95c84a-8202-ca11-2122-d936ae14a036.htm" />
+  <HelpKINode Title="Marca._empresa field" Url="html/79d68e05-7fc0-e1b6-148f-bc1486091612.htm" />
+  <HelpKINode Title="Marca._logo field" Url="html/c2deb926-31c0-9ab8-82bc-78369d99815b.htm" />
+  <HelpKINode Title="Marca._marcaID field" Url="html/7397efff-3296-2b2d-3f18-b3209adcbf44.htm" />
+  <HelpKINode Title="MarcaADO class">
+    <HelpKINode Title="MarcaADO Class" Url="html/8214a7f2-ffbf-e598-4729-d6524868c010.htm" />
+    <HelpKINode Title="constructor" Url="html/e41dff2e-7a57-8ad5-3115-26c198bea810.htm" />
+    <HelpKINode Title="fields" Url="html/d1cfb512-9ff5-8b3a-aa3f-629d7622ffd1.htm" />
+    <HelpKINode Title="methods" Url="html/79baa189-3fb1-ccd7-9052-f1872ffa2566.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MarcaADO.ActualizarMarca method" Url="html/4c73d0c6-dc59-3b80-30ef-f844a4731df2.htm" />
+  <HelpKINode Title="MarcaADO.BorrarMarca method" Url="html/a9ab03bc-f99c-0480-8387-3fbdab29f132.htm" />
+  <HelpKINode Title="MarcaADO.InsertarMarca method" Url="html/a004d5dc-c9eb-14e6-da6f-258124a8c9fc.htm" />
+  <HelpKINode Title="MarcaADO.LeerMarca method" Url="html/657e14b8-df6c-fe73-4515-2f049afaed63.htm" />
+  <HelpKINode Title="MarcaADO.LeerMarcas method" Url="html/730d1a6f-c473-0096-43e5-63f5ce013ce4.htm" />
+  <HelpKINode Title="MarcaADO.MarcaADO constructor" Url="html/e41dff2e-7a57-8ad5-3115-26c198bea810.htm" />
+  <HelpKINode Title="MarcaID property">
+    <HelpKINode Title="Articulo.MarcaID Property " Url="html/729820a9-e18c-8c00-67bf-16fe500e8169.htm" />
+    <HelpKINode Title="Marca.MarcaID Property " Url="html/0e2ba527-81f5-1b36-826f-225d93d2f68a.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Memoria class">
+    <HelpKINode Title="Memoria Class" Url="html/3240279e-4761-b7a3-c6b9-9da8ce7fcf7c.htm" />
+    <HelpKINode Title="constructor" Url="html/cb01e152-c0fd-6783-9c13-69736affd4bb.htm" />
+    <HelpKINode Title="fields" Url="html/3d7c3b93-9975-5111-c027-ea594b68b380.htm" />
+    <HelpKINode Title="methods" Url="html/32c7b127-44a3-2e6e-0429-45dc8d625832.htm" />
+    <HelpKINode Title="properties" Url="html/7a53a9d2-ca2c-3cfb-8151-720a08114fd7.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Memoria.Finalize method" Url="html/d37f96dd-4409-7f66-302a-5ed9e70ea78e.htm" />
+  <HelpKINode Title="Memoria.Memoria constructor" Url="html/cb01e152-c0fd-6783-9c13-69736affd4bb.htm" />
+  <HelpKINode Title="Memoria.MemoriaID property" Url="html/81605b1d-855c-7564-6c35-5798d039b807.htm" />
+  <HelpKINode Title="Memoria.Tipo property" Url="html/3ee0cc03-0b6d-862e-f38f-f88d738d2778.htm" />
+  <HelpKINode Title="Memoria.ToString method" Url="html/6d5aa56e-41a3-4176-a35e-e75670b92915.htm" />
+  <HelpKINode Title="Memoria._memoriaID field" Url="html/38521a2d-e577-0726-9115-021c09202fdd.htm" />
+  <HelpKINode Title="Memoria._tipo field" Url="html/bafe9c29-f662-bf60-69f8-ffd813e94036.htm" />
+  <HelpKINode Title="MemoriaADO class">
+    <HelpKINode Title="MemoriaADO Class" Url="html/6f027c64-884d-6f0b-037d-ed2820c368a8.htm" />
+    <HelpKINode Title="constructor" Url="html/69fdaf61-fb69-6eb4-83f7-b4dc1efd4d86.htm" />
+    <HelpKINode Title="fields" Url="html/e787b16e-9d78-5b00-2689-9d981af6c56c.htm" />
+    <HelpKINode Title="methods" Url="html/8773a860-31d8-579b-da12-35ce598d536d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MemoriaADO.ActualizarMemoria method" Url="html/7a00a6b9-6812-dfdb-a8fe-0c32879c1c7f.htm" />
+  <HelpKINode Title="MemoriaADO.BorrarMemoria method" Url="html/7a0977be-72a4-5169-8283-66cecffacc39.htm" />
+  <HelpKINode Title="MemoriaADO.InsertarMemoria method" Url="html/f6b0dea4-7268-fa97-bd71-2c2aac377852.htm" />
+  <HelpKINode Title="MemoriaADO.LeerMemoria method" Url="html/040ead05-726c-985c-4df7-b029f91685a5.htm" />
+  <HelpKINode Title="MemoriaADO.LeerMemorias method" Url="html/9c9b4064-6d67-c3e2-e2b2-885a7ae0e9f8.htm" />
+  <HelpKINode Title="MemoriaADO.MemoriaADO constructor" Url="html/69fdaf61-fb69-6eb4-83f7-b4dc1efd4d86.htm" />
+  <HelpKINode Title="MemoriaID property" Url="html/81605b1d-855c-7564-6c35-5798d039b807.htm" />
+  <HelpKINode Title="Montura property" Url="html/c69d2ff6-47bc-f73c-d083-762f436438cc.htm" />
+  <HelpKINode Title="Nacido property" Url="html/af347eff-1544-fc27-7480-34d4cb6ab102.htm" />
+  <HelpKINode Title="Nombre property">
+    <HelpKINode Title="Articulo.Nombre Property " Url="html/2f6641b0-885e-944e-7885-b003ed400784.htm" />
+    <HelpKINode Title="Localidad.Nombre Property " Url="html/931fd7a2-2d75-a217-f341-33521a9fca41.htm" />
+    <HelpKINode Title="Provincia.Nombre Property " Url="html/c1893b48-e0c8-3df4-618c-70180959e6f5.htm" />
+    <HelpKINode Title="Usuario.Nombre Property " Url="html/c18f2c95-388e-8435-07a1-4b1a78bc8c92.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Objetivo class">
+    <HelpKINode Title="Objetivo Class" Url="html/acd35325-7a7a-80f8-68b5-85e21cf3f14b.htm" />
+    <HelpKINode Title="constructor" Url="html/cc64b303-bedc-3f31-e199-b0a4f4d1174e.htm" />
+    <HelpKINode Title="fields" Url="html/8e0f38d2-faab-efc8-1d7a-51201a3c1201.htm" />
+    <HelpKINode Title="methods" Url="html/649eba16-bdf3-bcdc-96c2-8475d1893b94.htm" />
+    <HelpKINode Title="properties" Url="html/0d1c8196-a850-735f-017d-74cd072714e0.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Objetivo property" Url="html/25c3b338-8dba-14b4-56c7-498b1d01397f.htm" />
+  <HelpKINode Title="Objetivo.Apertura property" Url="html/a3f63f9d-cdb8-adaa-3539-39a09e0ba821.htm" />
+  <HelpKINode Title="Objetivo.Especiales property" Url="html/12fa87ba-b8ce-a0ca-6b4a-7333314efdba.htm" />
+  <HelpKINode Title="Objetivo.Finalize method" Url="html/5e38c6a4-6f0c-d07f-6218-3d8174251183.htm" />
+  <HelpKINode Title="Objetivo.Focal property" Url="html/9d69a3b8-6704-ac9b-b6ce-bd5ace16db16.htm" />
+  <HelpKINode Title="Objetivo.Montura property" Url="html/c69d2ff6-47bc-f73c-d083-762f436438cc.htm" />
+  <HelpKINode Title="Objetivo.Objetivo constructor" Url="html/cc64b303-bedc-3f31-e199-b0a4f4d1174e.htm" />
+  <HelpKINode Title="Objetivo.ObjetivoID property" Url="html/2ac196fd-56bc-b2e3-79e3-afb035c0dde3.htm" />
+  <HelpKINode Title="Objetivo.Tipo property" Url="html/eb48f2f2-044b-e2c2-e8d9-aadad1803302.htm" />
+  <HelpKINode Title="Objetivo.ToString method" Url="html/a190841b-7e68-c86e-f05e-673dfb4a7e80.htm" />
+  <HelpKINode Title="Objetivo._apertura field" Url="html/dbf96fc2-7ec1-37a5-8288-fd1c448fab60.htm" />
+  <HelpKINode Title="Objetivo._especiales field" Url="html/296433df-3192-c6e0-e0bb-f295eb5eaa75.htm" />
+  <HelpKINode Title="Objetivo._focal field" Url="html/06316fae-9fd8-67ce-8fbd-f494177ed751.htm" />
+  <HelpKINode Title="Objetivo._montura field" Url="html/b8b585f2-b995-92f2-6078-f9d73ffb8ae4.htm" />
+  <HelpKINode Title="Objetivo._objetivoID field" Url="html/6fcda836-a0f2-8799-7e76-0809473964e0.htm" />
+  <HelpKINode Title="Objetivo._tipo field" Url="html/6a941e40-30b6-e0d7-10e6-98e0acbe1a86.htm" />
+  <HelpKINode Title="ObjetivoADO class">
+    <HelpKINode Title="ObjetivoADO Class" Url="html/85dfb49e-d6ec-6dc7-6ef3-2b2b88b9a90f.htm" />
+    <HelpKINode Title="constructor" Url="html/6b2011bf-421b-2a14-860f-8e4c90bce0a1.htm" />
+    <HelpKINode Title="fields" Url="html/9d2a3458-d48e-27af-ab77-e012ad0d0c4c.htm" />
+    <HelpKINode Title="methods" Url="html/30ad0199-4487-35a1-cf63-468019b6ef7d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ObjetivoADO.ActualizarObjetivo method" Url="html/a6c3a058-e0c0-219d-db55-95c774b58a32.htm" />
+  <HelpKINode Title="ObjetivoADO.BorrarObjetivo method" Url="html/44b2f39e-f5dc-b91d-14b3-95f3e1782696.htm" />
+  <HelpKINode Title="ObjetivoADO.InsertarObjetivo method" Url="html/ab8af04b-abb1-4c64-b867-e762a5d9faa4.htm" />
+  <HelpKINode Title="ObjetivoADO.LeerObjetivo method" Url="html/35bcd09c-910c-821f-a341-4610984d7ae5.htm" />
+  <HelpKINode Title="ObjetivoADO.LeerObjetivos method" Url="html/348ba779-2791-9a7d-e7f6-e2ca03ac3066.htm" />
+  <HelpKINode Title="ObjetivoADO.ObjetivoADO constructor" Url="html/6b2011bf-421b-2a14-860f-8e4c90bce0a1.htm" />
+  <HelpKINode Title="ObjetivoID property" Url="html/2ac196fd-56bc-b2e3-79e3-afb035c0dde3.htm" />
+  <HelpKINode Title="ObtenerValorString method" Url="html/f54e64fc-8159-6bcf-704f-8ac4ee3c7b76.htm" />
+  <HelpKINode Title="OnPropertyChanged method">
+    <HelpKINode Title="Articulo.OnPropertyChanged Method " Url="html/f3693910-f8f8-42a5-aba2-fbb34911a328.htm" />
+    <HelpKINode Title="EspecificacionesExtras.OnPropertyChanged Method " Url="html/f2b86583-e26d-9d94-5c30-fafcde96a1d6.htm" />
+    <HelpKINode Title="TipoArticulo.OnPropertyChanged Method " Url="html/d7592054-01f3-4f79-0e4d-5ce1190920e1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Panel property" Url="html/d9e97e3d-ea5c-052f-bd03-4c2492b842b1.htm" />
+  <HelpKINode Title="Pantalla property">
+    <HelpKINode Title="Camara.Pantalla Property " Url="html/2a81be30-5571-3ced-cc8c-8efc0ee83b82.htm" />
+    <HelpKINode Title="Tv.Pantalla Property " Url="html/680548fe-8e9d-7539-9ce2-490c37c626d5.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Password property" Url="html/f7a7e064-b608-cd84-19c6-78f3166f7000.htm" />
+  <HelpKINode Title="Pedido class">
+    <HelpKINode Title="Pedido Class" Url="html/b9fb17c6-2abd-7959-16c4-3cdbb9c46404.htm" />
+    <HelpKINode Title="constructor" Url="html/17d209bf-5fd8-4dfb-0b82-a24427ae40a7.htm" />
+    <HelpKINode Title="fields" Url="html/a16773ba-31a4-5c58-120e-ac450f9769e9.htm" />
+    <HelpKINode Title="methods" Url="html/ab54a2ca-aa0f-89a6-5ac8-6385bd982b47.htm" />
+    <HelpKINode Title="properties" Url="html/e6e2e01c-5054-a8ab-4a92-3cfe390359bf.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Pedido.AddLinped method" Url="html/bc061be3-27a7-791e-036e-697e2d0556cd.htm" />
+  <HelpKINode Title="Pedido.Fecha property" Url="html/93ffdeef-f3a9-c0ca-2749-92d20e6835df.htm" />
+  <HelpKINode Title="Pedido.Finalize method" Url="html/6ca5cc6c-e7df-7217-e150-fac0feed058a.htm" />
+  <HelpKINode Title="Pedido.ImporteTotal property" Url="html/3014527f-23f3-154a-03af-8c4d5e7e1745.htm" />
+  <HelpKINode Title="Pedido.Linpeds property" Url="html/12453d2c-9d77-1bd4-73c7-d1fc48e238cf.htm" />
+  <HelpKINode Title="Pedido.Pedido constructor" Url="html/17d209bf-5fd8-4dfb-0b82-a24427ae40a7.htm" />
+  <HelpKINode Title="Pedido.PedidoID property" Url="html/8acc2501-4889-0ea6-5d20-b30bd46299bf.htm" />
+  <HelpKINode Title="Pedido.ToString method" Url="html/8fa74987-6811-f97b-5148-375d394fe64a.htm" />
+  <HelpKINode Title="Pedido.UsuarioID property" Url="html/219e33b0-fbd0-f7f6-cc8d-300e5c6343f0.htm" />
+  <HelpKINode Title="Pedido._fecha field" Url="html/a293b02a-da0a-2894-e6cb-97676c446945.htm" />
+  <HelpKINode Title="Pedido._pedidoID field" Url="html/f7de42fb-8bed-404f-f3bd-e52bc7072c86.htm" />
+  <HelpKINode Title="Pedido._usuarioID field" Url="html/18b1958e-6564-aca1-d278-be3e623da1c7.htm" />
+  <HelpKINode Title="PedidoADO class">
+    <HelpKINode Title="PedidoADO Class" Url="html/0066ed19-cd0f-0745-b5a1-e45dfcdd3a12.htm" />
+    <HelpKINode Title="constructor" Url="html/fcb0fa00-e354-f6a1-ebce-e71cbfb924f1.htm" />
+    <HelpKINode Title="fields" Url="html/3ab2b2d7-616d-eef8-a3b1-e66b14de707e.htm" />
+    <HelpKINode Title="methods" Url="html/e08c4d71-543f-4668-97b4-2e65848e3c59.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PedidoADO.ActualizarPedido method" Url="html/5b1b2946-1662-1924-8485-edb919a8e566.htm" />
+  <HelpKINode Title="PedidoADO.BorrarPedido method" Url="html/28b10260-6040-bc76-5f25-450b0bf2b888.htm" />
+  <HelpKINode Title="PedidoADO.InsertarPedido method" Url="html/b1e5b7a4-f8d0-7c54-f9e9-9c84875db5a7.htm" />
+  <HelpKINode Title="PedidoADO.LeerPedido method" Url="html/70858d0e-036f-c3df-dff2-1dd57c65f10e.htm" />
+  <HelpKINode Title="PedidoADO.LeerPedidos method" Url="html/7cb7f4ac-e814-47f7-b8e4-abf1afa31254.htm" />
+  <HelpKINode Title="PedidoADO.PedidoADO constructor" Url="html/fcb0fa00-e354-f6a1-ebce-e71cbfb924f1.htm" />
+  <HelpKINode Title="PedidoID property">
+    <HelpKINode Title="Linped.PedidoID Property " Url="html/b106892d-c437-8876-17a0-d5aaa1b4c730.htm" />
+    <HelpKINode Title="Pedido.PedidoID Property " Url="html/8acc2501-4889-0ea6-5d20-b30bd46299bf.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PropertyChanged event">
+    <HelpKINode Title="Articulo.PropertyChanged Event" Url="html/cd7f430d-0b66-8fb2-9314-b0d3e33fea8c.htm" />
+    <HelpKINode Title="EspecificacionesExtras.PropertyChanged Event" Url="html/fefe2caa-3d63-66f0-2ede-26362a41958b.htm" />
+    <HelpKINode Title="TipoArticulo.PropertyChanged Event" Url="html/c34ec798-ac3d-5256-c7d1-c910e5825105.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Provincia class">
+    <HelpKINode Title="Provincia Class" Url="html/fdfaeae0-2eda-12db-970e-3b3bc09f3940.htm" />
+    <HelpKINode Title="constructor" Url="html/c7dcbe6d-fb52-53a8-3000-349a60cc715d.htm" />
+    <HelpKINode Title="fields" Url="html/d35a1b40-a139-d982-a1a0-65d8aeaec6d1.htm" />
+    <HelpKINode Title="methods" Url="html/c0e78f3b-c4d7-f895-f877-7b617c442fcb.htm" />
+    <HelpKINode Title="properties" Url="html/988fcfa4-4749-9e74-02bd-132f21f07963.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Provincia.Finalize method" Url="html/2ab31d3a-f94a-8b4e-41d9-3e1ec97b3b92.htm" />
+  <HelpKINode Title="Provincia.Nombre property" Url="html/c1893b48-e0c8-3df4-618c-70180959e6f5.htm" />
+  <HelpKINode Title="Provincia.Provincia constructor" Url="html/c7dcbe6d-fb52-53a8-3000-349a60cc715d.htm" />
+  <HelpKINode Title="Provincia.ProvinciaID property" Url="html/928668de-7371-8a6d-992e-11e460393507.htm" />
+  <HelpKINode Title="Provincia.ToString method" Url="html/80e62968-49e5-ac89-3af9-ea4184525902.htm" />
+  <HelpKINode Title="Provincia._nombre field" Url="html/4a99cfcc-6dfc-ae1e-71ed-b7a74dc53969.htm" />
+  <HelpKINode Title="Provincia._provinciaID field" Url="html/02adcb7b-2168-354b-2638-a76bcfe75081.htm" />
+  <HelpKINode Title="ProvinciaADO class">
+    <HelpKINode Title="ProvinciaADO Class" Url="html/94497a8a-f0f1-0ef1-7cb6-700cdb5f649e.htm" />
+    <HelpKINode Title="constructor" Url="html/906f6fd3-6693-4147-6ed7-b451001a7317.htm" />
+    <HelpKINode Title="fields" Url="html/f48061dc-3dfe-4bde-3a97-3e220931cf0d.htm" />
+    <HelpKINode Title="methods" Url="html/1a830d73-3052-06c4-4989-eeb463c74b88.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ProvinciaADO.ActualizarProvincia method" Url="html/9312fcce-1c1f-639a-00ad-65cfe77a68ae.htm" />
+  <HelpKINode Title="ProvinciaADO.BorrarProvincia method" Url="html/0f37e99d-7264-277b-8f71-0a72533c6f25.htm" />
+  <HelpKINode Title="ProvinciaADO.InsertarProvincia method" Url="html/f85b66e4-f4d0-4400-c063-435a58e77b90.htm" />
+  <HelpKINode Title="ProvinciaADO.LeerProvincia method" Url="html/b7d1f5ca-d925-00d2-a149-125117bed6b5.htm" />
+  <HelpKINode Title="ProvinciaADO.LeerProvincias method" Url="html/e2e4e47b-59ef-f353-3f39-2f1612c43ad4.htm" />
+  <HelpKINode Title="ProvinciaADO.ProvinciaADO constructor" Url="html/906f6fd3-6693-4147-6ed7-b451001a7317.htm" />
+  <HelpKINode Title="ProvinciaID property">
+    <HelpKINode Title="Localidad.ProvinciaID Property " Url="html/4eb63d15-a4b0-fcab-71f5-82d382a3976f.htm" />
+    <HelpKINode Title="Provincia.ProvinciaID Property " Url="html/928668de-7371-8a6d-992e-11e460393507.htm" />
+    <HelpKINode Title="Usuario.ProvinciaID Property " Url="html/05dc1961-0518-2d40-d06a-97d9d24a10a9.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Proximamente enumeration member" Url="html/fdb9bfb4-fd3e-c73d-823b-e6462a1a0d54.htm" />
+  <HelpKINode Title="PuebloID property" Url="html/65e01f7a-fa83-5870-91de-34f8b3b2c536.htm" />
+  <HelpKINode Title="Pvp property" Url="html/018249ce-71db-92c2-182d-00049880c9c5.htm" />
+  <HelpKINode Title="Resolucion property">
+    <HelpKINode Title="Camara.Resolucion Property " Url="html/d494b455-4890-9ea8-90d0-a032495489f3.htm" />
+    <HelpKINode Title="Tv.Resolucion Property " Url="html/5c01b6f1-ffce-5434-6c15-bca5bef99a80.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Semanas enumeration member" Url="html/fdb9bfb4-fd3e-c73d-823b-e6462a1a0d54.htm" />
+  <HelpKINode Title="Sensor property" Url="html/a8365740-8167-4245-c407-760afab84f86.htm" />
+  <HelpKINode Title="SqlServerTypes namespace" Url="html/ba263b14-52d3-a89d-bfc2-2b2f8d2c88b3.htm" />
+  <HelpKINode Title="SqlServerTypes.Utilities class" Url="html/be44f8e7-dd76-1b83-2c63-069a77a9f949.htm" />
+  <HelpKINode Title="Stock class">
+    <HelpKINode Title="Stock Class" Url="html/8c22b038-20c4-ab27-5ea9-e81e82b8484f.htm" />
+    <HelpKINode Title="constructor" Url="html/ba3744fc-71b9-b76c-3077-f41a4d82df67.htm" />
+    <HelpKINode Title="fields" Url="html/6dab3006-662a-e481-e90a-2c6722292686.htm" />
+    <HelpKINode Title="methods" Url="html/1e843ab9-9f5c-1323-e125-339efd9766ec.htm" />
+    <HelpKINode Title="properties" Url="html/58ffab78-33eb-4d50-0f76-d232bb82b288.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Stock.ArticuloID property" Url="html/49515cfd-e868-20fe-30bf-9dd7144b41b5.htm" />
+  <HelpKINode Title="Stock.Disponible property" Url="html/222f9531-d8f0-64e4-f8c8-8dc6335442ce.htm" />
+  <HelpKINode Title="Stock.Entrega property" Url="html/5818b180-2b5c-1034-c70c-b30e41a6f87b.htm" />
+  <HelpKINode Title="Stock.Finalize method" Url="html/841ca300-9db0-633e-613f-0bfb2c96bf52.htm" />
+  <HelpKINode Title="Stock.GetEnumValueFromDescription(Of T) method" Url="html/d7437ef8-58fa-338b-040a-cdb7e0ad370d.htm" />
+  <HelpKINode Title="Stock.GetEnumValueFromDescription&lt;T&gt; method" Url="html/d7437ef8-58fa-338b-040a-cdb7e0ad370d.htm" />
+  <HelpKINode Title="Stock.ObtenerValorString method" Url="html/f54e64fc-8159-6bcf-704f-8ac4ee3c7b76.htm" />
+  <HelpKINode Title="Stock.Stock constructor" Url="html/ba3744fc-71b9-b76c-3077-f41a4d82df67.htm" />
+  <HelpKINode Title="Stock.ToString method" Url="html/31444a5f-5c79-a6ca-f943-da3d6d6a0252.htm" />
+  <HelpKINode Title="Stock._articuloID field" Url="html/530ecbe5-3d15-4cae-5343-98a5d4c743d2.htm" />
+  <HelpKINode Title="Stock._disponible field" Url="html/de1dd0a9-df6f-6bf4-5b70-3a4f9328f53b.htm" />
+  <HelpKINode Title="Stock._entrega field" Url="html/071fe549-75b9-0b5c-4b84-106fb4370f3b.htm" />
+  <HelpKINode Title="StockADO class">
+    <HelpKINode Title="StockADO Class" Url="html/59fe1837-cd23-0d01-6ecb-da94352f0311.htm" />
+    <HelpKINode Title="constructor" Url="html/50742e63-1c0c-d8be-c6f4-2c8eaf3f94ca.htm" />
+    <HelpKINode Title="fields" Url="html/7e9a842b-6aca-0491-c635-410c3f036ab9.htm" />
+    <HelpKINode Title="methods" Url="html/0b43be4c-41e8-9f95-c86f-13dbf9f4b7fb.htm" />
+  </HelpKINode>
+  <HelpKINode Title="StockADO.ActualizarStock method" Url="html/a15e1b59-4be9-56ce-702f-36311beea416.htm" />
+  <HelpKINode Title="StockADO.BorrarStock method" Url="html/0a368205-4f14-46f9-83d9-d9efaca90608.htm" />
+  <HelpKINode Title="StockADO.InsertarStock method" Url="html/d15265a2-38b4-5989-2fe3-7b99a14c9c30.htm" />
+  <HelpKINode Title="StockADO.LeerStock method" Url="html/4fba5024-06ea-4aaa-2e08-b6d910492958.htm" />
+  <HelpKINode Title="StockADO.LeerStocks method" Url="html/4f99755c-68ff-3d53-0c73-1cfd4d7ba4bf.htm" />
+  <HelpKINode Title="StockADO.StockADO constructor" Url="html/50742e63-1c0c-d8be-c6f4-2c8eaf3f94ca.htm" />
+  <HelpKINode Title="Stocks property" Url="html/55820bd1-708d-1df0-9d73-3ae74a32bc87.htm" />
+  <HelpKINode Title="Tdt property" Url="html/6b5e8a7a-4621-eeae-c911-be9d9418b36f.htm" />
+  <HelpKINode Title="Telefono property" Url="html/694045ec-a7e9-aef9-6195-4bb725e82a6d.htm" />
+  <HelpKINode Title="Tipo property">
+    <HelpKINode Title="Camara.Tipo Property " Url="html/3e7f8168-d9df-a930-8f79-991e5eac0256.htm" />
+    <HelpKINode Title="Memoria.Tipo Property " Url="html/3ee0cc03-0b6d-862e-f38f-f88d738d2778.htm" />
+    <HelpKINode Title="Objetivo.Tipo Property " Url="html/eb48f2f2-044b-e2c2-e8d9-aadad1803302.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TipoArticulo class">
+    <HelpKINode Title="TipoArticulo Class" Url="html/42531fa5-91e9-08a2-0f94-bb1625d081eb.htm" />
+    <HelpKINode Title="constructor" Url="html/a6837af4-57bf-da6b-9a44-207babd0f723.htm" />
+    <HelpKINode Title="events" Url="html/c5300646-0571-4b69-a943-93020f145b61.htm" />
+    <HelpKINode Title="fields" Url="html/f5369d8d-aab7-be67-e0f0-adca413974d3.htm" />
+    <HelpKINode Title="methods" Url="html/3562f019-ccca-0824-8adc-ba8ccbcf732e.htm" />
+    <HelpKINode Title="properties" Url="html/c6b9bd3a-33a1-6aad-e51a-a99bd5801b87.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TipoArticulo.Articulos property" Url="html/17751f1d-94e0-83b2-e842-c6615a3f6b73.htm" />
+  <HelpKINode Title="TipoArticulo.Descripcion property" Url="html/2ab7a5b9-3eb6-f40b-d8ee-816b9b56dab6.htm" />
+  <HelpKINode Title="TipoArticulo.Finalize method" Url="html/cfa516f2-9890-d8d5-1fea-feadbf2a50ad.htm" />
+  <HelpKINode Title="TipoArticulo.ListaArticulos property" Url="html/64a8aa10-a496-8cb2-a494-1f551e59b923.htm" />
+  <HelpKINode Title="TipoArticulo.OnPropertyChanged method" Url="html/d7592054-01f3-4f79-0e4d-5ce1190920e1.htm" />
+  <HelpKINode Title="TipoArticulo.PropertyChanged event" Url="html/c34ec798-ac3d-5256-c7d1-c910e5825105.htm" />
+  <HelpKINode Title="TipoArticulo.TipoArticulo constructor" Url="html/a6837af4-57bf-da6b-9a44-207babd0f723.htm" />
+  <HelpKINode Title="TipoArticulo.TipoArticuloID property" Url="html/fb3b3f1c-00cd-89de-a07b-a5b47dd05195.htm" />
+  <HelpKINode Title="TipoArticulo.ToString method" Url="html/d2651962-6a38-d68b-5e4a-8d028bbca044.htm" />
+  <HelpKINode Title="TipoArticulo._descripcion field" Url="html/9f8d7da6-2734-08e6-1566-84c5d05dfbe2.htm" />
+  <HelpKINode Title="TipoArticulo._listaArticulos field" Url="html/6f87e529-0deb-46eb-99cf-a758eef7e75b.htm" />
+  <HelpKINode Title="TipoArticulo._tipoArticuloID field" Url="html/7cf9edbe-9e87-63c4-a7ec-9358a86322d2.htm" />
+  <HelpKINode Title="TipoArticuloADO class">
+    <HelpKINode Title="TipoArticuloADO Class" Url="html/abe9044b-bc5a-a7a9-2b4d-0e5f12345999.htm" />
+    <HelpKINode Title="constructor" Url="html/dcbfbf6b-244b-cda9-40ac-af5ee7681e39.htm" />
+    <HelpKINode Title="fields" Url="html/5713289b-0aa3-5db1-cffc-2b9eef2f98c8.htm" />
+    <HelpKINode Title="methods" Url="html/552dbca5-e12e-e323-a213-6b7993c718ef.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TipoArticuloADO.ActualizarTipoArticulo method" Url="html/f61ead6e-1f3f-e431-fe7a-65b45dea1cf6.htm" />
+  <HelpKINode Title="TipoArticuloADO.BorrarTipoArticulo method" Url="html/d9d5e7c1-a8d1-0009-fe30-bbef12e11f86.htm" />
+  <HelpKINode Title="TipoArticuloADO.InsertarTipoArticulo method" Url="html/68cccfa6-7b9c-87e0-1bcd-6749b9ffa6eb.htm" />
+  <HelpKINode Title="TipoArticuloADO.LeerTipoArticulo method" Url="html/53c8c638-5e66-2f8d-b196-18c19bcaa79d.htm" />
+  <HelpKINode Title="TipoArticuloADO.LeerTipoTipoArticulos method" Url="html/6774c0c0-b300-b79b-1ac2-0eb77a64aa40.htm" />
+  <HelpKINode Title="TipoArticuloADO.ListaArticuloCompleto method" Url="html/137e21e7-2f2d-38b2-5f48-d63ebdfbc4a3.htm" />
+  <HelpKINode Title="TipoArticuloADO.TipoArticuloADO constructor" Url="html/dcbfbf6b-244b-cda9-40ac-af5ee7681e39.htm" />
+  <HelpKINode Title="TipoArticuloID property">
+    <HelpKINode Title="Articulo.TipoArticuloID Property " Url="html/07df65af-f90f-ef1e-8ede-9065d94d2fc4.htm" />
+    <HelpKINode Title="TipoArticulo.TipoArticuloID Property " Url="html/fb3b3f1c-00cd-89de-a07b-a5b47dd05195.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ToString method">
+    <HelpKINode Title="Articulo.ToString Method " Url="html/8313c02b-b61e-9bb1-c942-7354de7f3dac.htm" />
+    <HelpKINode Title="Camara.ToString Method " Url="html/1cdacd35-0da7-17a5-24f2-c0dedb38ce59.htm" />
+    <HelpKINode Title="Linped.ToString Method " Url="html/1456ad31-d526-7670-d1af-ff19137cd0de.htm" />
+    <HelpKINode Title="Localidad.ToString Method " Url="html/22d5629d-886d-ec16-5a1e-ab587b33906f.htm" />
+    <HelpKINode Title="Marca.ToString Method " Url="html/1f95c84a-8202-ca11-2122-d936ae14a036.htm" />
+    <HelpKINode Title="Memoria.ToString Method " Url="html/6d5aa56e-41a3-4176-a35e-e75670b92915.htm" />
+    <HelpKINode Title="Objetivo.ToString Method " Url="html/a190841b-7e68-c86e-f05e-673dfb4a7e80.htm" />
+    <HelpKINode Title="Pedido.ToString Method " Url="html/8fa74987-6811-f97b-5148-375d394fe64a.htm" />
+    <HelpKINode Title="Provincia.ToString Method " Url="html/80e62968-49e5-ac89-3af9-ea4184525902.htm" />
+    <HelpKINode Title="Stock.ToString Method " Url="html/31444a5f-5c79-a6ca-f943-da3d6d6a0252.htm" />
+    <HelpKINode Title="TipoArticulo.ToString Method " Url="html/d2651962-6a38-d68b-5e4a-8d028bbca044.htm" />
+    <HelpKINode Title="Tv.ToString Method " Url="html/36f8ab74-2bea-c74a-1433-10aceec266c0.htm" />
+    <HelpKINode Title="Usuario.ToString Method " Url="html/0c7f0adf-c62a-4e0f-e4d3-1b6cc284013c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Tv class">
+    <HelpKINode Title="Tv Class" Url="html/eff447a5-7b97-e5f9-c994-436982e73268.htm" />
+    <HelpKINode Title="constructor" Url="html/8a0b654d-06bd-9fe4-2129-0a5ff9c556d6.htm" />
+    <HelpKINode Title="fields" Url="html/d8de8bb1-8531-4f36-9ac0-633cfe6e566d.htm" />
+    <HelpKINode Title="methods" Url="html/2c244b67-7850-3846-047e-4445f6e9af46.htm" />
+    <HelpKINode Title="properties" Url="html/12376a77-4880-20f8-66f6-3be777f6b9b0.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Tv.Finalize method" Url="html/a7cabda5-7818-e8d8-c519-ad027534b63b.htm" />
+  <HelpKINode Title="Tv.Hdreadyfullhd property" Url="html/48b7fbae-af36-3ef0-db85-ef81a72512b3.htm" />
+  <HelpKINode Title="Tv.Panel property" Url="html/d9e97e3d-ea5c-052f-bd03-4c2492b842b1.htm" />
+  <HelpKINode Title="Tv.Pantalla property" Url="html/680548fe-8e9d-7539-9ce2-490c37c626d5.htm" />
+  <HelpKINode Title="Tv.Resolucion property" Url="html/5c01b6f1-ffce-5434-6c15-bca5bef99a80.htm" />
+  <HelpKINode Title="Tv.Tdt property" Url="html/6b5e8a7a-4621-eeae-c911-be9d9418b36f.htm" />
+  <HelpKINode Title="Tv.ToString method" Url="html/36f8ab74-2bea-c74a-1433-10aceec266c0.htm" />
+  <HelpKINode Title="Tv.Tv constructor" Url="html/8a0b654d-06bd-9fe4-2129-0a5ff9c556d6.htm" />
+  <HelpKINode Title="Tv.TvID property" Url="html/412ad6f4-f233-74c7-a105-525bbeaa6d05.htm" />
+  <HelpKINode Title="Tv._hdreadyfullhd field" Url="html/d113b7a4-b4f5-4285-a70f-66e2051b8b6a.htm" />
+  <HelpKINode Title="Tv._panel field" Url="html/eae729f3-9c8c-76c1-e909-e99a3d0803b1.htm" />
+  <HelpKINode Title="Tv._pantalla field" Url="html/447260f9-5843-d0f4-0ba9-e94bec0c4be0.htm" />
+  <HelpKINode Title="Tv._resolucion field" Url="html/cf743634-c06d-8dcf-94ec-024e33efdd3b.htm" />
+  <HelpKINode Title="Tv._tdt field" Url="html/842fcf89-15ac-a9c7-fa64-6a26e29de247.htm" />
+  <HelpKINode Title="Tv._tvID field" Url="html/b16b3c4c-9df2-a07d-2f04-d1d5dba80d53.htm" />
+  <HelpKINode Title="TvADO class">
+    <HelpKINode Title="TvADO Class" Url="html/af1fe40f-8aa9-4c54-63c2-f46d8dece214.htm" />
+    <HelpKINode Title="constructor" Url="html/a6cd4425-e36e-fc50-8fc0-39c8044923c1.htm" />
+    <HelpKINode Title="fields" Url="html/91f4610e-f8e1-3a83-45c7-1e5214eaef6e.htm" />
+    <HelpKINode Title="methods" Url="html/0e952d70-7d66-cce1-bcd3-88be20769950.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TvADO.ActualizarTv method" Url="html/20badc60-23bc-f90a-b149-05405f583d21.htm" />
+  <HelpKINode Title="TvADO.BorrarTv method" Url="html/05c04aa9-1a00-a957-cb1a-cc7d20798c79.htm" />
+  <HelpKINode Title="TvADO.InsertarTv method" Url="html/e6fec364-3faf-2eec-897e-1092e97bf2f8.htm" />
+  <HelpKINode Title="TvADO.Leertv method" Url="html/58f04cad-0ea2-55f6-fa20-127b81872c3e.htm" />
+  <HelpKINode Title="TvADO.LeerTvs method" Url="html/b7155e43-1faa-0e21-d77e-c328f8111688.htm" />
+  <HelpKINode Title="TvADO.TvADO constructor" Url="html/a6cd4425-e36e-fc50-8fc0-39c8044923c1.htm" />
+  <HelpKINode Title="TvID property" Url="html/412ad6f4-f233-74c7-a105-525bbeaa6d05.htm" />
+  <HelpKINode Title="Urlimagen property" Url="html/a2bcebb2-891b-52e1-e1e1-fd3bf340bbe4.htm" />
+  <HelpKINode Title="Usuario class">
+    <HelpKINode Title="Usuario Class" Url="html/0d9d57c4-359e-b021-3aca-51548db2e6a7.htm" />
+    <HelpKINode Title="constructor" Url="html/c0b5d558-de1f-48fc-2f37-d176d04484e9.htm" />
+    <HelpKINode Title="fields" Url="html/6b123045-315b-68c8-b27f-f072805245ac.htm" />
+    <HelpKINode Title="methods" Url="html/7014ef29-1988-5ce8-2047-ceb38f3eff5c.htm" />
+    <HelpKINode Title="properties" Url="html/db309d21-d099-6d1d-f2a2-ee96755f8ee4.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Usuario.Apellidos property" Url="html/4807536e-05c8-49bf-33b1-ab9a1c16ae87.htm" />
+  <HelpKINode Title="Usuario.Calle property" Url="html/88d763d5-a9fe-e769-e8ee-e886c6cc99b3.htm" />
+  <HelpKINode Title="Usuario.Calle2 property" Url="html/e11cc8a4-b6e4-9aa1-b512-f3e65e9ad3a5.htm" />
+  <HelpKINode Title="Usuario.Codpos property" Url="html/acb51c15-b8c2-37f1-6e60-464916a9d868.htm" />
+  <HelpKINode Title="Usuario.CompareTo method" Url="html/23079dd8-d20a-1cd5-4f04-4cc333391dd4.htm" />
+  <HelpKINode Title="Usuario.Dni property" Url="html/a0684f42-a1ed-92fa-af59-6875b6680453.htm" />
+  <HelpKINode Title="Usuario.Email property" Url="html/db3c6b6a-7d0a-6fcd-9c04-2e08a4405547.htm" />
+  <HelpKINode Title="Usuario.Error property" Url="html/1d11b5e0-5147-b5b4-a867-c4e45b87100b.htm" />
+  <HelpKINode Title="Usuario.Finalize method" Url="html/a2b7e834-dbbc-387a-50d3-cdd5b5972a17.htm" />
+  <HelpKINode Title="Usuario.IsValid method" Url="html/9eb6a478-69c0-685f-50dc-b4ad41436748.htm" />
+  <HelpKINode Title="Usuario.Item property" Url="html/7f24d8c2-cc38-1f27-d0c1-fd23785ca91b.htm" />
+  <HelpKINode Title="Usuario.Nacido property" Url="html/af347eff-1544-fc27-7480-34d4cb6ab102.htm" />
+  <HelpKINode Title="Usuario.Nombre property" Url="html/c18f2c95-388e-8435-07a1-4b1a78bc8c92.htm" />
+  <HelpKINode Title="Usuario.Password property" Url="html/f7a7e064-b608-cd84-19c6-78f3166f7000.htm" />
+  <HelpKINode Title="Usuario.ProvinciaID property" Url="html/05dc1961-0518-2d40-d06a-97d9d24a10a9.htm" />
+  <HelpKINode Title="Usuario.PuebloID property" Url="html/65e01f7a-fa83-5870-91de-34f8b3b2c536.htm" />
+  <HelpKINode Title="Usuario.Telefono property" Url="html/694045ec-a7e9-aef9-6195-4bb725e82a6d.htm" />
+  <HelpKINode Title="Usuario.ToString method" Url="html/0c7f0adf-c62a-4e0f-e4d3-1b6cc284013c.htm" />
+  <HelpKINode Title="Usuario.Usuario constructor" Url="html/c0b5d558-de1f-48fc-2f37-d176d04484e9.htm" />
+  <HelpKINode Title="Usuario.UsuarioID property" Url="html/27889107-5144-6fe2-76d6-ad1594f4dabe.htm" />
+  <HelpKINode Title="Usuario.ValidarDni method" Url="html/708722f3-6238-a052-6564-90bc82288b0b.htm" />
+  <HelpKINode Title="Usuario._apellidos field" Url="html/5aae5611-ba4f-c30d-ec58-48f4fdcecbbe.htm" />
+  <HelpKINode Title="Usuario._calle field" Url="html/41292d37-9a85-8374-f074-34b7bdc84e13.htm" />
+  <HelpKINode Title="Usuario._calle2 field" Url="html/691ec2ba-8891-db3b-78d4-b4136ef82c2b.htm" />
+  <HelpKINode Title="Usuario._codpos field" Url="html/cc02512e-08ed-dfa5-5c13-40e89d897a6b.htm" />
+  <HelpKINode Title="Usuario._dni field" Url="html/5b74207d-d5da-f3c2-2a68-43791c135235.htm" />
+  <HelpKINode Title="Usuario._email field" Url="html/7e44c844-4f55-4d23-b2d3-03579ba5ef0d.htm" />
+  <HelpKINode Title="Usuario._nacido field" Url="html/254e09ee-0d18-d4d8-4575-66416a2289f7.htm" />
+  <HelpKINode Title="Usuario._nombre field" Url="html/d3d0d363-a2b9-23b6-354a-b8f2d8b2fc62.htm" />
+  <HelpKINode Title="Usuario._password field" Url="html/668aa80d-65fb-42b4-4093-39ab97309707.htm" />
+  <HelpKINode Title="Usuario._provinciaID field" Url="html/fbd020a9-200b-735f-2652-25196d33da72.htm" />
+  <HelpKINode Title="Usuario._puebloID field" Url="html/314cb688-d43b-c20a-6ec5-a1a457b4628f.htm" />
+  <HelpKINode Title="Usuario._telefono field" Url="html/c4e7ee2b-5aff-71d9-f499-401691ddae25.htm" />
+  <HelpKINode Title="Usuario._usuarioID field" Url="html/a40e3597-0160-80ff-bc7a-8b5730669e71.htm" />
+  <HelpKINode Title="UsuarioADO class">
+    <HelpKINode Title="UsuarioADO Class" Url="html/6ce4707c-df59-49f9-42bd-eb438720208e.htm" />
+    <HelpKINode Title="constructor" Url="html/1733c731-fb9a-e7c8-0839-90d5a4c66624.htm" />
+    <HelpKINode Title="fields" Url="html/f96f8867-0af2-8020-7f4e-f18c71fba4fb.htm" />
+    <HelpKINode Title="methods" Url="html/2feda71e-7f71-4caf-681c-ba9d9ff10d9a.htm" />
+  </HelpKINode>
+  <HelpKINode Title="UsuarioADO.ActualizarUsuario method" Url="html/3f67fa9b-041f-227a-0be5-9f9e66ca5909.htm" />
+  <HelpKINode Title="UsuarioADO.BorrarUsuario method" Url="html/4209493e-8d88-97fb-d61e-560ade957a8d.htm" />
+  <HelpKINode Title="UsuarioADO.InsertarUsuario method" Url="html/5abae45a-d18e-75b0-44f8-63b064d12f71.htm" />
+  <HelpKINode Title="UsuarioADO.LeerUsuario method" Url="html/2c875311-43c2-bed4-0dcd-6b63e2f4a82f.htm" />
+  <HelpKINode Title="UsuarioADO.LeerUsuarios method" Url="html/5cc9e108-a1ce-1e24-fcd8-0d304bb7c870.htm" />
+  <HelpKINode Title="UsuarioADO.UsuarioADO constructor" Url="html/1733c731-fb9a-e7c8-0839-90d5a4c66624.htm" />
+  <HelpKINode Title="UsuarioID property">
+    <HelpKINode Title="Pedido.UsuarioID Property " Url="html/219e33b0-fbd0-f7f6-cc8d-300e5c6343f0.htm" />
+    <HelpKINode Title="Usuario.UsuarioID Property " Url="html/27889107-5144-6fe2-76d6-ad1594f4dabe.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Utilities class">
+    <HelpKINode Title="Utilities Class" Url="html/be44f8e7-dd76-1b83-2c63-069a77a9f949.htm" />
+    <HelpKINode Title="constructor" Url="html/9a5581f9-41a7-aa81-1a88-b3176bcbd879.htm" />
+    <HelpKINode Title="methods" Url="html/129094c7-320c-0e52-2554-993296947a46.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Utilities.LoadLibrary method" Url="html/5c5bc673-622e-85e5-110c-8f329af374d1.htm" />
+  <HelpKINode Title="Utilities.LoadNativeAssemblies method" Url="html/23666460-6b1b-d27f-77ca-d94915f03b20.htm" />
+  <HelpKINode Title="Utilities.LoadNativeAssembly method" Url="html/88deafea-312a-3f98-37c4-dfcdef013a24.htm" />
+  <HelpKINode Title="Utilities.Utilities constructor" Url="html/9a5581f9-41a7-aa81-1a88-b3176bcbd879.htm" />
+  <HelpKINode Title="ValidarDni method" Url="html/708722f3-6238-a052-6564-90bc82288b0b.htm" />
+  <HelpKINode Title="version">
+    <HelpKINode Title="1.0.0.0" Url="html/4d4eba28-fc01-4572-8966-3c3eca8fce9b.htm" />
+    <HelpKINode Title="history" Url="html/352a9a02-4f94-4b44-a0ba-76dee562604d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Welcome" Url="html/d25564b4-e4a1-48e1-8409-7ac9d7bcfa0d.htm" />
+  <HelpKINode Title="Zoom property" Url="html/e2d2a643-67c8-675d-a71f-f1eaac9faea9.htm" />
+  <HelpKINode Title="_apellidos field" Url="html/5aae5611-ba4f-c30d-ec58-48f4fdcecbbe.htm" />
+  <HelpKINode Title="_apertura field" Url="html/dbf96fc2-7ec1-37a5-8288-fd1c448fab60.htm" />
+  <HelpKINode Title="_articuloID field">
+    <HelpKINode Title="Articulo._articuloID Field" Url="html/98632462-506c-51e1-2545-b3dc52f1673b.htm" />
+    <HelpKINode Title="Linped._articuloID Field" Url="html/8b74221e-03ec-d7ca-5ffa-31c069adac06.htm" />
+    <HelpKINode Title="Stock._articuloID Field" Url="html/530ecbe5-3d15-4cae-5343-98a5d4c743d2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="_calle field" Url="html/41292d37-9a85-8374-f074-34b7bdc84e13.htm" />
+  <HelpKINode Title="_calle2 field" Url="html/691ec2ba-8891-db3b-78d4-b4136ef82c2b.htm" />
+  <HelpKINode Title="_camara field" Url="html/f6cff7b4-4343-ea9e-2adb-87028988adb6.htm" />
+  <HelpKINode Title="_camaraID field" Url="html/11fcabc4-7d1a-5f59-3cba-80dc0ccd1987.htm" />
+  <HelpKINode Title="_cantidad field">
+    <HelpKINode Title="Articulo._cantidad Field" Url="html/161e7e41-b3d5-a34b-3a6a-b6503ef2ee34.htm" />
+    <HelpKINode Title="Linped._cantidad Field" Url="html/29581e77-bb44-493f-bbee-7f9d6eb63f7b.htm" />
+  </HelpKINode>
+  <HelpKINode Title="_codpos field" Url="html/cc02512e-08ed-dfa5-5c13-40e89d897a6b.htm" />
+  <HelpKINode Title="_descripcion field" Url="html/9f8d7da6-2734-08e6-1566-84c5d05dfbe2.htm" />
+  <HelpKINode Title="_disponible field" Url="html/de1dd0a9-df6f-6bf4-5b70-3a4f9328f53b.htm" />
+  <HelpKINode Title="_dni field" Url="html/5b74207d-d5da-f3c2-2a68-43791c135235.htm" />
+  <HelpKINode Title="_email field" Url="html/7e44c844-4f55-4d23-b2d3-03579ba5ef0d.htm" />
+  <HelpKINode Title="_empresa field" Url="html/79d68e05-7fc0-e1b6-148f-bc1486091612.htm" />
+  <HelpKINode Title="_entrega field" Url="html/071fe549-75b9-0b5c-4b84-106fb4370f3b.htm" />
+  <HelpKINode Title="_especiales field" Url="html/296433df-3192-c6e0-e0bb-f295eb5eaa75.htm" />
+  <HelpKINode Title="_especificaciones field" Url="html/aec88288-ad4b-0cc5-764d-796250cffc49.htm" />
+  <HelpKINode Title="_espeExtra field" Url="html/2965e6ad-7dc8-0ce8-72c7-0135172180ef.htm" />
+  <HelpKINode Title="_factor field" Url="html/92895825-7b20-a8a2-1d24-9c860bc066e3.htm" />
+  <HelpKINode Title="_fecha field" Url="html/a293b02a-da0a-2894-e6cb-97676c446945.htm" />
+  <HelpKINode Title="_focal field" Url="html/06316fae-9fd8-67ce-8fbd-f494177ed751.htm" />
+  <HelpKINode Title="_hdreadyfullhd field" Url="html/d113b7a4-b4f5-4285-a70f-66e2051b8b6a.htm" />
+  <HelpKINode Title="_imagen field" Url="html/b02628c1-e1f4-f772-c9cf-ae49b5782482.htm" />
+  <HelpKINode Title="_importe field" Url="html/04df48d6-b669-0a60-19c5-d20591ad84cc.htm" />
+  <HelpKINode Title="_linea field" Url="html/bf69a5b4-1176-47be-4b55-66f75bd757e8.htm" />
+  <HelpKINode Title="_listaArticulos field" Url="html/6f87e529-0deb-46eb-99cf-a758eef7e75b.htm" />
+  <HelpKINode Title="_localidadID field" Url="html/3523d577-ab69-0762-911a-cd167cd98e14.htm" />
+  <HelpKINode Title="_logo field" Url="html/c2deb926-31c0-9ab8-82bc-78369d99815b.htm" />
+  <HelpKINode Title="_marcaID field">
+    <HelpKINode Title="Articulo._marcaID Field" Url="html/740f0f13-8b28-0f71-ce8a-80d6401812a3.htm" />
+    <HelpKINode Title="Marca._marcaID Field" Url="html/7397efff-3296-2b2d-3f18-b3209adcbf44.htm" />
+  </HelpKINode>
+  <HelpKINode Title="_memoriaID field" Url="html/38521a2d-e577-0726-9115-021c09202fdd.htm" />
+  <HelpKINode Title="_montura field" Url="html/b8b585f2-b995-92f2-6078-f9d73ffb8ae4.htm" />
+  <HelpKINode Title="_nacido field" Url="html/254e09ee-0d18-d4d8-4575-66416a2289f7.htm" />
+  <HelpKINode Title="_nombre field">
+    <HelpKINode Title="Articulo._nombre Field" Url="html/b7a3f6e7-5f29-9664-6b0a-39694ade5a36.htm" />
+    <HelpKINode Title="Usuario._nombre Field" Url="html/d3d0d363-a2b9-23b6-354a-b8f2d8b2fc62.htm" />
+    <HelpKINode Title="Provincia._nombre Field" Url="html/4a99cfcc-6dfc-ae1e-71ed-b7a74dc53969.htm" />
+  </HelpKINode>
+  <HelpKINode Title="_Nombre field" Url="html/61b6c1c6-d624-6f83-8351-290d82e6646a.htm" />
+  <HelpKINode Title="_objetivo field" Url="html/f1a3341c-5380-b560-5935-e849dc2f2953.htm" />
+  <HelpKINode Title="_objetivoID field" Url="html/6fcda836-a0f2-8799-7e76-0809473964e0.htm" />
+  <HelpKINode Title="_panel field" Url="html/eae729f3-9c8c-76c1-e909-e99a3d0803b1.htm" />
+  <HelpKINode Title="_pantalla field">
+    <HelpKINode Title="Camara._pantalla Field" Url="html/bee622de-bbd9-bb7e-18d7-7f20a39d3c46.htm" />
+    <HelpKINode Title="Tv._pantalla Field" Url="html/447260f9-5843-d0f4-0ba9-e94bec0c4be0.htm" />
+  </HelpKINode>
+  <HelpKINode Title="_password field" Url="html/668aa80d-65fb-42b4-4093-39ab97309707.htm" />
+  <HelpKINode Title="_pedidoID field">
+    <HelpKINode Title="Linped._pedidoID Field" Url="html/9f7a039b-03a6-0afd-a38c-e6b719731f01.htm" />
+    <HelpKINode Title="Pedido._pedidoID Field" Url="html/f7de42fb-8bed-404f-f3bd-e52bc7072c86.htm" />
+  </HelpKINode>
+  <HelpKINode Title="_provinciaID field">
+    <HelpKINode Title="Localidad._provinciaID Field" Url="html/4586f91b-e5c3-e7c3-b00d-7baffcd91760.htm" />
+    <HelpKINode Title="Provincia._provinciaID Field" Url="html/02adcb7b-2168-354b-2638-a76bcfe75081.htm" />
+    <HelpKINode Title="Usuario._provinciaID Field" Url="html/fbd020a9-200b-735f-2652-25196d33da72.htm" />
+  </HelpKINode>
+  <HelpKINode Title="_puebloID field" Url="html/314cb688-d43b-c20a-6ec5-a1a457b4628f.htm" />
+  <HelpKINode Title="_pvp field" Url="html/5499a9a1-6af2-a619-4ed6-f70315e4060d.htm" />
+  <HelpKINode Title="_resolucion field">
+    <HelpKINode Title="Camara._resolucion Field" Url="html/3135ed04-62df-a359-d189-96ce9b6be199.htm" />
+    <HelpKINode Title="Tv._resolucion Field" Url="html/cf743634-c06d-8dcf-94ec-024e33efdd3b.htm" />
+  </HelpKINode>
+  <HelpKINode Title="_sensor field" Url="html/ffbd99a1-c6cc-071a-fbe8-dd208731c421.htm" />
+  <HelpKINode Title="_tdt field" Url="html/842fcf89-15ac-a9c7-fa64-6a26e29de247.htm" />
+  <HelpKINode Title="_telefono field" Url="html/c4e7ee2b-5aff-71d9-f499-401691ddae25.htm" />
+  <HelpKINode Title="_tipo field">
+    <HelpKINode Title="Camara._tipo Field" Url="html/1c26c6cc-c8be-61ca-8869-91b975c44742.htm" />
+    <HelpKINode Title="Memoria._tipo Field" Url="html/bafe9c29-f662-bf60-69f8-ffd813e94036.htm" />
+    <HelpKINode Title="Objetivo._tipo Field" Url="html/6a941e40-30b6-e0d7-10e6-98e0acbe1a86.htm" />
+  </HelpKINode>
+  <HelpKINode Title="_tipoArticuloID field">
+    <HelpKINode Title="Articulo._tipoArticuloID Field" Url="html/47230405-ecd1-3af6-7b94-fdc952b21f51.htm" />
+    <HelpKINode Title="TipoArticulo._tipoArticuloID Field" Url="html/7cf9edbe-9e87-63c4-a7ec-9358a86322d2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="_tvID field" Url="html/b16b3c4c-9df2-a07d-2f04-d1d5dba80d53.htm" />
+  <HelpKINode Title="_urlimagen field" Url="html/88b3e7fc-0222-0a87-37ff-4ef577b35f08.htm" />
+  <HelpKINode Title="_usuarioID field">
+    <HelpKINode Title="Pedido._usuarioID Field" Url="html/18b1958e-6564-aca1-d278-be3e623da1c7.htm" />
+    <HelpKINode Title="Usuario._usuarioID Field" Url="html/a40e3597-0160-80ff-bc7a-8b5730669e71.htm" />
+  </HelpKINode>
+  <HelpKINode Title="_zoom field" Url="html/0544007d-9d76-ca3e-15ca-44e1dbc23da4.htm" />
+</HelpKI>

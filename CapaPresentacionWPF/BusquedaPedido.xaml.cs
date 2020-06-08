@@ -34,16 +34,20 @@ namespace CapaPresentacionWPF
         Negocio _negUsuario;
         List<Usuario> _listUsuarios;
 
+        UscInformes _uscInformes;
+
 
 
         public DataTable Dt { get; set; }
 
-        public BusquedaPedido()
+        public BusquedaPedido(UscInformes uscInformes)
         {
             InitializeComponent();
             _negPedido = new NegocioPedido();
             _negLinped = new NegocioLinped();
             _negUsuario = new Negocio();
+
+            _uscInformes = uscInformes;
 
         }
 
@@ -100,16 +104,16 @@ namespace CapaPresentacionWPF
 
             dtgPedidos.DataContext = Dt.DefaultView;
 
-            comboBoxfiltro.Text = "Seleccionar Filtro";
-            comboBoxfiltro.Items.Add("Nombre Usuario");
-            comboBoxfiltro.Items.Add("Fecha Pedido");
-            comboBoxfiltro.Items.Add("Nombre Usuario/Fecha Pedido");
+            comboBoxFiltro.Text = "Seleccionar Filtro";
+            comboBoxFiltro.Items.Add("Nombre Usuario");
+            comboBoxFiltro.Items.Add("Fecha Pedido");
+            comboBoxFiltro.Items.Add("Nombre Usuario/Fecha Pedido");
         }
 
      
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            int indice = comboBoxfiltro.SelectedIndex;
+            int indice = comboBoxFiltro.SelectedIndex;
 
             if(indice==0)
             {
@@ -155,7 +159,10 @@ namespace CapaPresentacionWPF
             }
             else
             {
-               var result= dtgPedidos.SelectedItems;
+              
+                this.Close();
+                
+
             }
 
             
@@ -164,6 +171,31 @@ namespace CapaPresentacionWPF
         private void Btncancelar_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void dtgPedidos_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+
+            try
+            {
+                if(sender !=null)
+                {
+                    DataGrid grid = sender as DataGrid;
+
+                    if(grid!=null && grid.SelectedItems !=null && grid.SelectedItems.Count ==1)
+                    {
+                        DataGridRow dgr = grid.ItemContainerGenerator.ContainerFromItem(grid.SelectedItem) as DataGridRow;
+                        DataRowView dr = (DataRowView)dgr.Item;
+
+                        _uscInformes.DatosFactura(dr);
+                        this.Close();
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());   
+            }
         }
     }
 }

@@ -30,7 +30,9 @@ namespace CapaPresentacionWPF
       
         Usuario usuario;
 
-
+        /// <summary>
+        /// 
+        /// </summary>
         public Login()
         {
             InitializeComponent();

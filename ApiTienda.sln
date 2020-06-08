@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiLibreria", "MiLibreria\Mi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaPresentacionWPF", "CapaPresentacionWPF\CapaPresentacionWPF.csproj", "{B3C80ED4-1B14-411E-A0A7-2D22FCDEB1BF}"
 EndProject
+Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "Documentation1", "Documentation1\Documentation1.shfbproj", "{A78CBDCF-30C7-4627-8A3C-CCDF0DB22C5F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{B3C80ED4-1B14-411E-A0A7-2D22FCDEB1BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3C80ED4-1B14-411E-A0A7-2D22FCDEB1BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3C80ED4-1B14-411E-A0A7-2D22FCDEB1BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A78CBDCF-30C7-4627-8A3C-CCDF0DB22C5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A78CBDCF-30C7-4627-8A3C-CCDF0DB22C5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A78CBDCF-30C7-4627-8A3C-CCDF0DB22C5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A78CBDCF-30C7-4627-8A3C-CCDF0DB22C5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

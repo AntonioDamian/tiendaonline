@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +10,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
@@ -27,6 +30,8 @@ namespace CapaPresentacionWPF
         NegocioPedido _negPedido;
         List<Pedido> _listaPedidos = new List<Pedido>();
 
+        DataRowView datosFactura;
+
         public UscInformes()
         {
             InitializeComponent();
@@ -40,8 +45,20 @@ namespace CapaPresentacionWPF
 
         private void BuscarFactura_Click(object sender, RoutedEventArgs e)
         {
-            BusquedaPedido busPedido = new BusquedaPedido();
-            busPedido.ShowDialog();
+            BusquedaPedido busPedido = new BusquedaPedido(this);
+            busPedido.Show();   
+        }
+
+
+
+
+
+        public void DatosFactura(DataRowView dataRow)
+        {
+
+            datosFactura = dataRow;
+
+           // NombreCliente = dataRow[2].ToString();
         }
     }
 }
