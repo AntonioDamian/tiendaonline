@@ -34,7 +34,7 @@
             <DatePicker x:Name="dateFecha" Margin="30,22,10,22" Grid.Column="3" SelectedDateChanged="DateFecha_SelectedDateChanged" />
         </Grid>
         <DataGrid x:Name="dtgPedidos" Grid.Column="2" HorizontalAlignment="Stretch"   Grid.Row="2" VerticalAlignment="Stretch"  AutoGenerateColumns="False" 
-              ItemsSource="{Binding }" PreviewMouseDoubleClick="dtgPedidos_PreviewMouseDoubleClick"  >
+              ItemsSource="{Binding }"  >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="PedidoId" x:Name="PedidoID" Binding="{Binding PedidoID}"/>
                 <DataGridTextColumn Header="UsuarioID" x:Name="UsuarioID" Binding="{Binding UsuarioID}"/>

@@ -20,28 +20,75 @@ namespace CapaPresentacionWPF
     /// <summary>
     /// Lógica de interacción para UscInformes.xaml
     /// </summary>
-    public partial class UscInformes : UserControl
+    public partial class UscInformes : UserControl,IBuscar
     {
 
         Negocio _usuario;
         NegocioPedido _negPedido;
-        List<Pedido> _listaPedidos = new List<Pedido>();
+
+        decimal total;
+        decimal totalConIva;
+        decimal totalIva;
+
 
         public UscInformes()
         {
             InitializeComponent();
-        }
-
-        private void UserControl_Loaded(object sender, RoutedEventArgs e)
-        {
             _usuario = new Negocio();
             _negPedido = new NegocioPedido();
+
         }
+
+      
 
         private void BuscarFactura_Click(object sender, RoutedEventArgs e)
         {
             BusquedaPedido busPedido = new BusquedaPedido();
+            busPedido.Buscar = (IBuscar)this;
             busPedido.ShowDialog();
+        }
+
+        public void Ejecutar(Articulo articulo)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DevolucionPedido(Pedido pedido, string nombre)
+        {
+            foreach(Linped li in pedido.Linpeds)
+                {
+                _ = listaVentas.Items.Add(new
+                {
+                    Linea = li.Linea,
+                    ArticuloID = li.ArticuloID,
+                    Importe = li.Importe,
+                    Cantidad = li.Cantidad,
+                    ImporteTotal = li.Importe * li.Cantidad
+                });
+                }
+
+            UsuarioID.DataContext = pedido.UsuarioID;
+            NombreCliente.DataContext = nombre;
+            FechaPedido.DataContext = pedido.Fecha;
+            NumPedidoCliente.DataContext = pedido.PedidoID;
+
+            ResumenFactura(pedido, 21);
+
+        }
+
+        private void ResumenFactura(Pedido pedido, decimal iva)
+        {
+            decimal[] resumenFactura = new decimal[4];
+
+            resumenFactura = _negPedido.Datosfactura(pedido, iva);
+
+            total = resumenFactura[0];
+            totalIva = resumenFactura[1];
+            totalConIva = resumenFactura[2];
+
+            Subtotal.DataContext = total.ToString() + " €";
+            IVA.DataContext= totalIva.ToString() + " €";
+            Total.DataContext= totalConIva.ToString() + " €";
         }
     }
 }

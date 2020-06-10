@@ -12,9 +12,9 @@
             <RowDefinition Height="1.5*"/>
             <RowDefinition Height=".2*"/>
         </Grid.RowDefinitions>
-        <Button x:Name="BuscarFactura" Grid.Row="0" Content="Buscar Factura" HorizontalAlignment="Right" Margin="0,10,110,10" Click="BuscarFactura_Click"/>
-        <FlowDocumentScrollViewer Grid.Row="1" x:Name="FlowDocViewer" >
-            <FlowDocument x:Name="FlocDoc" DataContext="{Binding}">
+        <Button x:Name="BuscarFactura" Grid.Row="0" Content="Buscar Factura" HorizontalAlignment="Right" Margin="0,10,109,5" Click="BuscarFactura_Click" Height="Auto"/>
+        <FlowDocumentScrollViewer Grid.Row="1" x:Name="FlowDocViewer" Margin="0,10,0,0" >
+            <FlowDocument x:Name="FlocDoc" >
                 <Paragraph>
                     <Run Text=" Datos del Cliente"/>
                 </Paragraph>
@@ -22,10 +22,30 @@
                     <TableRowGroup>
                         <TableRow>
                             <TableCell Background="Gainsboro" FontWeight="Bold">
+                                <Paragraph>UsuarioID</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph TextAlignment="Left" x:Name="UsuarioID"   >
+                                    <Run Text="{Binding Mode=OneTime,Path=.}" />
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                    </TableRowGroup>
+                    <TableRowGroup>
+                        <TableRow>
+                            <TableCell Background="Gainsboro" FontWeight="Bold">
                                 <Paragraph>Nombre</Paragraph>
                             </TableCell>
                             <TableCell>
-                                <Paragraph TextAlignment="Right" x:Name="NombreCliente" >
+                                <Paragraph TextAlignment="Left" x:Name="NombreCliente" >
+                                    <Run Text="{Binding Mode=OneTime,Path=.}"/>
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell Background="Gainsboro" FontWeight="Bold">
+                                <Paragraph>Dni</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph TextAlignment="Left" x:Name="DniCliente" >
                                     <Run Text="{Binding Mode=OneTime,Path=.}"/>
                                 </Paragraph>
                             </TableCell>
@@ -37,7 +57,15 @@
                                 <Paragraph>Direccion</Paragraph>
                             </TableCell>
                             <TableCell>
-                                <Paragraph TextAlignment="Right" x:Name="DireccionCliente" >
+                                <Paragraph TextAlignment="Left" x:Name="DireccionCliente" >
+                                    <Run Text="{Binding Mode=OneTime,Path=.}"/>
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell Background="Gainsboro" FontWeight="Bold">
+                                <Paragraph>Localidad</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph TextAlignment="Left" x:Name="LocalidadCliente" >
                                     <Run Text="{Binding Mode=OneTime,Path=.}"/>
                                 </Paragraph>
                             </TableCell>
@@ -45,22 +73,8 @@
                     </TableRowGroup>
                     <TableRowGroup>
                         <TableRow>
-                            <TableCell Background="Gainsboro" FontWeight="Bold">
-                                <Paragraph>Localidad</Paragraph>
-                            </TableCell>
-                            <TableCell>
-                                <Paragraph TextAlignment="Right" x:Name="LocalidadCliente" >
-                                    <Run Text="{Binding Mode=OneTime,Path=.}"/>
-                                </Paragraph>
-                            </TableCell>
-                            <TableCell Background="Gainsboro" FontWeight="Bold">
-                                <Paragraph>Dni</Paragraph>
-                            </TableCell>
-                            <TableCell>
-                                <Paragraph TextAlignment="Right" x:Name="DniCliente" >
-                                    <Run Text="{Binding Mode=OneTime,Path=.}"/>
-                                </Paragraph>
-                            </TableCell>
+
+
 
                         </TableRow>
                     </TableRowGroup>
@@ -70,7 +84,7 @@
                                 <Paragraph>Numero Pedido</Paragraph>
                             </TableCell>
                             <TableCell>
-                                <Paragraph TextAlignment="Right" x:Name="NumPedidoCliente" >
+                                <Paragraph TextAlignment="Left" x:Name="NumPedidoCliente" >
                                     <Run Text="{Binding Mode=OneTime,Path=.}"/>
                                 </Paragraph>
                             </TableCell>
@@ -78,7 +92,7 @@
                                 <Paragraph>Fecha Pedido</Paragraph>
                             </TableCell>
                             <TableCell>
-                                <Paragraph TextAlignment="Right" x:Name="FechaPedido" >
+                                <Paragraph TextAlignment="Left" x:Name="FechaPedido" >
                                     <Run Text="{Binding Mode=OneTime,Path=.}"/>
                                 </Paragraph>
                             </TableCell>
@@ -86,14 +100,14 @@
                     </TableRowGroup>
                 </Table>
                 <BlockUIContainer>
-                    <ListView BorderThickness="1" ItemsSource="{Binding}" x:Name="listaVentas">
+                    <ListView BorderThickness="1" ItemsSource="{Binding}" x:Name="listaVentas" Height="150">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn x:Name="Linea" Header="linea" Width="100" DisplayMemberBinding="{Binding Linea}"/>
-                                <GridViewColumn Header="Articulo" Width="100"/>
-                                <GridViewColumn Header="Importe" Width="100"/>
-                                <GridViewColumn Header="Cantidad" Width="100"/>
-                                <GridViewColumn Header="Importe Total" Width="100"/>
+                                <GridViewColumn Header="Articulo" Width="100" DisplayMemberBinding="{Binding ArticuloID}" />
+                                <GridViewColumn Header="Importe" Width="100" DisplayMemberBinding="{Binding Importe}"/>
+                                <GridViewColumn Header="Cantidad" Width="100" DisplayMemberBinding="{Binding Cantidad}"/>
+                                <GridViewColumn Header="Importe Total" Width="100" DisplayMemberBinding="{Binding ImporteTotal}"/>
                             </GridView>
                         </ListView.View>
                     </ListView>
@@ -105,7 +119,7 @@
                                 <Paragraph>Subtotal</Paragraph>
                             </TableCell>
                             <TableCell>
-                                <Paragraph TextAlignment="Right" x:Name="Subtotal" >
+                                <Paragraph TextAlignment="Left" x:Name="Subtotal" >
                                     <Run Text="{Binding Mode=OneTime,Path=.}"/>
                                 </Paragraph>
                             </TableCell>
@@ -113,7 +127,7 @@
                                 <Paragraph>Iva</Paragraph>
                             </TableCell>
                             <TableCell>
-                                <Paragraph TextAlignment="Right" x:Name="IVA" >
+                                <Paragraph TextAlignment="Left" x:Name="IVA" >
                                     <Run Text="{Binding Mode=OneTime,Path=.}"/>
                                 </Paragraph>
                             </TableCell>
@@ -121,7 +135,7 @@
                                 <Paragraph>Total</Paragraph>
                             </TableCell>
                             <TableCell>
-                                <Paragraph TextAlignment="Right" x:Name="Total" >
+                                <Paragraph TextAlignment="Left" x:Name="Total" >
                                     <Run Text="{Binding Mode=OneTime,Path=.}"/>
                                 </Paragraph>
                             </TableCell>

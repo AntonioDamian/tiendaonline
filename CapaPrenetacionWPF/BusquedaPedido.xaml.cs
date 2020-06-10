@@ -100,16 +100,16 @@ namespace CapaPresentacionWPF
 
             dtgPedidos.DataContext = Dt;
 
-            comboBoxfiltro.Text = "Seleccionar Filtro";
-            comboBoxfiltro.Items.Add("Nombre Usuario");
-            comboBoxfiltro.Items.Add("Fecha Pedido");
-            comboBoxfiltro.Items.Add("Nombre Usuario/Fecha Pedido");
+            comboBoxFiltro.Text = "Seleccionar Filtro";
+            comboBoxFiltro.Items.Add("Nombre Usuario");
+            comboBoxFiltro.Items.Add("Fecha Pedido");
+            comboBoxFiltro.Items.Add("Nombre Usuario/Fecha Pedido");
         }
 
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            int indice = comboBoxfiltro.SelectedIndex;
+            int indice = comboBoxFiltro.SelectedIndex;
 
             if (indice == 0)
             {
