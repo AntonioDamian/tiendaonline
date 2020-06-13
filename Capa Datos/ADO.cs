@@ -8,7 +8,7 @@ namespace Capa_Datos
 {
    public abstract class ADO
     {
-
+        
         protected HttpClient client = new HttpClient();
 
         public ADO()
