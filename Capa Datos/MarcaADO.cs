@@ -7,6 +7,8 @@ using System.Net.Http;
 using Newtonsoft.Json;
 using System.Runtime.InteropServices;
 using Capa_entidades;
+using System.Text;
+using System.Web.Script.Serialization;
 
 namespace Capa_Datos
 {
@@ -63,8 +65,8 @@ namespace Capa_Datos
             try
             {
                 Marca marca = new Marca(marcaID,empresa,logo);
-                HttpResponseMessage response = client.PostAsJsonAsync("api/marcas", marca).Result;
-                //var response = client.PostAsync("api/usuarios", new StringContent(new JavaScriptSerializer().Serialize(usu), Encoding.UTF8, "application/json")).Result;
+               // HttpResponseMessage response = client.PostAsJsonAsync("api/marcas", marca).Result;
+                var response = client.PostAsync("api/marcas", new StringContent(new JavaScriptSerializer().Serialize(marca), Encoding.UTF8, "application/json")).Result;
                 if (response.IsSuccessStatusCode)
                 {
                     return true;
@@ -85,7 +87,8 @@ namespace Capa_Datos
         {
             try
             {
-                HttpResponseMessage response = client.PutAsJsonAsync("api/marcas/" + marca.MarcaID, marca).Result;
+               // HttpResponseMessage response = client.PutAsJsonAsync("api/marcas/" + marca.MarcaID, marca).Result;
+                var response = client.PutAsync("api/marcas", new StringContent(new JavaScriptSerializer().Serialize(marca.MarcaID), Encoding.UTF8, "application/json")).Result;
 
                 if (response.IsSuccessStatusCode)
                     return true;

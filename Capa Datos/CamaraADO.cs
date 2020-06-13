@@ -7,6 +7,8 @@ using System.Net.Http;
 using Newtonsoft.Json;
 using System.Runtime.InteropServices;
 using Capa_entidades;
+using System.Web.Script.Serialization;
+using System.Text;
 
 namespace Capa_Datos
 {
@@ -67,11 +69,11 @@ namespace Capa_Datos
         {
             try
             {
-                Camara camara = new Camara(camaraID,resolucion,sensor,tipo,factor,objetivo,pantalla,zoom)
-       ;
+                Camara camara = new Camara(camaraID, resolucion, sensor, tipo, factor, objetivo, pantalla, zoom);
+       
 
-                HttpResponseMessage response = client.PostAsJsonAsync("api/camaras", camara).Result;
-                //var response = client.PostAsync("api/usuarios", new StringContent(new JavaScriptSerializer().Serialize(usu), Encoding.UTF8, "application/json")).Result;
+               // HttpResponseMessage response = client.PostAsJsonAsync("api/camaras", camara).Result;
+                var response = client.PostAsync("api/camaras", new StringContent(new JavaScriptSerializer().Serialize(camara), Encoding.UTF8, "application/json")).Result;
                 if (response.IsSuccessStatusCode)
                 {
                     return true;
@@ -92,7 +94,8 @@ namespace Capa_Datos
         {
             try
             {
-                HttpResponseMessage response = client.PutAsJsonAsync("api/camaras/" +camara.CamaraID,camara).Result;
+              //HttpResponseMessage response = client.PutAsJsonAsync("api/camaras/" +camara.CamaraID,camara).Result;
+                var response = client.PutAsync("api/camaras", new StringContent(new JavaScriptSerializer().Serialize(camara), Encoding.UTF8, "application/json")).Result;
 
                 if (response.IsSuccessStatusCode)
                     return true;

@@ -7,6 +7,8 @@ using System.Net.Http;
 using Newtonsoft.Json;
 using System.Runtime.InteropServices;
 using Capa_entidades;
+using System.Web.Script.Serialization;
+using System.Text;
 
 namespace Capa_Datos
 {
@@ -64,8 +66,8 @@ namespace Capa_Datos
             {
                 Localidad localidad = new Localidad(localidadID, Nombre,provinciaID);
 
-                HttpResponseMessage response = client.PostAsJsonAsync("api/localidades", localidad).Result;
-                //var response = client.PostAsync("api/usuarios", new StringContent(new JavaScriptSerializer().Serialize(usu), Encoding.UTF8, "application/json")).Result;
+               // HttpResponseMessage response = client.PostAsJsonAsync("api/localidades", localidad).Result;
+                var response = client.PostAsync("api/localidades", new StringContent(new JavaScriptSerializer().Serialize(localidad), Encoding.UTF8, "application/json")).Result;
                 if (response.IsSuccessStatusCode)
                 {
                     return true;
@@ -86,7 +88,8 @@ namespace Capa_Datos
         {
             try
             {
-                HttpResponseMessage response = client.PutAsJsonAsync("api/localidades/" + localidad.LocalidadID,localidad).Result;
+               // HttpResponseMessage response = client.PutAsJsonAsync("api/localidades/" + localidad.LocalidadID,localidad).Result;
+                var response = client.PostAsync("api/localidades", new StringContent(new JavaScriptSerializer().Serialize(localidad.LocalidadID), Encoding.UTF8, "application/json")).Result;
 
                 if (response.IsSuccessStatusCode)
                     return true;

@@ -7,6 +7,8 @@ using System.Net.Http;
 using Newtonsoft.Json;
 using System.Runtime.InteropServices;
 using Capa_entidades;
+using System.Web.Script.Serialization;
+using System.Text;
 
 namespace Capa_Datos
 {
@@ -64,8 +66,8 @@ namespace Capa_Datos
             {
                 Pedido Pedido = new Pedido(pedidoID,usuarioID,fecha,linpeds);
 
-                HttpResponseMessage response = client.PostAsJsonAsync("api/Pedidos", Pedido).Result;
-                //var response = client.PostAsync("api/usuarios", new StringContent(new JavaScriptSerializer().Serialize(usu), Encoding.UTF8, "application/json")).Result;
+               // HttpResponseMessage response = client.PostAsJsonAsync("api/Pedidos", Pedido).Result;
+                var response = client.PostAsync("api/Pedidoss", new StringContent(new JavaScriptSerializer().Serialize(Pedido), Encoding.UTF8, "application/json")).Result;
                 if (response.IsSuccessStatusCode)
                 {
                     return true;
@@ -86,7 +88,8 @@ namespace Capa_Datos
         {
             try
             {
-                HttpResponseMessage response = client.PutAsJsonAsync("api/Pedidos/" + Pedido.PedidoID, Pedido).Result;
+               // HttpResponseMessage response = client.PutAsJsonAsync("api/Pedidos/" + Pedido.PedidoID, Pedido).Result;
+                var response = client.PutAsync("api/Pedidos", new StringContent(new JavaScriptSerializer().Serialize(Pedido.PedidoID), Encoding.UTF8, "application/json")).Result;
 
                 if (response.IsSuccessStatusCode)
                     return true;

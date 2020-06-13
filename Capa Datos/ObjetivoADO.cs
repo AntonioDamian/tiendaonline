@@ -7,6 +7,8 @@ using System.Net.Http;
 using Newtonsoft.Json;
 using System.Runtime.InteropServices;
 using Capa_entidades;
+using System.Web.Script.Serialization;
+using System.Text;
 
 namespace Capa_Datos
 {
@@ -66,8 +68,8 @@ namespace Capa_Datos
             try
             {
                 Objetivo Objetivo = new Objetivo(objetivoID, tipo, montura, focal, apertura, especiales);
-                HttpResponseMessage response = client.PostAsJsonAsync("api/Objetivos", Objetivo).Result;
-                //var response = client.PostAsync("api/usuarios", new StringContent(new JavaScriptSerializer().Serialize(usu), Encoding.UTF8, "application/json")).Result;
+               // HttpResponseMessage response = client.PostAsJsonAsync("api/Objetivos", Objetivo).Result;
+                var response = client.PostAsync("api/Objetivoss", new StringContent(new JavaScriptSerializer().Serialize(Objetivo), Encoding.UTF8, "application/json")).Result;
                 if (response.IsSuccessStatusCode)
                 {
                     return true;
@@ -88,7 +90,8 @@ namespace Capa_Datos
         {
             try
             {
-                HttpResponseMessage response = client.PutAsJsonAsync("api/Objetivos/" + Objetivo.ObjetivoID, Objetivo).Result;
+               // HttpResponseMessage response = client.PutAsJsonAsync("api/Objetivos/" + Objetivo.ObjetivoID, Objetivo).Result;
+                var response = client.PutAsync("api/Objetivos", new StringContent(new JavaScriptSerializer().Serialize(Objetivo.ObjetivoID), Encoding.UTF8, "application/json")).Result;
 
                 if (response.IsSuccessStatusCode)
                     return true;

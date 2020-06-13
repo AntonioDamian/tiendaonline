@@ -7,6 +7,8 @@ using System.Net.Http;
 using Newtonsoft.Json;
 using System.Runtime.InteropServices;
 using Capa_entidades;
+using System.Web.Script.Serialization;
+using System.Text;
 
 namespace Capa_Datos
 {
@@ -65,8 +67,9 @@ namespace Capa_Datos
             {
                 Linped linped = new Linped(pedidoID,linea,articuloID,importe,cantidad);
 
-                HttpResponseMessage response = client.PostAsJsonAsync("api/linpeds",linped).Result;              
-                
+               // HttpResponseMessage response = client.PostAsJsonAsync("api/linpeds",linped).Result;
+                var response = client.PostAsync("api/linpeds", new StringContent(new JavaScriptSerializer().Serialize(linped), Encoding.UTF8, "application/json")).Result;
+
                 if (response.IsSuccessStatusCode)
                 {
                     return true;
@@ -87,7 +90,8 @@ namespace Capa_Datos
         {
             try
             {
-                HttpResponseMessage response = client.PutAsJsonAsync("api/linpeds/" + linped.PedidoID,linped).Result;
+               // HttpResponseMessage response = client.PutAsJsonAsync("api/linpeds/" + linped.PedidoID,linped).Result;
+                var response = client.PutAsync("api/linpeds", new StringContent(new JavaScriptSerializer().Serialize(linped.PedidoID), Encoding.UTF8, "application/json")).Result;
 
                 if (response.IsSuccessStatusCode)
                     return true;

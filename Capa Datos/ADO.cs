@@ -13,7 +13,7 @@ namespace Capa_Datos
 
         public ADO()
         {
-            client.BaseAddress = new Uri("http://localhost:60000/");
+            client.BaseAddress = new Uri("http://localhost:60000/");           
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             client.Timeout = TimeSpan.FromMinutes(10);

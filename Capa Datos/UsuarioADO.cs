@@ -10,6 +10,7 @@ using Capa_Datos;
 using System.Security.Cryptography;
 using System.Text;
 using System.Linq;
+using System.Web.Script.Serialization;
 
 namespace Capa_datos
 {
@@ -68,7 +69,8 @@ namespace Capa_datos
             {
                 Usuario usu = new Usuario(0,email,password,nombre,apellidos,dni,telefono,calle,calle2,codpos,puebloID,provinciaID,nacido);
 
-                HttpResponseMessage response = client.PostAsJsonAsync("api/usuarios",usu).Result;
+               // HttpResponseMessage response = client.PostAsJsonAsync("api/usuarios",usu).Result;
+                var response = client.PostAsync("api/usuarios", new StringContent(new JavaScriptSerializer().Serialize(usu), Encoding.UTF8, "application/json")).Result;
 
                 if (response.IsSuccessStatusCode)
                 {
@@ -90,7 +92,8 @@ namespace Capa_datos
         {
             try
             {
-                HttpResponseMessage response = client.PutAsJsonAsync("api/usuarios/"+usuario.UsuarioID, usuario).Result;
+               // HttpResponseMessage response = client.PutAsJsonAsync("api/usuarios/"+usuario.UsuarioID, usuario).Result;
+                var response = client.PutAsync("api/usuarios", new StringContent(new JavaScriptSerializer().Serialize(usuario.UsuarioID), Encoding.UTF8, "application/json")).Result;
 
                 if (response.IsSuccessStatusCode)
                     return true;
