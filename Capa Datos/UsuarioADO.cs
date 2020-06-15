@@ -25,6 +25,8 @@ namespace Capa_datos
 
             try
             {
+                
+
                 HttpResponseMessage response = client.GetAsync("api/usuarios").Result;
                 if (response.IsSuccessStatusCode)
                 {

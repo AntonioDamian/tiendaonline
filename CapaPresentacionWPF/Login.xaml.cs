@@ -34,15 +34,20 @@ namespace CapaPresentacionWPF
         public Login()
         {
             InitializeComponent();
+            numeroIntentos = 3;
+            neg = new Negocio();
+            negUsu = new NegocioUsuario();
+
+
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
 
-            numeroIntentos = 3;
+         /*   numeroIntentos = 3;
             neg = new Negocio();
-            negUsu = new NegocioUsuario();
-            negUsu.CrearUsuarioCliente();
+            negUsu = new NegocioUsuario();*/
+        
 
         }
 

@@ -55,12 +55,17 @@
                 <Grid Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center">
                     <TextBlock Text="LOGIN" FontSize="25" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 </Grid>
-                <StackPanel Grid.Column="3" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" Orientation="Horizontal">
-                    <Button x:Name="ButtonMinimizar" Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonMinimizar_Click">
-                        <materialDesign:PackIcon Kind="WindowMinimize"/>
+                <StackPanel Grid.Column="3" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" Orientation="Horizontal" Margin="0,0,10,0" >
+                    <Button x:Name="ButtonMinimizar" Width="25" Height="25" BorderBrush="{x:Null}"  Click="ButtonMinimizar_Click"  >
+                        <Button.Background>
+                            <ImageBrush ImageSource="minimizar.png"/>
+                        </Button.Background>
                     </Button>
-                    <Button x:Name="ButtonSalir"  Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonSalir_Click">
-                        <materialDesign:PackIcon Kind="WindowClose"/>
+                    <Button x:Name="ButtonSalir"  Width="25" Height="25" BorderBrush="{x:Null}" Foreground="White" Click="ButtonSalir_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="cerrar.png"/>
+                        </Button.Background>
+
                     </Button>
                 </StackPanel>
                 <materialDesign:PackIcon Grid.Column="0"  Grid.Row="1" Kind="UserBox" Style="{StaticResource InputIcon}" Margin="48,17,10,28"/>
@@ -84,7 +89,7 @@
                         </TextBlock.Visibility>
                     </TextBlock>
                     <PasswordBox x:Name="Contrasenya" Background="Transparent" BorderBrush="{StaticResource brushWatermarkBorder}"  PasswordChar="*" 
-                                 Height="25"/>                   
+                                 Height="25"/>
                 </Grid>
 
                 <Grid Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2">
