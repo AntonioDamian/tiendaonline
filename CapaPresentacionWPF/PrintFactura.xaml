@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="PrintFactura" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <DocumentViewer  Grid.Column="0" x:Name="PreviewD">
+        </DocumentViewer>
     </Grid>
 </Window>

@@ -140,6 +140,9 @@
       <DependentUpon>espera.xaml</DependentUpon>
     </Compile>
     <Compile Include="IBuscar.cs" />
+    <Compile Include="PrintFactura.xaml.cs">
+      <DependentUpon>PrintFactura.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UscAcercaDe.xaml.cs">
       <DependentUpon>UscAcercaDe.xaml</DependentUpon>
     </Compile>
@@ -211,6 +214,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PrintFactura.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UscAcercaDe.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
