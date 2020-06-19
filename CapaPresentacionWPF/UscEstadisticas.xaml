@@ -6,14 +6,14 @@
              xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
              xmlns:local="clr-namespace:CapaPresentacionWPF"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="850" d:DesignWidth="1190" Loaded="UserControl_Loaded">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="10*"/>
-            <ColumnDefinition Width="75*"/>
-            <ColumnDefinition Width="100*"/>
-            <ColumnDefinition Width="150*"/>
-            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="23*"/>
+            <ColumnDefinition Width="271*"/>
+            <ColumnDefinition Width="345*"/>
+            <ColumnDefinition Width="517*"/>
+            <ColumnDefinition Width="34*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="25*"/>
@@ -22,8 +22,11 @@
             <RowDefinition Height="25*"/>
 
         </Grid.RowDefinitions>
-        <Calendar x:Name="CalendarioFechas" Grid.Column="1" HorizontalAlignment="Center"  Grid.Row="2" VerticalAlignment="Center" 
-                  Width="200" Height="246"  SelectionMode="SingleDate" SelectedDatesChanged="CalendarioFechas_SelectedDatesChanged"   />
+        <Viewbox  Grid.Column="1"  Grid.Row="2" StretchDirection="UpOnly">
+            <Calendar x:Name="CalendarioFechas" HorizontalAlignment="Center"  VerticalAlignment="Center" 
+                 SelectionMode="SingleDate" SelectedDatesChanged="CalendarioFechas_SelectedDatesChanged"   />
+        </Viewbox>
+
         <lvc:CartesianChart Grid.Row="2"  Grid.Column="2"  x:Name="BarraPedidos"  Series="{Binding ColunmSeriesCollection}" >
             <lvc:CartesianChart.AxisY>
                 <lvc:Axis MinValue="0" Title="Cantidad" MaxValue="100">

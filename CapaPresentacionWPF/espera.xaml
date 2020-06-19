@@ -10,7 +10,7 @@
         <ImageBrush ImageSource="tienda.jpg"/>
     </Window.Background>
     <Grid>
-        <ProgressBar Minimum="0" Maximum="100" IsIndeterminate="True" Margin="-24,396,24,42" />
+        <ProgressBar Minimum="0" Maximum="100" IsIndeterminate="True" Margin="10,396,10,42" />
         <TextBlock HorizontalAlignment="Center"
                    VerticalAlignment="Center" Margin="366,405,375,21">Loading...</TextBlock>
 

@@ -55,6 +55,8 @@ namespace CapaPresentacionWPF
                     .OrderByDescending(s => s)
                     .ToList();
 
+            CalendarioFechas.DisplayDate = DateTime.Now;
+
             // AddSelectedDates(listaFecha);
 
         }
@@ -88,8 +90,8 @@ namespace CapaPresentacionWPF
                         linpeds.Add(_listaLinpeds[j]);
                     }
                 }
-            }
 
+            }
 
 
 
