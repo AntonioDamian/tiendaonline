@@ -14,6 +14,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CapaPresentacionWPF;
+using System.Windows.Xps; // refenecia ReachFramework
+using System.Windows.Xps.Packaging;
+using System.IO;
 
 namespace CapaPresentacionWPF
 {
@@ -43,6 +47,8 @@ namespace CapaPresentacionWPF
 
         private void BuscarFactura_Click(object sender, RoutedEventArgs e)
         {
+            listaVentas.Items.Clear();
+            
             BusquedaPedido busPedido = new BusquedaPedido();
             busPedido.Buscar = (IBuscar)this;
             busPedido.ShowDialog();
@@ -57,15 +63,17 @@ namespace CapaPresentacionWPF
         {
             foreach(Linped li in pedido.Linpeds)
                 {
-                _ = listaVentas.Items.Add(new
-                {
-                    Linea = li.Linea,
-                    ArticuloID = li.ArticuloID,
-                    Importe = li.Importe,
-                    Cantidad = li.Cantidad,
-                    ImporteTotal = li.Importe * li.Cantidad
-                });
+                    _ = listaVentas.Items.Add(new
+                    {
+                        Linea = li.Linea,
+                        ArticuloID = li.ArticuloID,
+                        Importe = li.Importe,
+                        Cantidad = li.Cantidad,
+                        ImporteTotal = li.Importe * li.Cantidad
+                    });
                 }
+
+          
 
             UsuarioID.DataContext = pedido.UsuarioID;
             NombreCliente.DataContext = nombre;
@@ -89,6 +97,49 @@ namespace CapaPresentacionWPF
             Subtotal.DataContext = total.ToString() + " €";
             IVA.DataContext= totalIva.ToString() + " €";
             Total.DataContext= totalConIva.ToString() + " €";
+        }
+
+        private void btnImprimir_Click(object sender, RoutedEventArgs e)
+        {
+            FlowDocumentScrollViewer visual = (FlowDocumentScrollViewer)(this.FindName("FlowDocViewer"));
+            try
+            {
+                // write the XPS document
+                using (XpsDocument doc = new XpsDocument("printPreview.xps", FileAccess.ReadWrite))
+                {
+                    XpsDocumentWriter writer = XpsDocument.CreateXpsDocumentWriter(doc);
+                    writer.Write(visual);
+                }
+
+                // Read the XPS document into a dynamically generated
+                // preview Window 
+                Window preview = new PrintWindow();
+                using (XpsDocument doc = new XpsDocument("printPreview.xps", FileAccess.Read))
+                {
+                    FixedDocumentSequence fds = doc.GetFixedDocumentSequence();
+
+                    DocumentViewer dv1 = LogicalTreeHelper.FindLogicalNode(preview, "PreviewD") as DocumentViewer;
+                    dv1.Document = fds as IDocumentPaginatorSource;
+
+                    // Eliminamos la ventana de búsqueda
+                    ContentControl cc = dv1.Template.FindName("PART_FindToolBarHost", dv1) as ContentControl;
+                    cc.Visibility = Visibility.Collapsed;
+                }
+                preview.ShowDialog();
+            }
+            finally
+            {
+                if (File.Exists("printPreview.xps"))
+                {
+                    try
+                    {
+                        File.Delete("printPreview.xps");
+                    }
+                    catch
+                    {
+                    }
+                }
+            }
         }
     }
 }

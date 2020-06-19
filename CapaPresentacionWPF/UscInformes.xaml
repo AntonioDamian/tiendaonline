@@ -7,14 +7,18 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="777*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height=".2*"/>
             <RowDefinition Height="1.5*"/>
             <RowDefinition Height=".2*"/>
         </Grid.RowDefinitions>
-        <Button x:Name="BuscarFactura" Grid.Row="0" Content="Buscar Factura" HorizontalAlignment="Right" Margin="0,10,109,5" Click="BuscarFactura_Click" Height="Auto"/>
-        <FlowDocumentScrollViewer Grid.Row="1" x:Name="FlowDocViewer" Margin="0,10,0,0" >
-            <FlowDocument x:Name="FlocDoc" >
+        <Button x:Name="BuscarFactura" Grid.Row="0" Content="Buscar Factura" HorizontalAlignment="Right" Margin="0,10,85.825,5" Click="BuscarFactura_Click" Height="Auto"/>
+        <FlowDocumentScrollViewer Grid.Row="1" x:Name="FlowDocViewer" Margin="0,10,0,0" Grid.ColumnSpan="2" >
+
+            <FlowDocument x:Name="FlocDoc"  >
                 <Paragraph>
                     <Run Text=" Datos del Cliente"/>
                 </Paragraph>
@@ -73,9 +77,6 @@
                     </TableRowGroup>
                     <TableRowGroup>
                         <TableRow>
-
-
-
                         </TableRow>
                     </TableRowGroup>
                     <TableRowGroup>
@@ -100,19 +101,19 @@
                     </TableRowGroup>
                 </Table>
                 <BlockUIContainer>
-                    <ListView BorderThickness="1" ItemsSource="{Binding}" x:Name="listaVentas" Height="150">
+                    <ListView BorderThickness="1" ItemsSource="{Binding}" x:Name="listaVentas" Height="150" MinHeight="150" ScrollViewer.CanContentScroll="False">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn x:Name="Linea" Header="linea" Width="100" DisplayMemberBinding="{Binding Linea}"/>
                                 <GridViewColumn Header="Articulo" Width="100" DisplayMemberBinding="{Binding ArticuloID}" />
                                 <GridViewColumn Header="Importe" Width="100" DisplayMemberBinding="{Binding Importe}"/>
                                 <GridViewColumn Header="Cantidad" Width="100" DisplayMemberBinding="{Binding Cantidad}"/>
-                                <GridViewColumn Header="Importe Total" Width="100" DisplayMemberBinding="{Binding ImporteTotal}"/>
+                                <GridViewColumn Header="Importe Total" Width="150" DisplayMemberBinding="{Binding ImporteTotal}"/>
                             </GridView>
                         </ListView.View>
                     </ListView>
                 </BlockUIContainer>
-                <Table CellSpacing="0">
+                <Table CellSpacing="0" >
                     <TableRowGroup>
                         <TableRow>
                             <TableCell Background="Gainsboro" FontWeight="Bold">
@@ -146,6 +147,12 @@
             </FlowDocument>
 
         </FlowDocumentScrollViewer>
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="50,10,10,0"  VerticalAlignment="Top" Width="100"/>
+            <Button x:Name="btnReset" Content="Reset" HorizontalAlignment="Left" Margin="20,10,10,0"  VerticalAlignment="Top" Width="105"/>
+            <Button x:Name="btnImprimir" Content="Imprimir" HorizontalAlignment="Left" Margin="350,10,10,0"  VerticalAlignment="Top" Width="105" Click="btnImprimir_Click"/>
+        </StackPanel>
+
 
     </Grid>
 </UserControl>
