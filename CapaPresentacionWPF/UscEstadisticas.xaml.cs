@@ -94,11 +94,36 @@ namespace CapaPresentacionWPF
             }
 
 
+            return linpeds;
+
+        }
+
+        public List<Linped> listaArticulosMes(DateTime fecha)
+        {
+
+            List<Linped> linpeds = new List<Linped>();
+
+            List<Pedido> list = _listaPedidos.Where(x => x.Fecha.Month == fecha.Month).ToList();
+
+
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                for (int j = 0; j < _listaLinpeds.Count; j++)
+                {
+                    if (_listaLinpeds[j].PedidoID.Equals(list[i].PedidoID))
+                    {
+                        linpeds.Add(_listaLinpeds[j]);
+                    }
+                }
+
+            }
+
 
             return linpeds;
 
-
         }
+
 
 
         List<string> _columnXLabels = new List<string>();
@@ -117,12 +142,12 @@ namespace CapaPresentacionWPF
             }
         }
 
-        SeriesCollection _colunmSeriesCollection = new SeriesCollection();
-        public SeriesCollection ColunmSeriesCollection { get => _colunmSeriesCollection; set => _colunmSeriesCollection = value; }
-        public Func<int, string> Formatter { get; set; }
-        public List<string> Labels { get => _labels; set => _labels = value; }
+     
+    
+      
 
         private List<string> _labels = new List<string>();
+       
 
         private void CalendarioFechas_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -138,19 +163,24 @@ namespace CapaPresentacionWPF
                 string mes = date.Month.ToString();
 
                 List<Linped> listArt = listaArticulos(date);
+                List<Linped> listArt1 = listaArticulosMes(date);
+
+                listArt.OrderBy(x => x.Cantidad).ToList();
 
 
+
+               //piechart
 
                 ChartValues<int> chartvalue = new ChartValues<int>();
                 SeriesCollection PieSeriesCollection2 = new SeriesCollection();
 
-                for (int i = 0; i < listArt.Count; i++)
+                for (int i = 0; i < listArt1.Count; i++)
                 {
                     chartvalue = new ChartValues<int>();
-                    chartvalue.Add(listArt[i].Cantidad.Value);
+                    chartvalue.Add(listArt1[i].Cantidad.Value);
                     PieSeries series2 = new PieSeries();
                     series2.DataLabels = true;
-                    series2.Title = listArt[i].ArticuloID;
+                    series2.Title = listArt1[i].ArticuloID;
                     series2.Values = chartvalue;
                     PieSeriesCollection2.Add(series2);
 
@@ -161,29 +191,47 @@ namespace CapaPresentacionWPF
 
                 List<int?> columValues = new List<int?>();
 
+                //grafico de barras
 
+               SeriesCollection serie1 = new SeriesCollection();
+              
+                cart_ejeX.MaxValue = 5;
+                cart_ejeY.MaxValue = listArt[0].Cantidad.Value;
+
+
+                string[] productos = new string[listArt.Count];
 
                 for (int i = 0; i < listArt.Count; i++)
                 {
-                    ColunmSeriesCollection.Add(new ColumnSeries
-                    {
-                        Title = listArt[i].ArticuloID,
-                        Values = new ChartValues<int> { listArt[i].Cantidad.Value }
-                    });
+                   
+                     serie1.Add(new ColumnSeries
+                     {
+                       
+                         Values = new ChartValues<int> { listArt[i].Cantidad.Value },
+                         DataLabels=true,
+                         LabelPoint=point=>point.Y.ToString(),
+                        
+                     });
 
-                    string s = listArt[i].ArticuloID.ToString();
-                    Labels.Add(s);
+                    productos[i] = listArt[i].ArticuloID.ToString();            
+                  
 
                 }
 
 
-                Formatter = value => value.ToString("N");
+
+                cart_ejeX.Labels = productos;
+                cart_ejeX.LabelsRotation = 15;
+
+               BarraPedidos.Series = serie1;         
 
 
 
             }
 
-            DataContext = this;
+            
         }
+
+       
     }
 }

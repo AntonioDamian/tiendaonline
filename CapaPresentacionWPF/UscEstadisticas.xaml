@@ -9,11 +9,11 @@
              d:DesignHeight="850" d:DesignWidth="1190" Loaded="UserControl_Loaded">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="23*"/>
-            <ColumnDefinition Width="271*"/>
-            <ColumnDefinition Width="345*"/>
-            <ColumnDefinition Width="517*"/>
-            <ColumnDefinition Width="34*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="280*"/>
+            <ColumnDefinition Width="400*"/>
+            <ColumnDefinition Width="464*"/>
+            <ColumnDefinition Width="20*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="25*"/>
@@ -23,26 +23,24 @@
 
         </Grid.RowDefinitions>
         <Viewbox  Grid.Column="1"  Grid.Row="2" StretchDirection="UpOnly">
-            <Calendar x:Name="CalendarioFechas" HorizontalAlignment="Center"  VerticalAlignment="Center" 
-                 SelectionMode="SingleDate" SelectedDatesChanged="CalendarioFechas_SelectedDatesChanged"   />
+            <Calendar x:Name="CalendarioFechas" 
+                 SelectionMode="SingleDate" SelectedDatesChanged="CalendarioFechas_SelectedDatesChanged" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontFamily="Times New Roman" FontSize="8"    />
         </Viewbox>
-
-        <lvc:CartesianChart Grid.Row="2"  Grid.Column="2"  x:Name="BarraPedidos"  Series="{Binding ColunmSeriesCollection}" >
-            <lvc:CartesianChart.AxisY>
-                <lvc:Axis MinValue="0" Title="Cantidad" MaxValue="100">
-                    <lvc:Axis.Separator>
+        <!--Grafico de columnas-->
+        <lvc:CartesianChart Grid.Row="2"  Grid.Column="2"  x:Name="BarraPedidos"  >
+            <lvc:CartesianChart.AxisX  >
+                <lvc:Axis x:Name="cart_ejeX" Title="Productos"  Foreground="Black" >
+                    <lvc:Axis.Separator >
                         <lvc:Separator IsEnabled="False" Step="1"/>
                     </lvc:Axis.Separator>
                 </lvc:Axis>
-            </lvc:CartesianChart.AxisY>
-            <lvc:CartesianChart.AxisX >
-                <lvc:Axis x:Name="cart_ejeX" Title="Productos" Labels="{Binding Labels}">
-                    <lvc:Axis.Separator>
-                        <lvc:Separator IsEnabled="True" Step="15"/>
-                    </lvc:Axis.Separator>
-                </lvc:Axis>
             </lvc:CartesianChart.AxisX>
+            <lvc:CartesianChart.AxisY>
+                <lvc:Axis x:Name="cart_ejeY" Title="Cantidad"  MinValue="0" Foreground="Black" >                   
+                </lvc:Axis>
+            </lvc:CartesianChart.AxisY>           
         </lvc:CartesianChart>
+        <!--Grafico Pastel-->
         <lvc:PieChart x:Name="Piechart" Grid.Row="2" Grid.Column="3">
 
         </lvc:PieChart>
