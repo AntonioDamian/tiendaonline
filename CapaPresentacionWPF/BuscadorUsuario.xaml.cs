@@ -58,19 +58,7 @@ namespace CapaPresentacionWPF
           //  view.Filter= UserFilter;
         }
 
-        private bool UserFilter(object obj)
-        {
-            bool filtro = false;
-
-            if (String.IsNullOrEmpty(txtBusqueda.Text))
-                filtro=true;
-            else if((obj as Usuario).Nombre.IndexOf(txtBusqueda.Text, StringComparison.OrdinalIgnoreCase) >= 0)
-                {
-                filtro=true;
-                }
-
-            return filtro;
-        }
+      
 
         private void Mostrar()
         {
@@ -142,9 +130,7 @@ namespace CapaPresentacionWPF
                     var query = from l in _listaUsuarios where l.Nombre.ToUpper().StartsWith(txtBusqueda.Text.ToUpper(), comparison) select l;
                   
 
-                  dgUsers.ItemsSource = query;
-
-                 
+                  dgUsers.ItemsSource = query;                
 
 
                      dt = Utilidades.ConvertToDataTable(query.ToList());

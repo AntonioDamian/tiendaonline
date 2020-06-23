@@ -34,7 +34,7 @@ namespace CapaPresentacionWPF
 
 
 
-        public DataTable Dt { get; set; }
+        private DataTable Dt { get; set; }
 
         public IBuscar Buscar { get; set; }
 
@@ -129,11 +129,11 @@ namespace CapaPresentacionWPF
         }
         private void TxtNombreUsuario_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (string.IsNullOrEmpty(TxtNombreUsuario.Text.Trim()) == false)
-            {
+                if (string.IsNullOrEmpty(TxtNombreUsuario.Text.Trim()) == false)
+                {
 
-                Dt.DefaultView.RowFilter = $"Nombre like'{TxtNombreUsuario.Text}%'";
-            }
+                    Dt.DefaultView.RowFilter = $"Nombre like'{TxtNombreUsuario.Text}%'";
+                }
         }
 
 
@@ -149,6 +149,8 @@ namespace CapaPresentacionWPF
 
         private void BtnSeleccionar_Click(object sender, RoutedEventArgs e)
         {
+          
+            
             if (dtgPedidos.Items.Count == 0)
             {
                 return;
@@ -179,7 +181,9 @@ namespace CapaPresentacionWPF
                 }*/
 
                 string nombre = dr[5].ToString();
-                Buscar.DevolucionPedido(pedido,nombre);
+               Buscar.DevolucionPedido(pedido,nombre);
+
+                
 
                 this.Close();
 

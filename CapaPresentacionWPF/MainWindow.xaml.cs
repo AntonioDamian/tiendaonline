@@ -28,6 +28,10 @@ namespace CapaPresentacionWPF
         DispatcherTimer dispatcherTimer;
         DateTime start;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="usuario"> Usuario con sus datos que recibimos despues de loguearnos</param>
         public MainWindow(Usuario usuario)
         {
             InitializeComponent();
@@ -60,6 +64,11 @@ namespace CapaPresentacionWPF
             TiempoEjecucion.DataContext = DateTime.Now - start;
         }
 
+        /// <summary>
+        /// Metodo para controlar las distintas opciones del menu ,segun el control pulsado
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ListViewItem_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             // Instancio un UserControl en función de la opción de menú pulsada
@@ -114,5 +123,12 @@ namespace CapaPresentacionWPF
             }
         }
 
+        private void btnPopupSalir_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("¿Desea cerrar la aplicación?", "Confirmación", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            if (result == MessageBoxResult.Yes)
+                Application.Current.Shutdown();
+        }
     }
 }

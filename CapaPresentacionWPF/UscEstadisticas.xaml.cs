@@ -196,7 +196,12 @@ namespace CapaPresentacionWPF
                SeriesCollection serie1 = new SeriesCollection();
               
                 cart_ejeX.MaxValue = 5;
-                cart_ejeY.MaxValue = listArt[0].Cantidad.Value;
+
+                if(listArt[0].Cantidad.Value!=null)
+                {
+                    cart_ejeY.MaxValue = listArt[0].Cantidad.Value;
+                }
+               
 
 
                 string[] productos = new string[listArt.Count];
@@ -209,7 +214,8 @@ namespace CapaPresentacionWPF
                        
                          Values = new ChartValues<int> { listArt[i].Cantidad.Value },
                          DataLabels=true,
-                         LabelPoint=point=>point.Y.ToString(),
+                         LabelPoint=point=>point.Y.ToString(),                       
+                         MaxColumnWidth=50
                         
                      });
 
@@ -220,8 +226,9 @@ namespace CapaPresentacionWPF
 
 
 
-                cart_ejeX.Labels = productos;
+                cart_ejeX.Labels = productos;                
                 cart_ejeX.LabelsRotation = 15;
+                
 
                BarraPedidos.Series = serie1;         
 

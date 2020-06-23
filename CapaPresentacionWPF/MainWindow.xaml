@@ -194,15 +194,15 @@
             </Grid.ColumnDefinitions>
 
             <!--AQUÍ MUESTRO EL NOMBRE DE LA APLICACIÓN Y UN MENÚ CONTEXTUAL-->
-            <!--<StackPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Orientation="Horizontal">
-                <materialDesign:PopupBox Margin="10" PlacementMode="BottomAndAlignCentres" StaysOpen="False" Foreground="White">
-                    <StackPanel Width="150" Background="White">
-                        <Button Content="Acerca de..." Foreground="Black" />
-                        <Separator />
-                        <Button x:Name="btnPopupSalir" Content="Salir" Foreground="Black" />
-                    </StackPanel>
-                </materialDesign:PopupBox>
-            </StackPanel>-->
+            <StackPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Orientation="Horizontal">
+            <materialDesign:PopupBox Margin="10" PlacementMode="BottomAndAlignCentres" StaysOpen="False" Foreground="White">
+                <StackPanel Width="150" Background="White">
+                    <Button Content="Acerca de..." Foreground="Black" />
+                    <Separator />
+                    <Button x:Name="btnPopupSalir" Content="Salir" Foreground="Black" Click="btnPopupSalir_Click" />
+                </StackPanel>
+            </materialDesign:PopupBox>
+            </StackPanel>
 
             <!--AQUÍ VOY A MOSTRAR EL NOMBRE DEL USUARIO-->
             <Grid x:Name="datosUsuarioAPP1" Grid.Column="1" Margin="0 0 0 0">
@@ -343,7 +343,7 @@
 
                     <!--#region SUBMENÚ DE USUARIOS-->
                     <ListViewItem x:Name="listAñadirUsuario" Visibility="Collapsed">
-                        <Border x:Name="borderAñadirUsuario" Width="210" Margin="35 0 0 0">
+                        <Border x:Name="borderAñadirUsuario" Width="220" Margin="35 0 0 0">
                             <StackPanel>
                                 <materialDesign:PackIcon Kind="AccountPlus" Width="40" Height="40" VerticalAlignment="Center" Margin="10 0"/>
                                 <TextBlock Text="MantenimientoUsuario"/>
@@ -365,7 +365,7 @@
                     </ListViewItem>
                     <!--#region SUBMENÚ DE PRODUCTO-->
                     <ListViewItem x:Name="listConsultarProducto" Visibility="Collapsed">
-                        <Border x:Name="borderConsultarProducto" Width="210" Margin="35 0 0 0">
+                        <Border x:Name="borderConsultarProducto" Width="220" Margin="35 0 0 0">
                             <StackPanel>
                                 <materialDesign:PackIcon Kind="MagnifyPlus" Width="40" Height="40" VerticalAlignment="Center" Margin="10 0"/>
                                 <TextBlock Text="Consultar"/>
@@ -387,7 +387,7 @@
                     </ListViewItem>
                     <!--#region SUBMENÚ DE PEDIDOS-->
                     <ListViewItem x:Name="listNuevoPedido" Visibility="Collapsed">
-                        <Border x:Name="borderNuevoPedido" Width="210" Margin="35 0 0 0">
+                        <Border x:Name="borderNuevoPedido" Width="220" Margin="35 0 0 0">
                             <StackPanel>
                                 <materialDesign:PackIcon Kind="CartArrowDown" Width="40" Height="40" VerticalAlignment="Center" Margin="10 0"/>
                                 <TextBlock Text="Nuevo Pedido"/>
@@ -419,7 +419,7 @@
 
                     <!--#region SUBMENÚ DE INFORMES-->
                     <ListViewItem x:Name="listInformeFactura" Visibility="Collapsed">
-                        <Border x:Name="borderInformefactura" Width="210" Margin="35 0 0 0">
+                        <Border x:Name="borderInformefactura" Width="220" Margin="35 0 0 0">
                             <StackPanel>
                                 <materialDesign:PackIcon Kind="FileDocumentBoxOutline" Width="40" Height="40" VerticalAlignment="Center" Margin="10 0"/>
                                 <TextBlock Text="Factura" ToolTip="Informe de una factura concreta"/>

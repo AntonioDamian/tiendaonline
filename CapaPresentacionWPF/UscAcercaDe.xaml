@@ -5,8 +5,95 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:CapaPresentacionWPF"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="850" d:DesignWidth="1190">
+    <UserControl.Resources>
+        <Style x:Key="titulo" TargetType="{x:Type TextBlock}">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Margin" Value="10 0 10 0"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+        <Style x:Key="datos" TargetType="{x:Type TextBlock}">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+    </UserControl.Resources>
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock
+            Text="Acerca de..."
+            FontSize="30"
+            Foreground="White"
+            FontWeight="Bold"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Rectangle RadiusX="40" RadiusY="40" Width="526" Height="590">
+                <Rectangle.Effect>
+                    <DropShadowEffect/>
+                </Rectangle.Effect>
+                <Rectangle.Fill>
+                    <ImageBrush x:Name="fondoMundial" ImageSource="Recursos/tiendaTransparente.png"/>
+                </Rectangle.Fill>
+            </Rectangle>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <StackPanel
+                    Grid.Row="1" 
+                    Orientation="Vertical"
+                    Margin="10">
+                    <StackPanel
+                        Orientation="Horizontal"
+                        Margin="0 10">
+                        <TextBlock Style="{StaticResource titulo}"
+                            Text="Nombre:"/>
+                        <TextBlock Style="{StaticResource datos}"
+                                   Text="Galvañ_Candela_Antº_Damian_WPF"/>
+                    </StackPanel>
+                    <StackPanel
+                        Orientation="Horizontal"
+                        Margin="0 10">
+                        <TextBlock Style="{StaticResource titulo}"
+                                   Text="Version:"/>
+                        <TextBlock Style="{StaticResource datos}"
+                                   Text="1.0.0.0"/>
+                    </StackPanel>
+                    <StackPanel
+                        Orientation="Horizontal"
+                        Margin="0 10">
+                        <TextBlock Style="{StaticResource titulo}"
+                                   Text="Copyight:"/>
+                        <TextBlock Style="{StaticResource datos}"
+                                   Text="@2020"/>
+                    </StackPanel>
+                    <StackPanel
+                        Orientation="Vertical"
+                        Margin="0 10">
+                        <TextBlock Style="{StaticResource titulo}" Text="Descripción:"/>
+                        <TextBlock Style="{StaticResource datos}"
+                                   TextAlignment="Justify"
+                                   Height="100"
+                                   Margin="10"
+                                   Text="Proyecto final del segundo trimestre de la asignatura de Desarrollo de Interfaces de DAM en el IES San Vicente"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+
+        </Grid>
     </Grid>
 </UserControl>

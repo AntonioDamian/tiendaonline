@@ -25,7 +25,7 @@ namespace CapaPresentacionWPF
     /// <summary>
     /// Lógica de interacción para UScMantenimientoUsuarios.xaml
     /// </summary>
-    public partial class UScMantenimientoUsuarios : UserControl
+    public partial class UScMantenimientoUsuarios : UserControl,IBuscar
     {
 
         CultureInfo cultures = new CultureInfo("es-ES");
@@ -665,25 +665,10 @@ namespace CapaPresentacionWPF
               }
           }*/
 
-        private void BtnSalir_Click(object sender, RoutedEventArgs e)
-        {
-            if (MessageBox.Show("Desea Salir?", "Aviso", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
-            {
-                MessageBox.Show("salir");
-            }
-            else
-            {
-                MessageBox.Show("Cancelar");
-            }
-
-        }
+      
 
 
 
-        private void Buscar_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
 
 
         private void TxtPass_LostFocus(object sender, RoutedEventArgs e)
@@ -707,6 +692,29 @@ namespace CapaPresentacionWPF
         private void radio_Unchecked(object sender, RoutedEventArgs e)
         {
             seleccionado = false;
+        }
+
+        private void BuscarPu_Click(object sender, RoutedEventArgs e)
+        {
+            BuscadorPueblo pueblo = new BuscadorPueblo();
+            pueblo.Buscar = (IBuscar)this;
+            pueblo.Show();
+        }
+
+        void IBuscar.Ejecutar(Articulo articulo)
+        {
+            throw new NotImplementedException();
+        }
+
+        void IBuscar.DevolucionPedido(Pedido pedido, string nombre)
+        {
+            throw new NotImplementedException();
+        }
+
+        void IBuscar.DevolucionLocalidad(Localidad localidad)
+        {
+            CodPueblo.Text=localidad.LocalidadID;
+            CodProvincia.Text = localidad.ProvinciaID;
         }
     }
 }

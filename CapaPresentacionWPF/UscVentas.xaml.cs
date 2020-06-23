@@ -173,27 +173,21 @@ namespace CapaPresentacionWPF
         }
         private void TxtCantidad_TextChanged(object sender, TextChangedEventArgs e)
         {
-
-       
-        
                 decimal precio = Convert.ToDecimal(lbPrecio.Content);
                 int cantidad = Convert.ToInt32(cantdidadArt.Text);
 
                 decimal resultado = precio * cantidad;
 
                 lbPrecioTotal.Content = resultado.ToString();
-          
-
-
         }
 
-        private void TxtCantidad_KeyDown(object sender, KeyEventArgs e)
+      /*  private void TxtCantidad_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key >= Key.D0 && e.Key <= Key.D9 || e.Key >= Key.NumPad0 && e.Key <= Key.NumPad9)
                 e.Handled = false;
             else
                 e.Handled = true;
-        }
+        }*/
 
 
       
@@ -352,7 +346,7 @@ namespace CapaPresentacionWPF
         }
 
 
-        private void BtnBuscar_Click(object sender, RoutedEventArgs e)
+        private void BtnBuscarArticulo_Click(object sender, RoutedEventArgs e)
         {
 
             if(Application.Current.Windows.OfType<BuscadorArticulo2>().Count()==0)
@@ -361,27 +355,10 @@ namespace CapaPresentacionWPF
                 buscadorArticulo.Buscar = (IBuscar)this;
                 buscadorArticulo.Opacity = 0.8;
                 buscadorArticulo.Show();
-            }
-
-
-         
+            }     
 
         }
 
-        public void ArticuloSeleccionado(Articulo articuloSeleleccionado)
-        {
-            if (articuloSeleleccionado != null)
-            {
-
-                lbIdProducto.Content = articuloSeleleccionado.ArticuloID;
-                lbNombreProducto.Content = articuloSeleleccionado.Nombre;
-                lbPrecio.Content = articuloSeleleccionado.Pvp.ToString();
-                lbStock.Content = articuloSeleleccionado.Cantidad;
-
-                lbPrecioTotal.Content = "";
-                cantdidadArt.Value= 0;
-            }
-        }
 
         private void BtnEliminar_Click(object sender, RoutedEventArgs e)
         {
@@ -405,50 +382,10 @@ namespace CapaPresentacionWPF
 
         }
 
-        //metodos interface Ibuscar
-
-        public void Ejecutar(Articulo articulo)
-        {
-
-            if (articulo != null)
-            {
-                lbIdProducto.Content = articulo.ArticuloID;
-                lbNombreProducto.Content = articulo.Nombre;
-                lbPrecio.Content = articulo.Pvp.ToString();
-                lbStock.Content = articulo.Cantidad;
-
-                lbPrecioTotal.Content = "";
-                cantdidadArt.Value=0;
-
-            }
+      
 
 
-        }
 
-        public void DevolucionPedido(Pedido pedido,string nombre)
-        {
-           if(pedido!=null)
-            {
-                TxTPedidoID.Text = pedido.PedidoID.ToString();
-                TxTUsuarioID.Text = pedido.UsuarioID.ToString();
-                TxTNombreCliente.Text = nombre;
-                TxTFecha.DisplayDate = Convert.ToDateTime(pedido.Fecha.ToShortDateString());
-
-                foreach(Linped li in pedido.Linpeds)
-                {
-                    listaVentas.Items.Add(new { Linea= li.Linea, ArticuloID =li.ArticuloID, Importe = li.Importe,
-                        Cantidad = li.Cantidad, ImporteTotal = li.Importe*li.Cantidad });
-                }
-                //  listaVentas.ItemsSource = pedido.Linpeds;
-                txtIva.Text = "21";
-                ResumenFactura(pedido, 21);
-            }
-        }
-
-        private void Btnsalir_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
 
         private void BtnGuardar_Click(object sender, RoutedEventArgs e)
         {
@@ -470,9 +407,6 @@ namespace CapaPresentacionWPF
                         {
                             lista--;
                         }
-
-
-
                     }
 
                 }
@@ -507,6 +441,100 @@ namespace CapaPresentacionWPF
 
         }
 
-      
+        void IBuscar.Ejecutar(Articulo articulo)
+        {
+            if (articulo != null)
+            {
+                lbIdProducto.Content = articulo.ArticuloID;
+                lbNombreProducto.Content = articulo.Nombre;
+                lbPrecio.Content = articulo.Pvp.ToString();
+                lbStock.Content = articulo.Cantidad;
+
+                lbPrecioTotal.Content = "";
+                cantdidadArt.Value = 0;
+
+            }
+        }
+
+        void IBuscar.DevolucionPedido(Pedido pedido, string nombre)
+        {
+            if (pedido != null)
+            {
+                TxTPedidoID.Text = pedido.PedidoID.ToString();
+                TxTUsuarioID.Text = pedido.UsuarioID.ToString();
+                TxTNombreCliente.Text = nombre;
+                TxTFecha.DisplayDate = Convert.ToDateTime(pedido.Fecha.ToShortDateString());
+
+                foreach (Linped li in pedido.Linpeds)
+                {
+                    listaVentas.Items.Add(new
+                    {
+                        Linea = li.Linea,
+                        ArticuloID = li.ArticuloID,
+                        Importe = li.Importe,
+                        Cantidad = li.Cantidad,
+                        ImporteTotal = li.Importe * li.Cantidad
+                    });
+                }
+                //  listaVentas.ItemsSource = pedido.Linpeds;
+                txtIva.Text = "21";
+                ResumenFactura(pedido, 21);
+            }
+        }
+
+        void IBuscar.DevolucionLocalidad(Localidad localidad)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void BtnActualizar_Click(object sender, RoutedEventArgs e)
+        {
+            bool exito = false;
+            int lista = linpeds.Count();
+
+            if (TxTPedidoID.Text != null && linpeds.Count > 0)
+            {
+                Pedido pedido = new Pedido(Convert.ToInt32(TxTPedidoID.Text), Convert.ToInt32(TxTUsuarioID.Text),
+                                                 DateTime.ParseExact(TxTFecha.SelectedDate.Value.ToShortDateString(), "yyyy-MM-dd hh:mm:ss tt", CultureInfo.InvariantCulture), linpeds);
+
+
+                exito = _negpedido.Actualizar(pedido);
+
+                if (exito == true)
+                {
+                    foreach (Linped li in linpeds)
+                    {
+                        int cant = Convert.ToInt32(li.Cantidad);
+                        if (_negLinped.Actualizar(li))
+                        {
+                            lista--;
+                        }
+                    }
+
+                }
+
+
+            }
+            else
+            {
+                MessageBox.Show("No hay ningun pedido para actualizar");
+            }
+
+            if (exito == true && lista == 0)
+            {
+                MessageBox.Show("Actualizado con exito el pedido nº " + TxTPedidoID.Text);
+            }
+            else
+            {
+                MessageBox.Show("No se ha posdido actualizar  el pedido nº " + TxTPedidoID.Text);
+            }
+
+        }
+
+        private void btnFacturar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
     }
 }

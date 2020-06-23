@@ -9,9 +9,9 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width=".2*"/>
-            <ColumnDefinition Width="0.5*"/>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="59*"/>
+            <ColumnDefinition Width="132*"/>
+            <ColumnDefinition Width="601*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height=".1*"/>
@@ -19,7 +19,7 @@
             <RowDefinition Height="2*"/>
             <RowDefinition Height=".5*"/>
         </Grid.RowDefinitions>
-        <ComboBox x:Name="comboBoxFiltro"  Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1"  Width="120" SelectionChanged="ComboBox_SelectionChanged"/>
+        <ComboBox x:Name="comboBoxFiltro"  Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1"  Width="120" SelectionChanged="ComboBox_SelectionChanged" Height="28" Margin="6,20"/>
         <Grid Grid.Row="1" Grid.Column="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width=".75*" />

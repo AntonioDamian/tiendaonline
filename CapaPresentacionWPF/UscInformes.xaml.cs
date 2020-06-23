@@ -141,5 +141,10 @@ namespace CapaPresentacionWPF
                 }
             }
         }
+
+        public void DevolucionLocalidad(Localidad localidad)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

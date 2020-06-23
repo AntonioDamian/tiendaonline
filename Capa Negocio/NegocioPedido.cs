@@ -36,6 +36,13 @@ namespace Capa_negocio
             return _pedido.InsertarPedido(pedidoID,usuarioID,fecha,linpeds);
         }
 
+        public bool Actualizar(Pedido pedido)
+        {
+
+            return (_pedido.ActualizarPedido(pedido));
+        }
+
+
         public decimal [] Datosfactura(Pedido pedido,decimal iva )
         {
             decimal[] valores = new decimal[3];

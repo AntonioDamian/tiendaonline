@@ -27,16 +27,19 @@
             <Setter Property="Margin" Value="20,0" />
         </Style>
     </Window.Resources>
-    <Grid   Opacity="90">
+    <Grid   Opacity="80">
+        <Grid.Background>
+            <ImageBrush ImageSource="reapertura-tienda.jpg"/>
+        </Grid.Background>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
-            <Grid Background="BlueViolet">
-                <Image HorizontalAlignment="Center" VerticalAlignment="Center" Source="Recursos/tienda.jpg"/>
+            <Grid Background="#7F1E98DE">
+                <Image HorizontalAlignment="Center" VerticalAlignment="Center" Source="tiendaTransparente.png" Height="144" Margin="32,30,91,276" Width="144"/>
             </Grid>
-            <Grid Background="CadetBlue" Grid.Column="1">
+            <Grid  Grid.Column="1" Background="#7F32720E">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition/>
@@ -73,8 +76,8 @@
                 <Grid Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" 
                       Background="{StaticResource brushWatermarkBackground}" Style="{StaticResource EntryFieldStyle}">
                     <TextBlock Margin="5,2" Text="Usuario ..." Foreground="{StaticResource brushWatermarkForeground}"
-                       Visibility="{Binding ElementName=txtUserEntry, Path=Text.IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}}" />
-                    <TextBox x:Name="Usuario" Background="Transparent" BorderBrush="{StaticResource brushWatermarkBorder}" Height="25" />
+                       Visibility="{Binding ElementName=Usuario, Path=Text.IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                    <TextBox Name="Usuario" Background="Transparent" BorderBrush="{StaticResource brushWatermarkBorder}" Height="25" />
                 </Grid>
                 <materialDesign:PackIcon Grid.Column="0" Grid.Row="2" Kind="ShieldKey" Style="{StaticResource InputIcon}" Margin="48,25,10,20"/>
 
@@ -83,8 +86,8 @@
                     <TextBlock Margin="5,2" Text="Password" Foreground="{StaticResource brushWatermarkForeground}" >
                         <TextBlock.Visibility>
                             <MultiBinding Converter="{StaticResource TextInputToVisibilityConverter}">
-                                <Binding ElementName="txtUserEntry2" Path="Text.IsEmpty" />
-                                <Binding ElementName="txtUserEntry2" Path="IsFocused" />
+                                <Binding ElementName="Contrasenya" Path="Password.IsEmpty" />
+                                <Binding ElementName="Contrasenya" Path="IsFocused" />
                             </MultiBinding>
                         </TextBlock.Visibility>
                     </TextBlock>
@@ -94,8 +97,9 @@
 
                 <Grid Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2">
                     <Button Click="BtnAcceder_Click" Margin="0,28,0,0" >
-                        <StackPanel>
-                            <TextBlock Name="btnLogin" Text="ACCEDER"/>
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="LoginVariant" Margin="0,0,10,0"/>
+                            <TextBlock x:Name="btnLogin" Text="ACCEDER"/>
                         </StackPanel>
                     </Button>
 

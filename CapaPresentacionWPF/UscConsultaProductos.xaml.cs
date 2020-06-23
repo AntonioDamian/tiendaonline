@@ -52,13 +52,15 @@ namespace CapaPresentacionWPF
         {
             //this.lblEjemplo.Content = "Iniciando la aplicación...";
             this.loading.Visibility = Visibility.Visible;
-          
+            Loading2.Content= "Loading...";
 
             await ArranqueAplicacionAsync();
-            this.loading.Visibility = Visibility.Collapsed;
+            Loading2.Content = "Carga finalizada";
+            progressbar.Visibility = Visibility.Collapsed;
+           // this.loading.Visibility = Visibility.Collapsed;
 
             this.TipoaArt.ItemsSource = ListaProductos;
-            // this.lblEjemplo.Content = "Carga finalizada";
+           
         }
 
 

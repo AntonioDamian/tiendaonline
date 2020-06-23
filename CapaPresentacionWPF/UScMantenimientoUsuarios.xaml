@@ -254,23 +254,19 @@
                                 </TextBox.Text>
                             </TextBox>
                             <StackPanel Orientation="Horizontal"  Grid.Column="4"  Grid.Row="5">
-                                <TextBox x:Name="CodPueblo"  Margin="23,0,24,10" TextWrapping="Wrap"  HorizontalAlignment="Left" Height="24" VerticalAlignment="Center" Width="159">
-                                    <TextBox.Text>
-                                        <Binding Path="PuebloID" UpdateSourceTrigger="PropertyChanged" >
-                                            <Binding.ValidationRules>
-                                                <local:ValidacionesString  Campo="PuebloID" ValidationStep="RawProposedValue" />
-                                            </Binding.ValidationRules>
-                                        </Binding>
-                                    </TextBox.Text>
+                                <TextBox x:Name="CodPueblo"  Margin="23,10,24,10" TextWrapping="Wrap"  HorizontalAlignment="Left" Height="24" VerticalAlignment="Center" Width="159">
+                                    <Binding Path="PuebloID" UpdateSourceTrigger="PropertyChanged" >
+                                        <Binding.ValidationRules>
+                                            <local:ValidacionesString  Campo="PuebloID" ValidationStep="RawProposedValue" />
+                                        </Binding.ValidationRules>
+                                    </Binding>
                                 </TextBox>
-
-                                <Button x:Name="BuscarPu" HorizontalAlignment="Right" VerticalAlignment="Center" Click="Buscar_Click"   Height="24"  Width="49" Margin="0,8"   >
+                                <Button x:Name="BuscarPu" HorizontalAlignment="Right" VerticalAlignment="Center" Click="BuscarPu_Click"   Height="24"  Width="49" Margin="0,8"   >
                                     <materialDesign:PackIcon Kind="Magnify"/>
                                 </Button>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal"  Grid.Column="4"  Grid.Row="6">
-                                <TextBox x:Name="CodProvincia"  Margin="23,0,24,10"   HorizontalAlignment="Left" Height="24"     VerticalAlignment="Center" Width="159">
-
+                                <TextBox x:Name="CodProvincia"  Margin="23,10,24,10"   HorizontalAlignment="Left" Height="24"     VerticalAlignment="Center" Width="159">
                                     <TextBox.Text>
                                         <Binding Path="ProvinciaID" UpdateSourceTrigger="PropertyChanged" >
                                             <Binding.ValidationRules>
@@ -279,12 +275,8 @@
                                         </Binding>
                                     </TextBox.Text>
                                 </TextBox>
-
-                                <Button x:Name="BuscarPro"  Click="Buscar_Click" HorizontalAlignment="Right" VerticalAlignment="Center" Height="24"  Width="49" Margin="0,8"   >
-                                    <materialDesign:PackIcon Kind="Magnify"/>
-                                </Button>
                             </StackPanel>
-                            <DatePicker   Grid.Column="4" Grid.Row="7" Name="cbNacido"                                   HorizontalAlignment="Center"  VerticalAlignment="Center" Width="230" Height="26" Margin="23,0,33,10">
+                            <DatePicker   Grid.Column="4" Grid.Row="7" Name="cbNacido" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="230" Height="26" Margin="23,0,33,10">
                                 <DatePicker.SelectedDate>
                                     <Binding Path="Nacido" UpdateSourceTrigger="PropertyChanged" >
                                         <Binding.ValidationRules>
@@ -321,21 +313,13 @@
                                 <materialDesign:PackIcon Kind="AccountEditOutline" Margin=" 10,5" Height="25" Width="30"/>
                                 <Label Content="Editar" x:Name="TextoEditar" Margin="10,5" Foreground="Black"/>
                             </StackPanel>
-                        </Button.Content> 
+                        </Button.Content>
                     </Button>
                     <Button x:Name="btnCancelar"  HorizontalAlignment="Left" Margin="950,500,0,0" VerticalAlignment="Top" Width="177" Click="BtnCancelar_Click" Grid.Column="1" Height="50">
                         <Button.Content>
                             <StackPanel Width="151" Orientation="Horizontal" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                                 <materialDesign:PackIcon Kind="AccountCancel" Margin=" 10,5" Height="25" Width="30"/>
                                 <Label Content="cancelar" x:Name="TextoCancelar" Margin="10,5" Foreground="Black"/>
-                            </StackPanel>
-                        </Button.Content>
-                    </Button>
-                    <Button x:Name="btnSalir"  HorizontalAlignment="Left" Margin="950,600,0,0" VerticalAlignment="Top" Width="177" Click="BtnSalir_Click" Grid.Column="1" Height="50">
-                        <Button.Content>
-                            <StackPanel Width="151" Orientation="Horizontal" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
-                                <materialDesign:PackIcon Kind="CloseCircle" Margin=" 10,5" Height="25" Width="30"/>
-                                <Label Content="Salir" x:Name="Textosalir" Margin="10,5" Foreground="Black"/>
                             </StackPanel>
                         </Button.Content>
                     </Button>

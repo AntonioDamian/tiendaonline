@@ -25,11 +25,8 @@ namespace CapaPresentacionWPF
         public BuscadorArticulo2()
         {
             InitializeComponent();
+
         }
-
-
-      
-
        
 
         protected void Window_Loaded(object sender, RoutedEventArgs e)
