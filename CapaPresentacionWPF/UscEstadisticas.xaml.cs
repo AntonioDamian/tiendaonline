@@ -265,7 +265,7 @@ namespace CapaPresentacionWPF
 
               
 
-                labelmes.Content = date.Month;
+                labelmes.Content = meses[date.Month-1];
             }
             //si no hay pedidos
 
@@ -274,7 +274,7 @@ namespace CapaPresentacionWPF
             {
                 Piechart.Series.Clear();
                 labelmes.Content = "";
-                MessageBox.Show("No hay pedidos en el mes de'" + meses[date.Month] + "'del año '" + date.Year.ToString() + "'");
+                MessageBox.Show("No hay pedidos en el mes de'" + meses[date.Month-1] + "'del año '" + date.Year.ToString() + "'");
             }
         }
 
@@ -313,7 +313,7 @@ namespace CapaPresentacionWPF
 
                 Piechart1.Series = PieSeriesCollection2;               
 
-                labelmes.Content = date.Month;
+                labelmesTipo.Content = meses[date.Month-1];
             }
             //si no hay pedidos
 
@@ -322,7 +322,7 @@ namespace CapaPresentacionWPF
             {
                 Piechart1.Series.Clear();
                 labelmes.Content = "";
-                MessageBox.Show("No hay pedidos en el mes de'"+ meses[date.Month]+"'del año '"+ date.Year.ToString() + "'");
+                MessageBox.Show("No hay pedidos en el mes de'"+ meses[date.Month-1]+"'del año '"+ date.Year.ToString() + "'");
             }
         }
 
