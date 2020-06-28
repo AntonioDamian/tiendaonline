@@ -59,11 +59,11 @@
             // 
             // StockBindingSource
             // 
-            this.StockBindingSource.DataSource = typeof(Capa_entidades.Stock);
+            this.StockBindingSource.DataSource = typeof(CapaEntidades.Stock);
             // 
             // ArticuloBindingSource
             // 
-            this.ArticuloBindingSource.DataSource = typeof(Capa_entidades.Articulo);
+            this.ArticuloBindingSource.DataSource = typeof(CapaEntidades.Articulo);
             // 
             // StockReporte
             // 

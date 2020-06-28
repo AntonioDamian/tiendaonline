@@ -1,5 +1,5 @@
-using Capa_entidades;
-using Capa_negocio;
+using CapaEntidades;
+using CapaNegocio;
 using MiLibreria;
 using System;
 using System.Collections.Generic;

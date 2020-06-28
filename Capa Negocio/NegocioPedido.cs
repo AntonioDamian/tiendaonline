@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Capa_datos;
-using Capa_entidades;
-using Capa_Datos;
+using CapaEntidades;
+using CapaDatos;
 using System.Windows.Forms;
 
-namespace Capa_negocio
+namespace CapaNegocio
 {
    public  class NegocioPedido
     {

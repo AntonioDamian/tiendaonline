@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
-using Capa_entidades;
+using CapaEntidades;
 
 // Para contactar con la WEB API
 using System.Net.Http;
 using Newtonsoft.Json;
 using System.Runtime.InteropServices;
-using Capa_Datos;
+using CapaDatos;
 using System.Security.Cryptography;
 using System.Text;
 using System.Linq;

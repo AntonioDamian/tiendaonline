@@ -4,7 +4,7 @@ using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
 
-namespace Capa_Datos
+namespace CapaDatos
 {
    public abstract class ADO
     {

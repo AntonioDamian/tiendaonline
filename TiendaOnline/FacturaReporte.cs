@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Capa_entidades;
+using CapaEntidades;
 using Microsoft.Reporting.WinForms;
 
 namespace TiendaOnline

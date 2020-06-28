@@ -6,11 +6,11 @@ using System.Collections.Generic;
 using System.Net.Http;
 using Newtonsoft.Json;
 using System.Runtime.InteropServices;
-using Capa_entidades;
+using CapaEntidades;
 using System.Text;
 using System.Web.Script.Serialization;
 
-namespace Capa_Datos
+namespace CapaDatos
 {
    public class MarcaADO:ADO
     {

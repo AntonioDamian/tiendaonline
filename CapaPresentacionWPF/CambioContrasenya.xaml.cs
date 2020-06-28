@@ -19,7 +19,7 @@ namespace CapaPresentacionWPF
     /// </summary>
     public partial class CambioContrasenya : Window
     {
-        public CambioContrasenya(Capa_entidades.Usuario usuario)
+        public CambioContrasenya(CapaEntidades.Usuario usuario)
         {
             InitializeComponent();
         }

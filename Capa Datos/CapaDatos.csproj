@@ -175,9 +175,9 @@
     <Compile Include="UsuarioADO.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Capa Entidades\Capa Entidades.csproj">
+    <ProjectReference Include="..\Capa Entidades\CapaEntidades.csproj">
       <Project>{96f5d5eb-d83d-464a-82f7-91cd86449680}</Project>
-      <Name>Capa Entidades</Name>
+      <Name>CapaEntidades</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

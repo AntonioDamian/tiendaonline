@@ -5,13 +5,13 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiTienda", "ApiTienda\ApiTienda.csproj", "{220AC4FB-8851-410C-99D2-563A3F59FCCA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capa Datos", "Capa Datos\Capa Datos.csproj", "{28A61840-A8BE-48C5-AAC8-AC1390B6099A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDatos", "Capa Datos\CapaDatos.csproj", "{28A61840-A8BE-48C5-AAC8-AC1390B6099A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capa Entidades", "Capa Entidades\Capa Entidades.csproj", "{96F5D5EB-D83D-464A-82F7-91CD86449680}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaEntidades", "Capa Entidades\CapaEntidades.csproj", "{96F5D5EB-D83D-464A-82F7-91CD86449680}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capa Negocio", "Capa Negocio\Capa Negocio.csproj", "{C0F828FF-534A-4DD4-A308-9E16136CB708}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaNegocio", "Capa Negocio\CapaNegocio.csproj", "{C0F828FF-534A-4DD4-A308-9E16136CB708}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capa Presentacion", "TiendaOnline\Capa Presentacion.csproj", "{A0573C73-0DEB-4BFA-A4BA-9C71809DF05A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaPresentacion", "TiendaOnline\CapaPresentacion.csproj", "{A0573C73-0DEB-4BFA-A4BA-9C71809DF05A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiLibreria", "MiLibreria\MiLibreria.csproj", "{F99CB41C-937B-4D6B-A431-306CCE5358FA}"
 EndProject

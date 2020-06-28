@@ -1,13 +1,13 @@
 
 using System;
 using Capa_datos;
-using Capa_entidades;
+using CapaEntidades;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
 using System.Linq;
 
-namespace Capa_negocio
+namespace CapaNegocio
 {
 
    

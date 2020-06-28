@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Capa_Datos;
-using Capa_entidades;
+using CapaDatos;
+using CapaEntidades;
 using System.Collections.ObjectModel;									 
 
-namespace Capa_negocio
+namespace CapaNegocio
 {
     public class NegociotipoArticulo
     {

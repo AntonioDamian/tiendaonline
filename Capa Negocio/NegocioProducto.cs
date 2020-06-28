@@ -4,11 +4,11 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Capa_Datos;
-using Capa_entidades;
+using CapaDatos;
+using CapaEntidades;
 
 
-namespace Capa_negocio
+namespace CapaNegocio
 {
     public class NegocioProducto
     {

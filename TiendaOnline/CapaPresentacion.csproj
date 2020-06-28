@@ -362,13 +362,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Capa Entidades\Capa Entidades.csproj">
+    <ProjectReference Include="..\Capa Entidades\CapaEntidades.csproj">
       <Project>{96f5d5eb-d83d-464a-82f7-91cd86449680}</Project>
-      <Name>Capa Entidades</Name>
+      <Name>CapaEntidades</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Capa negocio\Capa Negocio.csproj">
+    <ProjectReference Include="..\Capa Negocio\CapaNegocio.csproj">
       <Project>{c0f828ff-534a-4dd4-a308-9e16136cb708}</Project>
-      <Name>Capa Negocio</Name>
+      <Name>CapaNegocio</Name>
     </ProjectReference>
     <ProjectReference Include="..\MiLibreria\MiLibreria.csproj">
       <Project>{F99CB41C-937B-4D6B-A431-306CCE5358FA}</Project>

@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Capa_entidades;
-using Capa_negocio;
+using CapaEntidades;
+using CapaNegocio;
 using MiLibreria;
 
 namespace TiendaOnline

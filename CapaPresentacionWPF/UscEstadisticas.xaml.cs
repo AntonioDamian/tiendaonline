@@ -1,5 +1,5 @@
-﻿using Capa_entidades;
-using Capa_negocio;
+﻿using CapaEntidades;
+using CapaNegocio;
 using LiveCharts;
 using LiveCharts.Wpf;
 using System;

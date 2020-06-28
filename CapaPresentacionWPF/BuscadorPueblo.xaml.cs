@@ -11,8 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Capa_negocio;
-using Capa_entidades;
+using CapaNegocio;
+using CapaEntidades;
 using System.Data;
 using MiLibreria;
 

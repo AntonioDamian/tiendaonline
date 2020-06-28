@@ -1,6 +1,6 @@
 using Capa_datos;
-using Capa_Datos;
-using Capa_entidades;
+using CapaDatos;
+using CapaEntidades;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;									 
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Capa_negocio
+namespace CapaNegocio
 {
     public class Negocio
     {

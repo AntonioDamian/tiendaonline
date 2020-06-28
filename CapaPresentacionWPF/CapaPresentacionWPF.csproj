@@ -304,13 +304,13 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Capa Entidades\Capa Entidades.csproj">
+    <ProjectReference Include="..\Capa Entidades\CapaEntidades.csproj">
       <Project>{96F5D5EB-D83D-464A-82F7-91CD86449680}</Project>
-      <Name>Capa Entidades</Name>
+      <Name>CapaEntidades</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Capa Negocio\Capa Negocio.csproj">
+    <ProjectReference Include="..\Capa Negocio\CapaNegocio.csproj">
       <Project>{C0F828FF-534A-4DD4-A308-9E16136CB708}</Project>
-      <Name>Capa Negocio</Name>
+      <Name>CapaNegocio</Name>
     </ProjectReference>
     <ProjectReference Include="..\MiLibreria\MiLibreria.csproj">
       <Project>{F99CB41C-937B-4D6B-A431-306CCE5358FA}</Project>

@@ -1,4 +1,4 @@
-﻿using Capa_entidades;
+﻿using CapaEntidades;
 
 namespace CapaPresentacionWPF
 {

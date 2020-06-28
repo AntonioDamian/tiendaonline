@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Capa_entidades;
-using Capa_Datos;
+using CapaEntidades;
+using CapaDatos;
 
-namespace Capa_negocio
+namespace CapaNegocio
 {
    public class NegocioLinped
     {
