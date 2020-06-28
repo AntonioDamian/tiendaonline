@@ -17,11 +17,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiLibreria", "MiLibreria\Mi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaPresentacionWPF", "CapaPresentacionWPF\CapaPresentacionWPF.csproj", "{B6427033-D1A3-4B0E-AAA2-7B8F20214EA0}"
 EndProject
-Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "ApiTienda-Setup", "ApiTienda-Setup\ApiTienda-Setup.isproj", "{6CFD6086-F2AD-4E19-9949-BABFF7A0F078}"
-	ProjectSection(ProjectDependencies) = postProject
-		{B6427033-D1A3-4B0E-AAA2-7B8F20214EA0} = {B6427033-D1A3-4B0E-AAA2-7B8F20214EA0}
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CD_ROM|Any CPU = CD_ROM|Any CPU
@@ -101,16 +96,6 @@ Global
 		{B6427033-D1A3-4B0E-AAA2-7B8F20214EA0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B6427033-D1A3-4B0E-AAA2-7B8F20214EA0}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
 		{B6427033-D1A3-4B0E-AAA2-7B8F20214EA0}.SingleImage|Any CPU.Build.0 = Release|Any CPU
-		{6CFD6086-F2AD-4E19-9949-BABFF7A0F078}.CD_ROM|Any CPU.ActiveCfg = CD_ROM
-		{6CFD6086-F2AD-4E19-9949-BABFF7A0F078}.CD_ROM|Any CPU.Build.0 = CD_ROM
-		{6CFD6086-F2AD-4E19-9949-BABFF7A0F078}.Debug|Any CPU.ActiveCfg = DVD-5
-		{6CFD6086-F2AD-4E19-9949-BABFF7A0F078}.Debug|Any CPU.Build.0 = DVD-5
-		{6CFD6086-F2AD-4E19-9949-BABFF7A0F078}.DVD-5|Any CPU.ActiveCfg = DVD-5
-		{6CFD6086-F2AD-4E19-9949-BABFF7A0F078}.DVD-5|Any CPU.Build.0 = DVD-5
-		{6CFD6086-F2AD-4E19-9949-BABFF7A0F078}.Release|Any CPU.ActiveCfg = SingleImage
-		{6CFD6086-F2AD-4E19-9949-BABFF7A0F078}.Release|Any CPU.Build.0 = SingleImage
-		{6CFD6086-F2AD-4E19-9949-BABFF7A0F078}.SingleImage|Any CPU.ActiveCfg = SingleImage
-		{6CFD6086-F2AD-4E19-9949-BABFF7A0F078}.SingleImage|Any CPU.Build.0 = SingleImage
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

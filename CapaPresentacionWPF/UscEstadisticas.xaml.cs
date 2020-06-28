@@ -35,6 +35,8 @@ namespace CapaPresentacionWPF
         List<Articulo> _listaArticulos;
         List<Linped> listArt1;
 
+        string[] meses = new string[] { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" };
+
         public UscEstadisticas()
         {
             InitializeComponent();
@@ -272,7 +274,7 @@ namespace CapaPresentacionWPF
             {
                 Piechart.Series.Clear();
                 labelmes.Content = "";
-                MessageBox.Show("No hay pedidos en el mes de " + date.Month);
+                MessageBox.Show("No hay pedidos en el mes de'" + meses[date.Month] + "'del año '" + date.Year.ToString() + "'");
             }
         }
 
@@ -320,7 +322,7 @@ namespace CapaPresentacionWPF
             {
                 Piechart1.Series.Clear();
                 labelmes.Content = "";
-                MessageBox.Show("No hay pedidos en el mes de " + date.Month);
+                MessageBox.Show("No hay pedidos en el mes de'"+ meses[date.Month]+"'del año '"+ date.Year.ToString() + "'");
             }
         }
 
