@@ -94,8 +94,8 @@ namespace Capa_datos
         {
             try
             {
-               // HttpResponseMessage response = client.PutAsJsonAsync("api/usuarios/"+usuario.UsuarioID, usuario).Result;
-                var response = client.PutAsync("api/usuarios", new StringContent(new JavaScriptSerializer().Serialize(usuario.UsuarioID), Encoding.UTF8, "application/json")).Result;
+                HttpResponseMessage response = client.PutAsJsonAsync("api/usuarios/"+usuario.UsuarioID, usuario).Result;
+               // var response = client.PutAsync("api/usuarios", new StringContent(new JavaScriptSerializer().Serialize(usuario.UsuarioID), Encoding.UTF8, "application/json")).Result;
 
                 if (response.IsSuccessStatusCode)
                     return true;

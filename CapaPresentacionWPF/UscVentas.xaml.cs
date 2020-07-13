@@ -402,7 +402,7 @@ namespace CapaPresentacionWPF
                 {
                     foreach (Linped li in linpeds)
                     {
-                        int cant = Convert.ToInt32(li.Cantidad);
+                        int? cant = Convert.ToInt32(li.Cantidad);
                         if (_negLinped.NuevoLinped(li.PedidoID, li.Linea, li.ArticuloID, li.Importe, cant))
                         {
                             lista--;

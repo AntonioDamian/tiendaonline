@@ -95,7 +95,7 @@ namespace TiendaOnline
         private void ModificarEliminarToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-           FormularioBusquedaUsuario busqueda=new FormularioBusquedaUsuario()
+           FormularioBusquedaUsuario busqueda=new FormularioBusquedaUsuario("Usuario")
             {
                 MdiParent = this
             };
@@ -105,7 +105,7 @@ namespace TiendaOnline
 
         private void ConsultarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormularioBusquedaProducto busquedaProducto = new FormularioBusquedaProducto()
+            FormularioBusquedaProducto busquedaProducto = new FormularioBusquedaProducto("Consulta")
             {
                 MdiParent = this
               }; 
@@ -122,6 +122,16 @@ namespace TiendaOnline
             };
             pedidos.WindowState = FormWindowState.Maximized;
             pedidos.Show();
+        }
+
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormularioBusquedaPedido busquedaPedido = new FormularioBusquedaPedido("Eliminar")
+            {
+                MdiParent = this
+            };
+            busquedaPedido.WindowState = FormWindowState.Maximized;
+            busquedaPedido.Show();
         }
 
         private void estadisticasToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -208,6 +218,6 @@ namespace TiendaOnline
             toolTiempoTranscurrido.Text = string.Format("{0:hh\\:mm\\:ss}", tiempoTranscurrido);
         }
 
-       
+      
     }
 }

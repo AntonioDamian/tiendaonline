@@ -31,6 +31,10 @@ namespace MiLibreria
                                 errorProvider.SetError(obj, "No puede estar vacio");
                                 hayErrores = true;
                             }
+                            else
+                            {
+                                hayErrores = false;
+                            }
                         }
 
                         if (obj.SoloNumeros == true)
@@ -50,6 +54,10 @@ namespace MiLibreria
                             {
                                 hayErrores = true;
                                 errorProvider.SetError(obj, "Solo admite numeros");
+                            }
+                            else
+                            {
+                                hayErrores = false;
                             }
                         }
                     }

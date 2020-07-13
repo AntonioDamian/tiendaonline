@@ -25,15 +25,20 @@ namespace TiendaOnline
         public FormularioLogin()
         {
             InitializeComponent();
-          
+
+            numerointentosLogin = 3;
+            _neg = new Negocio();
+
+            negUsuario.CrearUsuarioCliente();
+
         }
-        private void FormularioLogin_Load(object sender, EventArgs e)
+     /*   private void FormularioLogin_Load(object sender, EventArgs e)
         {
             numerointentosLogin = 3;
             _neg = new Negocio();
 
             negUsuario.CrearUsuarioCliente();
-        }
+        }*/
 
 
 
@@ -56,8 +61,7 @@ namespace TiendaOnline
                 // Si aún quedan intentos de login por realizar, intentamos acceder a la aplicación con los datos introducidos
                 // por el usuario
                 if (numerointentosLogin > 1)
-                {
-                   
+                {                  
 
                     bool usuarioLogueado = _neg.Validar2(txtNombre.Text, txtPass.Text,out usuario);
                     // Si se puede loguear al usuario, se comprueba si es el primer login (para que establezca una nueva contraseña)
@@ -70,7 +74,6 @@ namespace TiendaOnline
                                "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                             if (result == DialogResult.Yes)
                             {
-
                                 FormularioCambioContrasenya formularioCambioContrasenya = new FormularioCambioContrasenya(usuario);
                                 formularioCambioContrasenya.ShowDialog();
                             }
@@ -80,13 +83,9 @@ namespace TiendaOnline
                             FormularioPrincipal formularioPrincipal = new FormularioPrincipal(nombre);  
                             
                             formularioPrincipal.Show();
-                            this.Hide();
-                            
+                            this.Hide();                           
                            
-                        }
-                        
-                       
-                       
+                        }                  
                        
                     }
                     // Si no se puede loguear al usuario mostramos el error y quitamos un intento de los disponibles
@@ -117,7 +116,6 @@ namespace TiendaOnline
                "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-
                     FormularioCambioContrasenya formularioCambioContrasenya = new FormularioCambioContrasenya(usuario);
                     formularioCambioContrasenya.ShowDialog();
                 }
@@ -142,12 +140,7 @@ namespace TiendaOnline
 
                 FormularioRecordarPass recPass = new FormularioRecordarPass();
                 recPass.ShowDialog();
-            }
-
-
-           
-           
-          
+            }         
 
         }
 
@@ -155,17 +148,13 @@ namespace TiendaOnline
 
         private void Salir(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Desea Salir?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
-            {
-               // Application.Exit();
-                Environment.Exit(0);
-            }
+            DialogResult dialogResult = MessageBox.Show("¿Deseas salir de la aplicacion?", "Confirmación",
+                 MessageBoxButtons.YesNo, MessageBoxIcon.Hand);
+            if (dialogResult == DialogResult.Yes)
+                Application.Exit();
         }
 
-        private void FormularioLogin_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
-        }
+     
 
      
     }

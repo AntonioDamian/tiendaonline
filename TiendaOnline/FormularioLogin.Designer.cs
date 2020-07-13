@@ -224,8 +224,6 @@ namespace TiendaOnline
             this.Name = "FormularioLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormularioLogin";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormularioLogin_FormClosing);
-            this.Load += new System.EventHandler(this.FormularioLogin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

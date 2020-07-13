@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using CapaNegocio;
 using CapaEntidades;
 using System.IO;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace TiendaOnline
 {
@@ -18,55 +19,87 @@ namespace TiendaOnline
         Negocio _neg;
         List<Usuario> _listaUsuarios;
         DataTable dt = new DataTable();
+        DataTable aux = new DataTable();
         private int indice;
+
+       
 
         public string usuarioId { get; set; }
 
 
-        public FormularioBusquedaUsuario()
+        public FormularioBusquedaUsuario( string opcion)
         {
             InitializeComponent();
 
             _neg = new Negocio();
 
+            if("Pedido"==opcion)
+            {
+                this.dataGridViewUsuarios.CellContentClick -= new DataGridViewCellEventHandler(this.DataGridViewUsuarios_CellContentClick);
+            }          
 
+          
         }
 
         private void FormularioBusqueda_Load(object sender, EventArgs e)
         {
             _listaUsuarios = new List<Usuario>();
-            _listaUsuarios = _neg.ObtenerUsuarios();
+            _listaUsuarios = _neg.ObtenerUsuarios();     
+
+            dt.Columns.Add("UsuarioID");
+            dt.Columns.Add("Email");
+            dt.Columns.Add("Nombre");
+            dt.Columns.Add("Apellidos");
+            dt.Columns.Add("Dni");
+
+          
 
 
-            dt = ConvertToDataTable(_listaUsuarios);
-            dt.DefaultView.Sort = "UsuarioID";
-
-            DataColumn nomApellido = dt.Columns.Add("NomApellido", typeof(string));
-
-            foreach (DataRow data in dt.Rows)
+            foreach (Usuario usu in _listaUsuarios)
             {
-
-                data["NomApellido"] = data["nombre"].ToString() + " " + data["apellidos"].ToString();
+               // dataGridViewUsuarios.Rows.Add(new object[] { usu.UsuarioID, usu.Email, usu.Nombre, usu.Apellidos, usu.Dni });
+                dt.Rows.Add(new object[] { usu.UsuarioID, usu.Email, usu.Nombre, usu.Apellidos, usu.Dni });
             }
 
-            dataGridViewUsuarios.DataSource = dt;
-
-            dataGridViewUsuarios.Columns["NomApellido"].Visible = false;
+           dt.DefaultView.Sort = "UsuarioID";           
 
             txtBusqueda.Enabled = false;
+
+          dataGridViewUsuarios.DataSource = dt;
 
 
         }
 
+        private void RefresDatagridview()
+        {
+            dt.Clear();
+            aux.Clear();          
+         
 
+            foreach (Usuario usu in _listaUsuarios)
+            {
+                dt.Rows.Add(new object[] { usu.UsuarioID, usu.Email, usu.Nombre, usu.Apellidos, usu.Dni });
+            }
+
+
+            dataGridViewUsuarios.DataSource = dt;
+        }
+
+
+        /// <summary>
+        /// Metodo que utilizaremos para seleccionar la opcion de filtrado
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void ComboFiltro_SelectedIndexChanged(object sender, EventArgs e)
         {
             indice = comboFiltro.SelectedIndex;
 
+           
             if (indice == 0)
-            {
-                LbSeleccion.Text = "Nombre y Apellidos del usuario";               
+            {               
+                LbSeleccion.Text = "Nombre del usuario";               
                 txtBusqueda.Enabled = true;
 
             }
@@ -85,61 +118,106 @@ namespace TiendaOnline
         }
 
 
-
+        /// <summary>
+        /// Metodo par introducir el parametro de filtrado,que se realizara según vayamos escribiendo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
 
         private void TxtBusqueda_TextChanged(object sender, EventArgs e)
         {
+            
             if (string.IsNullOrEmpty(txtBusqueda.Text.Trim()) == false)
             {
-
-                if (indice == 0)
+               
+                if (indice == 0)//filtrado por nombre
                 {
+                    aux = dt.Clone();
+                    lbApellidos.Visible = true;
+                    lbApellidos.Text = "Apellidos";
+                    textApellidos.Enabled = true;
+                    textApellidos.Visible = true;
 
-                    /*  BindingSource bs = new BindingSource
-                      {
-                          DataSource = dataGridViewUsuarios.DataSource,
-                          Filter = "nomApellido like'%" + txtBusqueda.Text + "%'"
-                      };
-                      dataGridViewUsuarios.DataSource = bs;*/
+                   dt.DefaultView.RowFilter = $"Nombre like'{txtBusqueda.Text}%'";
+                    // ((DataTable)dataGridViewUsuarios.DataSource).DefaultView.RowFilter = $"Nombre like'{txtBusqueda.Text}%'";  
 
-                    dt.DefaultView.RowFilter = $"nomApellido like'{txtBusqueda.Text}%'";
+                   
+
+
+                    foreach (DataGridViewRow rows in dataGridViewUsuarios.Rows)
+                    {
+                        DataRow dr = aux.NewRow();
+                        dr[0] = rows.Cells[0].Value.ToString();
+                        dr[1] = rows.Cells[1].Value.ToString();
+                        dr[2] = rows.Cells[2].Value.ToString();
+                        dr[3] = rows.Cells[3].Value.ToString();
+                        dr[4] = rows.Cells[4].Value.ToString();
+
+                        aux.Rows.Add(dr);
+                    }
+
                 }
-                if (indice == 1)
-                {
-                    /* BindingSource bs = new BindingSource
-                      {
-                          DataSource = dataGridViewUsuarios.DataSource,
-                          Filter = "dni like'%" + txtBusqueda.Text + "%'"
-                      };
-                      dataGridViewUsuarios.DataSource = bs;*/
+                if (indice == 1)//filtrado por email
+                {                   
 
-                    dt.DefaultView.RowFilter = $"Email like'{txtBusqueda.Text}%'";
+                  dt.DefaultView.RowFilter = $"Email like'{txtBusqueda.Text}%'";
+                    //((DataTable)dataGridViewUsuarios.DataSource).DefaultView.RowFilter = $"Email like'{txtBusqueda.Text}%'";
                 }
-                if (indice == 2)
+                if (indice == 2)//filtrado por deni usuario
                 {
-                    /*  BindingSource bs = new BindingSource
-                      {
-                          DataSource = dataGridViewUsuarios.DataSource,
-                          Filter = "Email like'%" + txtBusqueda.Text + "%'"
-                      };
-                      dataGridViewUsuarios.DataSource = bs;*/
 
+                    //((DataTable)dataGridViewUsuarios.DataSource).DefaultView.RowFilter = $"Dni like'{txtBusqueda.Text}%'";
                     dt.DefaultView.RowFilter = $"Dni like'{txtBusqueda.Text}%'";
                 }
             }
             else
             {
-                dataGridViewUsuarios.DataSource = dt;
                 txtBusqueda.Text = "";
+                lbApellidos.Visible = false;
+                textApellidos.Enabled = false; 
+                textApellidos.Visible = false;
+                // ((DataTable)dataGridViewUsuarios.DataSource).DefaultView.RowFilter ="";
+
+
+                //  dataGridViewUsuarios.DataSource = dt;
+                dataGridViewUsuarios.DataSource = "";
+                RefresDatagridview();
+             
             }
 
+        }
+
+        /// <summary>
+        /// Metodo que utilizzaremos para filtrar por apellidos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
+        private void TextApellidos_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textApellidos.Text.Trim()) == false)
+            {
+               // ((DataTable)dataGridViewUsuarios.DataSource).DefaultView.RowFilter = $"Apellidos like'{textApellidos.Text}%'";
+              aux.DefaultView.RowFilter = $"Apellidos like'{textApellidos.Text}%'";
+               dataGridViewUsuarios.DataSource = aux;
+            }
+            else
+            {
+                ((DataTable)dataGridViewUsuarios.DataSource).DefaultView.RowFilter = "";
+               // dataGridViewUsuarios.DataSource = aux;
+
+            }
         }
 
 
 
 
-
+        /// <summary>
+        /// Metodo que se habilitara cuando la llamada  a la clase sea desde formulario usuario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
 
         private void DataGridViewUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -147,6 +225,9 @@ namespace TiendaOnline
             DevolverUsuario();
         }
 
+        /// <summary>
+        /// Metodo aux qeu nos devolvera el usuario seleccionado
+        /// </summary>
         private void DevolverUsuario()
         {
             FormularioNuevoUsuario frmModificar = new FormularioNuevoUsuario();
@@ -174,26 +255,6 @@ namespace TiendaOnline
         }
 
 
-
-        public DataTable ConvertToDataTable<T>(IList<T> data)
-        {
-            PropertyDescriptorCollection properties =
-               TypeDescriptor.GetProperties(typeof(T));
-            DataTable table = new DataTable();
-            foreach (PropertyDescriptor prop in properties)
-                table.Columns.Add(prop.Name, Nullable.GetUnderlyingType(prop.PropertyType) ?? prop.PropertyType);
-            foreach (T item in data)
-            {
-                DataRow row = table.NewRow();
-                foreach (PropertyDescriptor prop in properties)
-                    row[prop.Name] = prop.GetValue(item) ?? DBNull.Value;
-                table.Rows.Add(row);
-            }
-            return table;
-
-        }
-
-
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
             if (dataGridViewUsuarios.Rows.Count == 0)
@@ -207,7 +268,20 @@ namespace TiendaOnline
             }
         }
 
-      
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void textApellidos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar==(char)13)
+            {
+                DataView dv = dt.DefaultView;
+                dv.RowFilter = string.Format("Apellidos Like '%{0}%'", textApellidos.Text);
+                dataGridViewUsuarios.DataSource = dv.ToTable();
+            }
+        }
     }
 }
 

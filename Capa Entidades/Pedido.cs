@@ -91,7 +91,23 @@ namespace CapaEntidades
 
         }
 
+        //Constructor con argumentos
+        public Pedido(int pedidoID, int usuarioID, DateTime fecha, List<Linped> linpeds)
+        {
+            PedidoID = pedidoID;
+            UsuarioID = usuarioID;
+            Fecha = fecha;
+            this.Linpeds = linpeds;
+        }
 
+        public Pedido(int pedidoID, int usuarioID, DateTime fecha)
+        {
+            _pedidoID = pedidoID;
+            _usuarioID = usuarioID;
+            _fecha = fecha;
+        }
+
+      
         //Constructor  sin argumentos
         public Pedido()
         {
@@ -103,22 +119,7 @@ namespace CapaEntidades
 
         }
 
-        //Constructor con argumentos
-
-
-        public Pedido(int pedidoID, int usuarioID, DateTime fecha)
-        {
-            _pedidoID = pedidoID;
-            _usuarioID = usuarioID;
-            _fecha = fecha;
-        }
-        public Pedido(int pedidoID, int usuarioID, DateTime fecha, List<Linped> linpeds)
-        {
-            _pedidoID = pedidoID;
-            _usuarioID = usuarioID;
-            _fecha = fecha;
-            this.Linpeds = linpeds;
-        }
+     
 
         //Constructor de copia
         public Pedido(Pedido otroPedido)

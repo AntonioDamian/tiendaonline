@@ -30,68 +30,7 @@ namespace CapaEntidades
         private DateTime? _nacido;
 		string _repepas;				
 
-        //Peopiedades
-
-        /*    public string Email { get => _email;
-                set
-                {
-                    if (value.Length > 50)
-                    {
-                        throw new ArgumentOutOfRangeException("Email no puede superar los 50 caracteres");
-                    }
-                    _email = value ?? throw new ArgumentNullException("EmailID no puede ser nulo");
-                }
-            }
-
-
-            public string Nombre { get => _nombre; set
-                {
-                    if (value.Length > 35)
-                    {
-                        throw new ArgumentOutOfRangeException("Nombre no puede superar los 35 caracteres");
-                    }
-                    _nombre = value ?? throw new ArgumentNullException("Nombre no puede ser nulo");
-                }
-            }
-            public string Apellidos { get => _apellidos;
-                set
-                {
-                    if (value.Length > 35)
-                    {
-                        throw new ArgumentOutOfRangeException("Apellidos no puede superar los 35 caracteres");
-                    }
-                    _apellidos = value ?? throw new ArgumentNullException("Apellidos no puede ser nulo");
-                }
-            }
-            public string Dni { get => _dni; set
-                {
-                    if (value.Length > 12)
-                    {
-                        throw new ArgumentOutOfRangeException("Dni no puede superar los 12 caracteres");
-                    }
-                    _dni = value ?? throw new ArgumentNullException("Dni no puede ser nulo");
-                }
-            }
-
-            public string Codpos { get => _codpos;
-                set
-                { 
-                        if(string.IsNullOrEmpty(value))
-                    {
-                        _codpos = value;
-                    }
-
-                   else  if (value.Length < 5 && !string.IsNullOrEmpty(value))
-                    {
-                        throw new ArgumentOutOfRangeException("Codpos no puede ser inferior a los 5 caracteres");
-                    }
-                    else
-                    {
-                        _codpos = value;
-                    }
-
-                }
-            }*/
+       
         public int UsuarioID { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
@@ -106,20 +45,6 @@ namespace CapaEntidades
         public string ProvinciaID { get; set; }
         public DateTime? Nacido { get; set; }
 	    public string Repepas { get => _repepas; set => _repepas = value; }
-
-      //  public string Error => throw new NotImplementedException();
-
-     //   public string this[string columnName] => throw new NotImplementedException();
-
-
-
-
-
-
-
-
-
-
 
         //Constructor sobrecargado
         public Usuario(int usuarioID, string email, string password, string nombre, string apellidos, string dni, string telefono, string calle, string calle2, string codpos, string puebloID, string provinciaID, DateTime? nacido)

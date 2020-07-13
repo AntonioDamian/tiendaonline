@@ -61,7 +61,7 @@ namespace CapaDatos
             return listaLinpeds;
         }
         // Creo un nuevo linbped en la BD
-        public bool InsertarLinped(int pedidoID, int linea, string articuloID, decimal importe, int cantidad)
+        public bool InsertarLinped(int pedidoID, int linea, string articuloID, decimal importe, int? cantidad)
         {
             try
             {
@@ -90,8 +90,9 @@ namespace CapaDatos
         {
             try
             {
-               // HttpResponseMessage response = client.PutAsJsonAsync("api/linpeds/" + linped.PedidoID,linped).Result;
-                var response = client.PutAsync("api/linpeds", new StringContent(new JavaScriptSerializer().Serialize(linped.PedidoID), Encoding.UTF8, "application/json")).Result;
+                HttpResponseMessage response = client.PutAsJsonAsync("api/linpeds/"+ linped.PedidoID + "/"+linped.Linea,linped).Result;
+               // HttpResponseMessage response = client.PutAsJsonAsync("api/linpeds/" + linped.PedidoID , linped).Result;
+                // var response = client.PutAsync("api/linpeds", new StringContent(new JavaScriptSerializer().Serialize(linped.PedidoID), Encoding.UTF8, "application/json")).Result;
 
                 if (response.IsSuccessStatusCode)
                     return true;

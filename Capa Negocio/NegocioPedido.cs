@@ -42,6 +42,11 @@ namespace CapaNegocio
             return (_pedido.ActualizarPedido(pedido));
         }
 
+        public bool Borrar(int pedido)
+        {
+            return (_pedido.BorrarPedido(pedido));
+        }
+
 
         public decimal [] Datosfactura(Pedido pedido,decimal iva )
         {

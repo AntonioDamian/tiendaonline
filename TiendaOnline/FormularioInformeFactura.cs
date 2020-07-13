@@ -38,14 +38,14 @@ namespace TiendaOnline
 
             DataTable dt = new DataTable();
 
-            FormularioBusquedaPedido formPedido = new FormularioBusquedaPedido();
+            FormularioBusquedaPedido formPedido = new FormularioBusquedaPedido("informe");
             formPedido.ShowDialog();
 
             if (formPedido.DialogResult == DialogResult.OK)
             {
-                errorTxtnumeroPedido.Text = formPedido.dgvPedidos.Rows[formPedido.dgvPedidos.CurrentRow.Index].Cells[1].Value.ToString();
-                errorUsuarioID.Text = formPedido.dgvPedidos.Rows[formPedido.dgvPedidos.CurrentRow.Index].Cells[2].Value.ToString();
-                dateTimePicker1.Value = Convert.ToDateTime(formPedido.dgvPedidos.Rows[formPedido.dgvPedidos.CurrentRow.Index].Cells[3].Value);
+                errorTxtnumeroPedido.Text = formPedido.dgvPedidos.Rows[formPedido.dgvPedidos.CurrentRow.Index].Cells[0].Value.ToString();
+                errorUsuarioID.Text = formPedido.dgvPedidos.Rows[formPedido.dgvPedidos.CurrentRow.Index].Cells[1].Value.ToString();
+                dateTimePicker1.Value = Convert.ToDateTime(formPedido.dgvPedidos.Rows[formPedido.dgvPedidos.CurrentRow.Index].Cells[2].Value);
 
                 _lista = FormularioBusquedaPedido.lista;
 
@@ -53,7 +53,7 @@ namespace TiendaOnline
 
                 List<Usuario> usuarios = new List<Usuario>();
                 usuarios = _usuario.ObtenerUsuarios();
-                var result = usuarios.Where(x => x.UsuarioID == Convert.ToInt32(formPedido.dgvPedidos.Rows[formPedido.dgvPedidos.CurrentRow.Index].Cells[2].Value.ToString())).ToList();
+                var result = usuarios.Where(x => x.UsuarioID == Convert.ToInt32(formPedido.dgvPedidos.Rows[formPedido.dgvPedidos.CurrentRow.Index].Cells[1].Value.ToString())).ToList();
              
                 errorTxtnombre.Text = result[0].Nombre;
                 errorTxtdireccion.Text = result[0].Calle;
@@ -72,6 +72,14 @@ namespace TiendaOnline
                     data["Importe"].ToString(), data["Cantidad"].ToString(), data["ImporteTotal"].ToString());
 
                 }
+
+                decimal[] resumenFactura = new decimal[4];
+
+                resumenFactura = _negPedido.Datosfactura(FormularioBusquedaPedido._pedidoeleguido[0], 21);
+
+                textsubTotal.Text = resumenFactura[0].ToString() + " €";
+                textIva.Text = resumenFactura[1].ToString() + " €";
+                textTotal.Text = resumenFactura[2].ToString() + " €";
             }
         }
 
@@ -139,11 +147,23 @@ namespace TiendaOnline
             facturaReporte.Show();
 
 
+          
+
+
+
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            GenerarFactura();
+            if (errorTxtnumeroPedido.Text != "")
+            {
+                GenerarFactura();
+            }
+            else
+            {
+                MessageBox.Show("No hay ninguna factura para imprimir");
+            }
+           
         }
     }
 }

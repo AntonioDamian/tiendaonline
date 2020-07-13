@@ -67,7 +67,7 @@ namespace CapaDatos
                 Pedido Pedido = new Pedido(pedidoID,usuarioID,fecha,linpeds);
 
                // HttpResponseMessage response = client.PostAsJsonAsync("api/Pedidos", Pedido).Result;
-                var response = client.PostAsync("api/Pedidoss", new StringContent(new JavaScriptSerializer().Serialize(Pedido), Encoding.UTF8, "application/json")).Result;
+                var response = client.PostAsync("api/Pedidos", new StringContent(new JavaScriptSerializer().Serialize(Pedido), Encoding.UTF8, "application/json")).Result;
                 if (response.IsSuccessStatusCode)
                 {
                     return true;
@@ -84,12 +84,12 @@ namespace CapaDatos
 
             return true;
         }
-        public bool ActualizarPedido(Pedido Pedido)
+        public bool ActualizarPedido(Pedido pedido)
         {
             try
             {
-               // HttpResponseMessage response = client.PutAsJsonAsync("api/Pedidos/" + Pedido.PedidoID, Pedido).Result;
-                var response = client.PutAsync("api/Pedidos", new StringContent(new JavaScriptSerializer().Serialize(Pedido.PedidoID), Encoding.UTF8, "application/json")).Result;
+                HttpResponseMessage response = client.PutAsJsonAsync("api/Pedidos/" + pedido.PedidoID, pedido).Result;
+               // var response = client.PutAsync("api/pedidos", new StringContent(new JavaScriptSerializer().Serialize(pedido.PedidoID), Encoding.UTF8, "application/json")).Result;
 
                 if (response.IsSuccessStatusCode)
                     return true;

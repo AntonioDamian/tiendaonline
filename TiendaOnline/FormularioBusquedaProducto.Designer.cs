@@ -38,7 +38,7 @@ namespace TiendaOnline
             this.btnCancelar = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
@@ -171,7 +171,7 @@ namespace TiendaOnline
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.button1);
+            this.flowLayoutPanel1.Controls.Add(this.btnActualizar);
             this.flowLayoutPanel1.Controls.Add(this.btnSeleccionar);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(612, 503);
@@ -180,21 +180,21 @@ namespace TiendaOnline
             this.flowLayoutPanel1.Size = new System.Drawing.Size(558, 66);
             this.flowLayoutPanel1.TabIndex = 4;
             // 
-            // button1
+            // btnActualizar
             // 
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::TiendaOnline.Properties.Resources.disco;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(416, 10);
-            this.button1.Margin = new System.Windows.Forms.Padding(10, 10, 20, 3);
-            this.button1.Name = "button1";
-            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button1.Size = new System.Drawing.Size(132, 44);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Actualizar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Actualizar_Click);
+            this.btnActualizar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.Image = global::TiendaOnline.Properties.Resources.disco;
+            this.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnActualizar.Location = new System.Drawing.Point(416, 10);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(10, 10, 20, 3);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnActualizar.Size = new System.Drawing.Size(132, 44);
+            this.btnActualizar.TabIndex = 0;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.Actualizar_Click);
             // 
             // btnSeleccionar
             // 
@@ -255,7 +255,7 @@ namespace TiendaOnline
         private System.Windows.Forms.Label labelFiltro;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnSeleccionar;
         public System.Windows.Forms.DataGridView dataGridViewArticulos;
         private System.Windows.Forms.Button btnCancelar;

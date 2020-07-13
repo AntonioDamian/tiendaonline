@@ -83,7 +83,15 @@ namespace CapaEntidades
             } 
 
         }
-
+        //Cosnstructor con argumentos
+        public Linped(int pedidoID, int linea, string articuloID, decimal importe, int? cantidad)
+        {
+            PedidoID = pedidoID;
+            Linea = linea;
+            ArticuloID = articuloID;
+            Importe = importe;
+            Cantidad = cantidad;
+        }
         //Constructor sin argumentos
         public Linped()
         {
@@ -93,15 +101,7 @@ namespace CapaEntidades
             _importe = 0.0M;
             _cantidad = 0;
         }
-        //Cosnstructor con argumentos
-        public Linped(int pedidoID, int linea, string articuloID, decimal importe, int cantidad)
-        {
-            _pedidoID = pedidoID;
-            _linea = linea;
-            _articuloID = articuloID;
-            _importe = importe;
-            _cantidad = cantidad;
-        }
+      
         //Constructor de copia
         public Linped(Linped otroLinped)
         {

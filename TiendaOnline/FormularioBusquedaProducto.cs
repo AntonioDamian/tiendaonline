@@ -25,7 +25,7 @@ namespace TiendaOnline
         List<Articulo> _listaArticulos;
         List<TipoArticulo> _ListaTipoArticulos;
         DataTable dt;
-        DataView dv;
+        DataTable aux = new DataTable();
 
         Dictionary<int, string> especi;
 
@@ -47,12 +47,18 @@ namespace TiendaOnline
 
         TextBox[] t;
 
-        public FormularioBusquedaProducto()
+        public FormularioBusquedaProducto( string opcion)
         {
             InitializeComponent();
 
+            if("Pedido"==opcion)
+            {
+                btnActualizar.Enabled = false;
+                btnActualizar.Visible = false;
+            }
+
             dt = new DataTable();
-            dv = new DataView();
+         
             _neg = new NegocioProducto();
             _negTipo = new NegociotipoArticulo();
             _negEspecificaciones = new NegocioEspecificaciones();
@@ -78,6 +84,7 @@ namespace TiendaOnline
 
 
             especi = new Dictionary<int, string>();
+            especi.Add(-1, "Seleccione");
             especi.Add(0, "null");
 
             foreach (TipoArticulo tp in _ListaTipoArticulos)
@@ -93,12 +100,31 @@ namespace TiendaOnline
             _listaArticulos = new List<Articulo>();
             _listaArticulos = _neg.ObtenerArticulos();
 
+            
+           
 
-            dt =   Utilidades.ConvertToDataTable(_listaArticulos);
-            dv = new DataView(dt);
+
+          //  dt = Utilidades.ConvertToDataTable(_listaArticulos);
+          
+
+            dt.Columns.Add("ArticuloID");
+            dt.Columns.Add("Nombre");
+            dt.Columns.Add("MarcaID");
+            dt.Columns.Add("Pvp");
+            dt.Columns.Add("TipoArticulo");
+
+            foreach (Articulo art in _listaArticulos)
+            {
+               
+                dt.Rows.Add(new object[] { art.ArticuloID,art.Nombre,art.MarcaID,art.Pvp,art.TipoArticuloID});
+            }
+
+            dt.DefaultView.Sort = "ArticuloID";
+           
 
             dataGridViewArticulos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewArticulos.DataSource = dv;
+            aux = dt.Copy();
+            dataGridViewArticulos.DataSource = dt;
 
         }
 
@@ -109,9 +135,11 @@ namespace TiendaOnline
         {
 
             indice = comboFiltro.SelectedIndex;
+          //  dataGridViewArticulos.DataSource = aux;
 
             switch (indice)
             {
+               
                 case 0:
                     if (activotext == true)
                     {
@@ -122,29 +150,28 @@ namespace TiendaOnline
                     if (activocombo == false)
                     {
 
-
                         labelFiltro.Text = comboFiltro.SelectedItem.ToString();
-
-
                         comboTipo = new ComboBox();
-                        comboTipo.Anchor = AnchorStyles.Left;
-                        comboTipo.Name = "comboTipo";
-                        comboTipo.Text = "Seleccione";
+                        comboTipo.Anchor = AnchorStyles.Left;                    
+
                         comboTipo.DataSource = new BindingSource(especi, null);
                        
                         comboTipo.DisplayMember = "Value";
                         comboTipo.ValueMember = "Key";
 
+                      
 
                         // comboTipo.DataSource = _ListaTipoArticulos;
 
-                     /*   foreach (var li in _ListaTipoArticulos)
-                        {
-                            comboTipo.Items.Add(li.Descripcion);
-                        }
-                        comboTipo.Items.Insert(0, "null");*/
+                        /*   foreach (var li in _ListaTipoArticulos)
+                           {
+                               comboTipo.Items.Add(li.Descripcion);
+                           }
+                           comboTipo.Items.Insert(0, "null");*/
 
                         comboTipo.SelectedIndexChanged += new EventHandler(comboTipo_SelectedIndexChanged);
+                        comboTipo.Name = "comboTipo";
+                        comboTipo.Text = "Seleccione";
                         tableLayoutPanel2.Controls.Add(comboTipo);
                         activocombo = true;
                         activotext = false;
@@ -226,27 +253,27 @@ namespace TiendaOnline
             string tipo = comboTipo.SelectedValue.ToString();          
 
 
-            if (dv != null)
+            if (dt != null)
             {
                 if (index != -1)
                 {
                    
                     if (tipo !="0")
                     {
-                        dv.RowFilter = String.Format(CultureInfo.InvariantCulture.NumberFormat,
-                                           "TipoArticuloID = {0}", tipo);
+                        dt.DefaultView.RowFilter = String.Format(CultureInfo.InvariantCulture.NumberFormat,
+                                           "TipoArticulo = {0}", tipo);
                     }
                     if(tipo=="0")
                     {
-                        dv.RowFilter = "TipoArticuloID IS NULL";
-                        dataGridViewArticulos.DataSource = dv;
+                        dt.DefaultView.RowFilter = "TipoArticulo IS NULL";
+                        dataGridViewArticulos.DataSource = dt;
                     }
 
-                    dataGridViewArticulos.DataSource = dv;
+                    dataGridViewArticulos.DataSource = dt;
                 }
                 else
                 {
-                    dataGridViewArticulos.DataSource = dv;
+                    dataGridViewArticulos.DataSource = dt;
                 }
 
 
@@ -260,10 +287,10 @@ namespace TiendaOnline
             string idArticulo = dataGridViewArticulos.CurrentRow.Cells["articuloID"].Value.ToString();
             CrearPanelDetallesArticulo();
 
-            if (!string.IsNullOrEmpty(Convert.ToString((dataGridViewArticulos.CurrentRow.Cells["tipoArticuloID"].Value))))
+            if (!string.IsNullOrEmpty(Convert.ToString((dataGridViewArticulos.CurrentRow.Cells["TipoArticulo"].Value))))
             {
 
-                tipoArticulo = Convert.ToInt32(dataGridViewArticulos.CurrentRow.Cells["tipoArticuloID"].Value.ToString());          
+                tipoArticulo = Convert.ToInt32(dataGridViewArticulos.CurrentRow.Cells["TipoArticulo"].Value.ToString());          
 
                 if (tipoArticulo == 1)
                 {
@@ -451,73 +478,81 @@ namespace TiendaOnline
 
         private void comboFiltro_SelectedValueChanged(object sender, EventArgs e)
         {
-            dataGridViewArticulos.DataSource = dt; 
+            dataGridViewArticulos.DataSource = aux; 
         }
 
         private void Actualizar_Click(object sender, EventArgs e)
         {
             Articulo articulo = new Articulo();        
 
-
-            articulo.ArticuloID= t[0].Text.ToString();
-            articulo.Nombre= t[1].Text.ToString();
-            if (t[2].Text.ToString().Length==0)
+            if(t!=null)
             {
-                articulo.Pvp = null;
-            }
-            else
-            {
-                articulo.Pvp = Convert.ToDecimal(t[2].Text.ToString());
-            }
-          
-
-            articulo.MarcaID= t[3].Text.ToString();
-
-            if (t[4].Text.ToString().Length == 0)
-            {
-                articulo.Imagen = null;
-            }
-            else
-            {
-                articulo.Imagen = Encoding.ASCII.GetBytes(t[4].Text.ToString());
-            }
-
-            articulo.Urlimagen= t[5].Text.ToString();
-            articulo.Especificaciones= t[6].Text.ToString();
-            articulo.TipoArticuloID=Convert.ToInt32( t[7].Text.ToString());
-
-          /*  articulo = new Articulo(t[0].Text.ToString(), t[1].Text.ToString(), Convert.ToDecimal(t[2].Text.ToString()), t[3].Text.ToString(), Encoding.ASCII.GetBytes( t[4].Text.ToString()),
-                t[5].Text.ToString(),
-                 t[6].Text.ToString(),Convert.ToInt32( t[7].Text.ToString()));*/
-
-          
-
-
-           if( _neg.Actualizar(articulo))
-            {
-                MessageBox.Show("Se ha actualizado correctamnete el articulo");
-
+                articulo.ArticuloID = t[0].Text.ToString();
+                articulo.Nombre = t[1].Text.ToString();
                 if (t[2].Text.ToString().Length == 0)
                 {
-                    dataGridViewArticulos[2, posicionFila].Value = DBNull.Value;
+                    articulo.Pvp = null;
                 }
                 else
                 {
-                    dataGridViewArticulos[2, posicionFila].Value = Convert.ToDecimal(t[2].Text.ToString());
-                } 
+                    articulo.Pvp = Convert.ToDecimal(t[2].Text.ToString());
+                }
 
 
+                articulo.MarcaID = t[3].Text.ToString();
+
+                if (t[4].Text.ToString().Length == 0)
+                {
+                    articulo.Imagen = null;
+                }
+                else
+                {
+                    articulo.Imagen = Encoding.ASCII.GetBytes(t[4].Text.ToString());
+                }
+
+                articulo.Urlimagen = t[5].Text.ToString();
+                articulo.Especificaciones = t[6].Text.ToString();
+                articulo.TipoArticuloID = Convert.ToInt32(t[7].Text.ToString());
+
+                /*  articulo = new Articulo(t[0].Text.ToString(), t[1].Text.ToString(), Convert.ToDecimal(t[2].Text.ToString()), t[3].Text.ToString(), Encoding.ASCII.GetBytes( t[4].Text.ToString()),
+                      t[5].Text.ToString(),
+                       t[6].Text.ToString(),Convert.ToInt32( t[7].Text.ToString()));*/
+
+
+
+
+                if (_neg.Actualizar(articulo))
+                {
+                    MessageBox.Show("Se ha actualizado correctamnete el articulo");
+
+                    if (t[2].Text.ToString().Length == 0)
+                    {
+                        dataGridViewArticulos[2, posicionFila].Value = DBNull.Value;
+                    }
+                    else
+                    {
+                        dataGridViewArticulos[2, posicionFila].Value = Convert.ToDecimal(t[2].Text.ToString());
+                    }
+
+
+                }
+                else
+                {
+                    MessageBox.Show("No  se ha actualizado correctamnete el articulo");
+                }
             }
             else
             {
-                MessageBox.Show("No  se ha actualizado correctamnete el articulo");
+                MessageBox.Show("Nimgun Articulo a actualizar");
             }
+
+         
 
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-               
+            Close();
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
